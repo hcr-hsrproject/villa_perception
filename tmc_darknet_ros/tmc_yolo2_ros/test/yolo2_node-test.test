@@ -1,0 +1,13 @@
+<launch>
+  <node name="yolo2_node_stub" pkg="tmc_yolo2_ros" type="yolo2_node_stub">
+    <param name="cfg_path" value="dummy_path" />
+    <param name="weights_path" value="dummy_path" />
+    <param name="class_names_path" value="dummy_path" />
+    <remap from="~image" to="/dummy_image" />
+  </node>
+  <test test-name="yolo2_node_test"
+        pkg="tmc_yolo2_ros"
+        type="yolo2_node_test"
+        time-limit="30.0" >
+  </test>
+</launch>

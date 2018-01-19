@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="kinect" default="false" />
+  <arg name="image_topic" default="/hsrb/head_rgbd_sensor/rgb/image_rect_color" />
+  <arg if="$(arg kinect)" name="image_topic" value="/camera/rgb/image_rect_color" />
+
+  <node name="age_publisher" pkg="age_identification" type="age_publisher" required="true">
+    <remap from="~image" to="$(arg image_topic)" />
+  </node>
+</launch>

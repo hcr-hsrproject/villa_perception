@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+import rospy
+import cv2
+from cv_bridge import CvBridge, CvBridgeError
+from sensor_msgs.msg import Image
+from std_msgs.msg import String
+from tmc_yolo2_ros.msg import Detections
+
+from rude_carnie.utils_ros import Person
+from gender_classifier import GenderClassifier
+
+from gender_identification.srv import *
+
+
+CAMERA_PIXEL_WIDTH = 640
+CAMERA_PIXEL_HEIGHT = 480
+
+detected_people = []
+classifier = None
+
+def image_callback(req):
+    print('service request received!')
+    res = GenderIdentificationResponse()
+    cv_bridge = CvBridge()
+    try:
+        cv_img = cv_bridge.imgmsg_to_cv2(req.input_img, "bgr8")
+        img_resize = cv2.resize(cv_img, (classifier.RESIZE_FINAL, classifier.RESIZE_FINAL))
+        best_choice = classifier.classify(img_resize)
+        res.detected_gender = best_choice[0]
+        res.confidence = best_choice[1]
+    except CvBridgeError as e:
+        print(e)
+    return res
+
+
+if __name__ == '__main__':
+    rospy.init_node('gender_classifier')
+    classifier = GenderClassifier()
+    service = rospy.Service('/gender_identification_srv', GenderIdentification, image_callback)
+    rospy.spin()

@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(hsrb_darknet_tutorials)
+find_package(catkin REQUIRED)
+
+catkin_package()
+
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
+  USE_SOURCE_PERMISSIONS
+)
+
+install(DIRECTORY config/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config
+  USE_SOURCE_PERMISSIONS
+)
+
+install(DIRECTORY scripts/
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/scripts
+  USE_SOURCE_PERMISSIONS
+)
+
+install(DIRECTORY worlds/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/worlds
+  USE_SOURCE_PERMISSIONS
+)
+
+install(DIRECTORY data_samples/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/data_samples
+  USE_SOURCE_PERMISSIONS
+)

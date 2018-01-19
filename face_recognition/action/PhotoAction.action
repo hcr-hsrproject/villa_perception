@@ -1,0 +1,9 @@
+#goal definition
+bool start
+---
+#result definition
+string name
+int human_index
+---
+#feedback
+bool Is_people_Yolo

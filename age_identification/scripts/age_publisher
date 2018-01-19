@@ -1,0 +1,88 @@
+#!/usr/bin/python2
+import rospy
+import cv2
+import re
+from cv_bridge import CvBridgeError, CvBridge
+from sensor_msgs.msg import Image
+from std_msgs.msg import String
+from tmc_yolo2_ros.msg import Detections
+from age_classifier import AgeClassifier
+
+from rude_carnie.utils_ros import Person
+
+classifier = None
+
+CAMERA_PIXEL_WIDTH = 640
+CAMERA_PIXEL_HEIGHT = 480
+
+detected_people = []
+
+
+def image_callback(data):
+    global detected_people
+    if len(detected_people) == 0:
+        return
+    detected_ages = []
+    for person in detected_people:
+        cv_bridge = CvBridge()
+        try:
+            cv_image = cv_bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            print(e)
+
+        crop_person = cv_image[person.tl_y:person.tl_y + person.height,
+                   person.tl_x:person.tl_x + person.width]  # Crop from x, y, w, h -> 100, 200, 300, 400
+        
+        crop_img = classifier.crop_face(crop_person)
+        img_resize = cv2.resize(crop_img, (classifier.RESIZE_FINAL, classifier.RESIZE_FINAL))
+
+        face_pub.publish(cv_bridge.cv2_to_imgmsg(crop_img, "bgr8"))
+        
+        best_choice = classifier.classify(img_resize)
+
+        low_age = re.compile(r'\(([0-9]+)\W\s([0-9]+)').match(best_choice[0]).group(1)
+        high_age = re.compile(r'\(([0-9]+)\W\s([0-9]+)').match(best_choice[0]).group(2)
+        
+        if(person.tl_x < 330 and 330 < person.tl_x + person.width):
+            detected_ages.insert(0,str(low_age)+"-"+str(high_age))
+        else:
+            detected_ages.append(str(low_age)+"-"+str(high_age))
+        
+    age_pub.publish(','.join(detected_ages))
+    detected_people = []
+
+
+def detections_callback(data):
+    global detected_people
+    detected_people = []
+    for detected_object in data.detections:
+        if detected_object.class_name != 'person':
+            continue
+
+        left = int(detected_object.x - detected_object.width / 2.0)
+        right = int(detected_object.x + detected_object.width / 2.0)
+        top = int(detected_object.y - detected_object.height / 2.0)
+        bot = int(detected_object.y + detected_object.height / 2.0)
+
+        if right > CAMERA_PIXEL_WIDTH - 1:
+            right = CAMERA_PIXEL_WIDTH - 1
+        if bot > CAMERA_PIXEL_HEIGHT - 1:
+            bot = CAMERA_PIXEL_HEIGHT - 1
+
+        tl_x = 0 if left < 0 else left
+        tl_y = 0 if top < 0 else top
+        width_bound = right - tl_x
+        height_bound = bot - tl_y
+
+        detected_people.append(Person(tl_x, tl_y, width_bound, height_bound))
+
+
+if __name__ == '__main__':
+    rospy.init_node('age_classifier')
+    classifier = AgeClassifier()
+    #"~image"
+    face_pub = rospy.Publisher('/villa/face', Image, queue_size=1)
+    image_sub = rospy.Subscriber("/hsrb/head_rgbd_sensor/rgb/image_rect_color", Image, image_callback)
+    detections_sub = rospy.Subscriber("/yolo2_node/detections", Detections, detections_callback)
+    age_pub = rospy.Publisher('/villa/age_identification', String, queue_size=1)
+    rospy.spin()

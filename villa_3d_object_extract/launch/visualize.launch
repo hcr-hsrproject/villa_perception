@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="rviz" default="true"/>
+  <arg name="kinect" default="false" />
+  <arg name="local_yolo" default="false" />
+  <arg if="$(arg kinect)" name="image_topic" value="/camera/rgb/image_rect_color" />
+  
+  <arg if="$(arg kinect)" name="rviz_config_name" value="kinect_yolo_bounding_box.rviz" />
+  <arg unless="$(arg kinect)" name="rviz_config_name" value="yolo_bounding_box.rviz" />
+  
+  <include if="$(arg local_yolo)" file="$(find villa_yolo)/launch/tiny-yolo.launch" pass_all_args="true"/>
+  <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" required="true"
+    args="-d $(find villa_3d_object_extract)/config/$(arg rviz_config_name)" />
+</launch>
+

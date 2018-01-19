@@ -1,0 +1,14 @@
+<package>
+  <name>tmc_darknet</name>
+  <version>0.1.0</version>
+  <description>forked darknet repository compatible with catkin</description>
+  <maintainer email="kazuto_murase_aa@mail.toyota.co.jp">Kazuto Murase</maintainer>
+
+  <license>BSD 2-Clause License</license>
+  <license>YOLO LICENSE</license>
+  <license>TMC</license>
+
+  <author>Joseph Redmon</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

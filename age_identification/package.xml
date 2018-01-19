@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>age_identification</name>
+  <version>0.0.0</version>
+  <description>The age_identification package</description>
+  <maintainer email="stevenjj@todo.todo">stevenjj</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <depend>tmc_yolo2_ros</depend>
+  <depend>villa_rude_carnie_ros</depend>
+</package>

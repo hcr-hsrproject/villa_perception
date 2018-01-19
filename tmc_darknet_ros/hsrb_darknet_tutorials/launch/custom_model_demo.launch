@@ -1,0 +1,14 @@
+<launch>
+  <node pkg="tmc_yolo2_ros" type="yolo2_node" name="yolo2_node">
+    <param name="confidence" value="0.3" />
+    <param name="nms" value="0.4" />
+    <param name="cfg_path" value="$(env ROS_HOME)/darknet/learning.cfg" />
+    <param name="weights_path" value="$(env ROS_HOME)/darknet/learning.weights" />
+    <param name="class_names_path" value="$(env ROS_HOME)/darknet/learning.names" />
+    <remap from="~image" to="/hsrb/head_rgbd_sensor/rgb/image_rect_color" />
+  </node>
+  <node pkg="tmc_yolo2_ros" type="yolo2_image_node" name="yolo2_image_node" >
+    <remap from="~image" to="/hsrb/head_rgbd_sensor/rgb/image_rect_color" />
+    <remap from="~detections" to="/yolo2_node/detections" />
+  </node>
+</launch>

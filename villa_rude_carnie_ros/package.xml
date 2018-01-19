@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>villa_rude_carnie_ros</name>
+  <version>0.0.0</version>
+  <description>The rude_carnie_ros package</description>
+
+  <maintainer email="stevenjj@todo.todo">stevenjj</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <run_depend>tmc_yolo2_ros</run_depend>  
+
+
+</package>

@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# coding: utf-8
+# Copyright (C) 2017 Toyota Motor Corporation
+u"""認識結果を画像として表示するノード"""
+import rospy
+from tmc_yolo2_ros.yolo2_image_node import Yolo2ImageNode
+
+
+def main():
+    rospy.init_node('yolo2_image_node')
+    Yolo2ImageNode()
+    rospy.spin()
+
+if __name__ == '__main__':
+    main()

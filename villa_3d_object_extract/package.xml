@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<package>
+  <name>villa_3d_object_extract</name>
+  <version>0.0.0</version>
+  <description>The people_bounding_boxes package</description>
+
+  <maintainer email="stevenjj@todo.todo">stevenjj</maintainer>
+
+
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>grabcut_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>people_msgs</build_depend>
+
+  <run_depend>tf</run_depend>
+  <run_depend>grabcut_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>people_msgs</run_depend>
+
+
+  <build_depend>tmc_yolo2_ros</build_depend>
+  <run_depend>tmc_yolo2_ros</run_depend>  
+
+  <build_depend>message_runtime</build_depend>
+  <run_depend>message_runtime</run_depend>
+
+  <build_depend>villa_perception_msgs</build_depend>
+  <run_depend>villa_perception_msgs</run_depend>  
+
+  
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

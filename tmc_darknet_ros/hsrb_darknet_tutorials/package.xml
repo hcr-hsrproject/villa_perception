@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <name>hsrb_darknet_tutorials</name>
+  <version>0.1.0</version>
+  <description>launch, config and script files for executing and training darknet</description>
+
+  <maintainer email="kazuto_murase_aa@mail.toyota.co.jp">Kazuto Murase</maintainer>
+
+  <license>TMC</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>hsrb_gazebo_bringup</run_depend>
+  <run_depend>tmc_yolo2_ros</run_depend>
+</package>

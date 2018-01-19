@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find hsrb_gazebo_bringup)/launch/hsrb_empty_world.launch">
+    <arg name="world_name" value="$(find hsrb_darknet_tutorials)/worlds/yolo_learning.world" />
+    <arg name="robot_pos" value="-x 0.5 -y -2.0 -z 0.25 -Y 0" />
+    <arg name="use_laser_odom" value="false" />
+    <arg name="paused" value="false" />
+  </include>
+</launch>

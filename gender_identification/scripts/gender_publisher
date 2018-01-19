@@ -1,0 +1,82 @@
+#!/usr/bin/env python
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+import rospy
+import cv2
+from cv_bridge import CvBridge, CvBridgeError
+from sensor_msgs.msg import Image
+from std_msgs.msg import String
+from tmc_yolo2_ros.msg import Detections
+
+from rude_carnie.utils_ros import Person
+from gender_classifier import GenderClassifier
+
+
+CAMERA_PIXEL_WIDTH = 640
+CAMERA_PIXEL_HEIGHT = 480
+
+detected_people = []
+classifier = None
+
+def image_callback(data):
+    global detected_people
+    if len(detected_people) == 0:
+        return
+    detected_genders = []
+    for person in detected_people:
+        cv_bridge = CvBridge()
+        try:
+            cv_image = cv_bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            print(e)
+
+        crop_person = cv_image[person.tl_y:person.tl_y + person.height,
+                   person.tl_x:person.tl_x + person.width]  # Crop from x, y, w, h -> 100, 200, 300, 400
+
+        crop_img = classifier.crop_face(crop_person)
+        img_resize = cv2.resize(crop_img, (classifier.RESIZE_FINAL, classifier.RESIZE_FINAL))
+
+        face_pub.publish(cv_bridge.cv2_to_imgmsg(crop_img, "bgr8"))
+
+        best_choice = classifier.classify(img_resize)
+        detected_genders.append(best_choice[0])
+
+    gender_pub.publish(','.join(detected_genders))
+    detected_people = []
+
+
+def detections_callback(data):
+    global detected_people
+    detected_people = []
+    for detected_object in data.detections:
+        if detected_object.class_name != 'person':
+            continue
+
+        left = int(detected_object.x - detected_object.width / 2.0)
+        right = int(detected_object.x + detected_object.width / 2.0)
+        top = int(detected_object.y - detected_object.height / 2.0)
+        bot = int(detected_object.y + detected_object.height / 2.0)
+
+        if right > CAMERA_PIXEL_WIDTH - 1:
+            right = CAMERA_PIXEL_WIDTH - 1
+        if bot > CAMERA_PIXEL_HEIGHT - 1:
+            bot = CAMERA_PIXEL_HEIGHT - 1
+
+        tl_x = 0 if left < 0 else left
+        tl_y = 0 if top < 0 else top
+        width_bound = right - tl_x
+        height_bound = bot - tl_y
+
+        detected_people.append(Person(tl_x, tl_y, width_bound, height_bound))
+
+
+if __name__ == '__main__':
+    rospy.init_node('gender_classifier')
+    classifier = GenderClassifier()
+    face_pub = rospy.Publisher('/villa/face', Image, queue_size=1)
+    gender_pub = rospy.Publisher('/villa/gender_identification', String, queue_size=1)
+    image_sub = rospy.Subscriber("/hsrb/head_center_camera/image_rect", Image, image_callback)
+    detections_sub = rospy.Subscriber("/yolo2_node/detections", Detections, detections_callback)
+    rospy.spin()

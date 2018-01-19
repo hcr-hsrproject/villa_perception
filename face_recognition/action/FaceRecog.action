@@ -1,0 +1,9 @@
+#goal definition
+bool start
+---
+#result definition
+string name
+bool Isknownperson
+---
+#feedback
+bool num_face

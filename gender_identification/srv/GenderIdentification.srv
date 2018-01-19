@@ -1,0 +1,4 @@
+sensor_msgs/Image input_img
+---
+string detected_gender
+float32 confidence
