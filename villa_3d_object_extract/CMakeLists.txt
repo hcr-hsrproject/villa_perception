@@ -68,18 +68,25 @@ set(STD_SRCS_GRABCUT
 add_executable(tmc_yolo_3D_extractor_kinect1 ${STD_SRCS} src/tmc_yolo_3D_extractor_kinect1.cpp)
 target_link_libraries(tmc_yolo_3D_extractor_kinect1 ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
+
 add_executable(tmc_yolo_3D_extractor ${STD_SRCS} src/tmc_yolo_3D_extractor.cpp)
 target_link_libraries(tmc_yolo_3D_extractor ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+
 
 add_executable(tmc_yolo_3D_extractor_roscallserv ${STD_SRCS_GRABCUT} src/tmc_yolo_3D_extractor_roscallserv.cpp)
 add_dependencies (tmc_yolo_3D_extractor_roscallserv villa_3d_object_extract_generate_messages_cpp )
 target_link_libraries(tmc_yolo_3D_extractor_roscallserv ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
+
 add_executable(tmc_cluster_based_yolo_3D_extractor src/tmc_cluster_based_yolo_3D_extractor.cpp)
 target_link_libraries(tmc_cluster_based_yolo_3D_extractor ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
+
 add_executable(human_tmc_cluster_based_yolo_3D_extractor src/human_tmc_cluster_based_yolo_3D_extractor.cpp)
 target_link_libraries(human_tmc_cluster_based_yolo_3D_extractor ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+
+add_executable(chair_tmc_cluster_based_yolo_3D_extractor src/chair_tmc_cluster_based_yolo_3D_extractor.cpp)
+target_link_libraries(chair_tmc_cluster_based_yolo_3D_extractor ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
 add_executable(tracking src/Tracking.cpp src/TrackingBoxDObject.cpp src/TrackingBoxPersonDesc.cpp src/Cluster3DBoundingBox.cpp src/Mean3DTrackingBox)
 target_link_libraries(tracking ${catkin_LIBRARIES} ${PCL_LIBRARIES})

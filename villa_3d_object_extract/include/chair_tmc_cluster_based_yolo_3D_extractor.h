@@ -40,7 +40,7 @@
 #define VOXEL_SIZE 0.01 //1cm voxels
 #define VEL_CRITERION 0.001
 #define CLUSTER_DIST_TOLERANCE 0.15
-#define HUMAN_BOXES_NAMESPACE "human_boxes"
+#define CHAIR_BOXES_NAMESPACE "chair_boxes"
 #define CLUSTER_BOXES_NAMESPACE "cluster_3D_boxes"
 #define dobject_BOXES_NAMESPACE "dobject_3D_boxes"
 

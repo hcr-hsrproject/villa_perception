@@ -23,6 +23,8 @@
 #include <message_filters/subscriber.h>
 #include <message_filters/synchronizer.h>
 #include <message_filters/sync_policies/approximate_time.h>
+#include <string>
+
 
 #define CAMERA_PIXEL_WIDTH 640
 #define CAMERA_PIXEL_HEIGHT 480
@@ -249,7 +251,7 @@ bool Bounding_Box_dobject::init_vars(){
       color.push_back(r); color.push_back(g); color.push_back(b); 
       colormap[color_num] = color;
 
-      printf("color_num: %d r: %d g: %d b: %d \n", color_num, r, g, b);
+      // printf("color_num: %d r: %d g: %d b: %d \n", color_num, r, g, b);
 
     }
 

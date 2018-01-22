@@ -1,4 +1,4 @@
-#include <human_tmc_cluster_based_yolo_3D_extractor.h>
+#include <chair_tmc_cluster_based_yolo_3D_extractor.h>
 
 
 
@@ -79,7 +79,6 @@ bool Bounding_Box_dobject::init_vars(){
       colormap[color_num] = color;
 
       // printf("color_num: %d r: %d g: %d b: %d \n", color_num, r, g, b);
-
     }
 
     if (ferror(fp) != 0 || fclose(fp) != 0){
@@ -98,9 +97,7 @@ bool Bounding_Box_dobject::init_vars(){
     isMoving=false;
     Head_vel.resize(2,0.0);
     IsHeadMoving=false;
-
 }
-
 
 Bounding_Box_dobject::~Bounding_Box_dobject(){}
 
@@ -112,12 +109,12 @@ void Bounding_Box_dobject::yolo_detected_obj_callback(const tmc_yolo2_ros::Detec
 	int obj_idx=0;
     int number_of_objects = objects.size();
     boxes.clear();
-    std::string person_str ("person");
+    std::string chair_str ("chair");
 
     if(!IsHeadMoving){
     for(size_t i = 0; i < objects.size(); i++){
 
-    	 if(person_str.compare(objects[i].class_name)== 0)			//when detection result is human
+    	 if(chair_str.compare(objects[i].class_name)== 0)			//when detection result is human
 	     {	
 	        // std::cout << "Object " << i+1 << std::endl;
 	        // std::cout << "    Class Name:" << objects[i].class_name << std::endl;
@@ -141,7 +138,6 @@ void Bounding_Box_dobject::yolo_detected_obj_callback(const tmc_yolo2_ros::Detec
 	        int width_bound = right - tl_x;
 	        int height_bound = bot - tl_y;
 
-     
 	        // std::cout << "    TL_x index:" << tl_x << std::endl;
 	        // std::cout << "    TL_y index:" << tl_y << std::endl;        
 	        // std::cout << "   width_bound:" << width_bound << std::endl; 
@@ -149,20 +145,22 @@ void Bounding_Box_dobject::yolo_detected_obj_callback(const tmc_yolo2_ros::Detec
 
 			//boxes.push_back(BoundingBox_Person_Desc( tl_x, tl_y,  width_bound,  height_bound));
         	// ROS_INFO("I detected person : idx : %d", i);
+
         	boxes.push_back(BoundingBox_Person_Desc( tl_x, tl_y,  width_bound,  height_bound));
         	obj_idx++;
        	}
        	
-       	if(person_str.compare(objects[i].class_name)!= 0)
+       	if(chair_str.compare(objects[i].class_name)!= 0)
         {	
         	 // ROS_INFO("I detected but it is not person : idx : %d", i);
         	 // std::cout << "    Class Name:" << objects[i].class_name << std::endl;
+        	
         	// boxes.push_back(BoundingBox_Person_Desc( tl_x, tl_y,  width_bound,  height_bound));
        	}
         
     }
     
-    std::cout << "Number of human detected: " << boxes.size() <<std::endl;
+    std::cout << "Number of chair detected: " << boxes.size() <<std::endl;
     std_msgs::Int8 num_msg;
     if(dobject_boxes_array.markers.size() >= boxes.size()){
         num_msg.data = boxes.size();
@@ -566,13 +564,13 @@ void Bounding_Box_dobject::extract_candidate_dobject_boxes(){
 	} // Finished with this DN box
 }
 
-
+//not in use
 visualization_msgs::Marker Bounding_Box_dobject::createHumanMarker(const std::string &array_namespace,
 																	   const double _x, const double _y, const double _z, 
 																  	   const int &marker_index ){
 
 
-	// std::cout<<"chair Creating : marker index :" <<marker_index<<std::endl;
+	// std::cout<<"Humamarker Creating : marker index :" <<marker_index<<std::endl;
 	geometry_msgs::Vector3Stamped gV, tV;
 
     gV.vector.x = _x;
@@ -587,7 +585,7 @@ visualization_msgs::Marker Bounding_Box_dobject::createHumanMarker(const std::st
 	visualization_msgs::Marker marker_human;
 	marker_human.header.frame_id = "/map"; 
     marker_human.header.stamp = ros::Time::now();
-    marker_human.ns = HUMAN_BOXES_NAMESPACE;
+    marker_human.ns = CHAIR_BOXES_NAMESPACE;
     marker_human.id = marker_index;
 
     uint32_t shape = visualization_msgs::Marker::SPHERE;
@@ -609,12 +607,12 @@ visualization_msgs::Marker Bounding_Box_dobject::createHumanMarker(const std::st
 
     //ROS_INFO("temp dist : %.3lf, temp dist2 : %.3lf, temp dist3 : %.3lf",temp_dist,temp_dist2,temp_dist3);
     marker_human.scale.x = std::abs(temp_dist);
-    marker_human.scale.y = std::abs(temp_dist2);
-    marker_human.scale.z = std::abs(temp_dist3);
+    // marker_human.scale.y = std::abs(temp_dist2);
+    // marker_human.scale.z = std::abs(temp_dist3);
 
-    marker_human.color.r = 1.0;
-    marker_human.color.g = 1.0;
-    marker_human.color.b = 0.2;
+    marker_human.color.r = 0.3;
+    marker_human.color.g = 0.0;
+    marker_human.color.b = 0.9;
     marker_human.color.a = 0.85;
 
     // human_markers_array.markers.push_back(marker_human);
@@ -692,9 +690,9 @@ visualization_msgs::Marker Bounding_Box_dobject::createHumanMarker(const std::st
 
 	visualization_msgs::Marker marker_human;
 	// marker_human.header.frame_id = "/map"; 
-    marker_human.header.frame_id ="/head_rgbd_sensor_rgb_frame";
+	 marker_human.header.frame_id ="/head_rgbd_sensor_rgb_frame";
     marker_human.header.stamp = ros::Time::now();
-    marker_human.ns = HUMAN_BOXES_NAMESPACE;
+    marker_human.ns = CHAIR_BOXES_NAMESPACE;
     marker_human.id = marker_index;
 
     uint32_t shape = visualization_msgs::Marker::SPHERE;
@@ -724,11 +722,12 @@ visualization_msgs::Marker Bounding_Box_dobject::createHumanMarker(const std::st
     marker_human.scale.y = std::abs(temp_dist2);
     marker_human.scale.z = std::abs(temp_dist3);
 
-    marker_human.color.r = 1.0;
-    marker_human.color.g = 1.0;
-    marker_human.color.b = 0.2;
+    marker_human.color.r = 0.1;
+    marker_human.color.g = 0.2;
+    marker_human.color.b = 0.9;
     marker_human.color.a = 0.85;
 
+    // human_markers_array.markers.push_back(marker_human);
     // ROS_INFO("human_markers_array_pushback");
     return marker_human;
 
@@ -982,8 +981,8 @@ void Bounding_Box_dobject::publish_human_boxes(){
     int marker_index = 0;
 	for(size_t i = 0; i < dobject_3D_boxes.size() ; i++){
 		int apply_color = marker_index;
-			human_markers_array.markers.push_back(createHumanMarker(HUMAN_BOXES_NAMESPACE, dobject_3D_boxes[i], marker_index, apply_color));
-			createHumanPositionMarker(HUMAN_BOXES_NAMESPACE, dobject_3D_boxes[i], marker_index, apply_color);
+			human_markers_array.markers.push_back(createHumanMarker(CHAIR_BOXES_NAMESPACE, dobject_3D_boxes[i], marker_index, apply_color));
+			createHumanPositionMarker(CHAIR_BOXES_NAMESPACE, dobject_3D_boxes[i], marker_index, apply_color);
 			marker_index++;
 		// ROS_INFO("dObject_3D_boxes_size : %d", i);
 	}
@@ -1004,7 +1003,7 @@ void Bounding_Box_dobject::delete_previous_human_markers(){
     marker.header.stamp = ros::Time::now();
     // Set the namespace and id for this marker.  This serves to create a unique ID
     // Any marker sent with the same namespace and id will overwrite the old one
-    marker.ns = HUMAN_BOXES_NAMESPACE;//"cluster_3D_boxes";
+    marker.ns = CHAIR_BOXES_NAMESPACE;//"cluster_3D_boxes";
     marker.id = 0;
     marker.action = 3;					//visualization_msgs::Marker::DELETEALL;
     human_markers_array.markers.push_back(marker);
@@ -1050,7 +1049,7 @@ void Bounding_Box_dobject::global_pose_callback(const geometry_msgs::PoseStamped
 
 int main(int argc, char **argv)
 {
-	ros::init(argc, argv, "villa_3D_object_bounding_boxes_human");
+	ros::init(argc, argv, "villa_3D_object_bounding_boxes_chair");
 	Bounding_Box_dobject bbh_obj;
 
 
@@ -1067,7 +1066,7 @@ int main(int argc, char **argv)
 	bbh_obj.One_People_pos_pub=bbh_obj.node.advertise<people_msgs::PositionMeasurement>("/people_tracker_measurements", 0 );
 	//mk
 	bbh_obj.human_box_pub=bbh_obj.node.advertise<visualization_msgs::Marker>( "/human_target", 0 );
-	bbh_obj.human_boxes_array_pub=bbh_obj.node.advertise<visualization_msgs::MarkerArray>( "/human_boxes", 0 );
+	bbh_obj.human_boxes_array_pub=bbh_obj.node.advertise<visualization_msgs::MarkerArray>( "/chair_boxes", 0 );
 	//
     
 	bbh_obj.dobject_points_pub = bbh_obj.node.advertise<pcl::PointCloud<pcl::PointXYZRGB> >( "/dobject_voxels", 0 );

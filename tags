@@ -15,7 +15,6 @@ ACUTE1	activity_detection/scripts/activityDetection_action.py	/^ACUTE1 = 45$/;"	
 ACUTE2	activity_detection/scripts/activityDetection_action.py	/^ACUTE2 = 80$/;"	v
 ADDR	rtabmap/corelib/src/sqlite3/sqlite3.c	9019;"	d	file:
 AGE_LIST	age_identification/scripts/age_classifier.py	/^AGE_LIST = ['(0, 2)', '(4, 6)', '(8, 12)', '(15, 20)', '(25, 32)', '(38, 43)', '(48, 53)', '(60, 100)']$/;"	v
-AGE_LIST	face_recognition/scripts/age_classifier.py	/^AGE_LIST = ['(0, 2)', '(4, 6)', '(8, 12)', '(15, 20)', '(25, 32)', '(38, 43)', '(48, 53)', '(60, 100)']$/;"	v
 AGE_LIST	villa_rude_carnie_ros/src/rude_carnie/guess.py	/^AGE_LIST = ['(0, 2)','(4, 6)','(8, 12)','(15, 20)','(25, 32)','(38, 43)','(48, 53)','(60, 100)']$/;"	v
 AGGREGATE	rtabmap/corelib/src/sqlite3/sqlite3.c	10470;"	d	file:
 AI2	tmc_darknet_ros/tmc_darknet/src/convolutional_layer.c	16;"	d	file:
@@ -65,7 +64,6 @@ AddEntry	rtabmap/corelib/src/SimpleIni.h	/^CSimpleIniTempl<SI_CHAR,SI_STRLESS,SI
 AdjustTree	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int AdjustTree($/;"	f	file:
 Affine3DEstimatorCallback	rtabmap/corelib/src/opencv/solvepnp.cpp	/^class Affine3DEstimatorCallback : public PointSetRegistrator::Callback$/;"	c	namespace:cv3	file:
 AgeClassifier	age_identification/scripts/age_classifier.py	/^class AgeClassifier:$/;"	c
-AgeClassifier	face_recognition/scripts/age_classifier.py	/^class AgeClassifier:$/;"	c
 AggInfo	rtabmap/corelib/src/sqlite3/sqlite3.c	/^struct AggInfo {$/;"	s	file:
 AggInfo	rtabmap/corelib/src/sqlite3/sqlite3.c	/^typedef struct AggInfo AggInfo;$/;"	t	typeref:struct:AggInfo	file:
 AggInfo_col	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  struct AggInfo_col {    \/* For each column used in source tables *\/$/;"	s	struct:AggInfo	file:
@@ -128,46 +126,52 @@ BOUNDING_BOX_D_OBJECT_H	villa_3d_object_extract/include/BoundingBoxDObject.h	2;"
 BOUNDING_BOX_D_OBJECT_H	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	2;"	d
 BOUNDING_BOX_PERSON_DESC_H	villa_3d_object_extract/include/BoundingBoxPersonDesc.h	2;"	d
 BOUNDING_BOX_PERSON_DESC_H	villa_3d_object_extract/include/TrackingBoxPersonDesc.h	2;"	d
+BOX_DEPTH_MAX_TOL	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	57;"	d
 BOX_DEPTH_MAX_TOL	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	57;"	d
 BOX_DEPTH_MAX_TOL	villa_3d_object_extract/src/Tracking.cpp	35;"	d	file:
 BOX_DEPTH_MAX_TOL	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	43;"	d	file:
-BOX_DEPTH_MAX_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	44;"	d	file:
+BOX_DEPTH_MAX_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	46;"	d	file:
 BOX_DEPTH_MAX_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	40;"	d	file:
 BOX_DEPTH_MAX_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	40;"	d	file:
 BOX_DEPTH_MAX_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	42;"	d	file:
+BOX_DEPTH_TOL	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	53;"	d
 BOX_DEPTH_TOL	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	53;"	d
 BOX_DEPTH_TOL	villa_3d_object_extract/src/Tracking.cpp	31;"	d	file:
 BOX_DEPTH_TOL	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	39;"	d	file:
-BOX_DEPTH_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	40;"	d	file:
+BOX_DEPTH_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	42;"	d	file:
 BOX_DEPTH_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	36;"	d	file:
 BOX_DEPTH_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	36;"	d	file:
 BOX_DEPTH_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	38;"	d	file:
 BOX_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/box.h	2;"	d
+BOX_HEIGHT_MAX_TOL	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	55;"	d
 BOX_HEIGHT_MAX_TOL	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	55;"	d
 BOX_HEIGHT_MAX_TOL	villa_3d_object_extract/src/Tracking.cpp	33;"	d	file:
 BOX_HEIGHT_MAX_TOL	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	41;"	d	file:
-BOX_HEIGHT_MAX_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	42;"	d	file:
+BOX_HEIGHT_MAX_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	44;"	d	file:
 BOX_HEIGHT_MAX_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	38;"	d	file:
 BOX_HEIGHT_MAX_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	38;"	d	file:
 BOX_HEIGHT_MAX_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	40;"	d	file:
+BOX_HEIGHT_TOL	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	51;"	d
 BOX_HEIGHT_TOL	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	51;"	d
 BOX_HEIGHT_TOL	villa_3d_object_extract/src/Tracking.cpp	29;"	d	file:
 BOX_HEIGHT_TOL	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	37;"	d	file:
-BOX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	38;"	d	file:
+BOX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	40;"	d	file:
 BOX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	34;"	d	file:
 BOX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	34;"	d	file:
 BOX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	36;"	d	file:
+BOX_WIDTH_MAX_TOL	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	56;"	d
 BOX_WIDTH_MAX_TOL	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	56;"	d
 BOX_WIDTH_MAX_TOL	villa_3d_object_extract/src/Tracking.cpp	34;"	d	file:
 BOX_WIDTH_MAX_TOL	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	42;"	d	file:
-BOX_WIDTH_MAX_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	43;"	d	file:
+BOX_WIDTH_MAX_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	45;"	d	file:
 BOX_WIDTH_MAX_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	39;"	d	file:
 BOX_WIDTH_MAX_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	39;"	d	file:
 BOX_WIDTH_MAX_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	41;"	d	file:
+BOX_WIDTH_TOL	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	52;"	d
 BOX_WIDTH_TOL	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	52;"	d
 BOX_WIDTH_TOL	villa_3d_object_extract/src/Tracking.cpp	30;"	d	file:
 BOX_WIDTH_TOL	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	38;"	d	file:
-BOX_WIDTH_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	39;"	d	file:
+BOX_WIDTH_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	41;"	d	file:
 BOX_WIDTH_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	35;"	d	file:
 BOX_WIDTH_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	35;"	d	file:
 BOX_WIDTH_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	37;"	d	file:
@@ -249,6 +253,8 @@ BoundingBox	rtabmap/app/android/jni/tango-gl/include/tango-gl/bounding_box.h	/^ 
 BoundingBox	rtabmap/app/android/jni/tango-gl/include/tango-gl/bounding_box.h	/^class BoundingBox {$/;"	c	namespace:tango_gl
 BoundingBox	rtabmap/corelib/src/rtflann/algorithms/kdtree_single_index.h	/^    typedef std::vector<Interval> BoundingBox;$/;"	t	class:rtflann::KDTreeSingleIndex
 BoundingBox_Person_Desc	villa_3d_object_extract/include/BoundingBoxPersonDesc.h	/^class BoundingBox_Person_Desc$/;"	c
+BoundingBox_Person_Desc	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^BoundingBox_Person_Desc::BoundingBox_Person_Desc(float _tl_x, float _tl_y, float _width, float _height):$/;"	f	class:BoundingBox_Person_Desc
+BoundingBox_Person_Desc	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^class BoundingBox_Person_Desc$/;"	c
 BoundingBox_Person_Desc	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^BoundingBox_Person_Desc::BoundingBox_Person_Desc(float _tl_x, float _tl_y, float _width, float _height):$/;"	f	class:BoundingBox_Person_Desc
 BoundingBox_Person_Desc	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^class BoundingBox_Person_Desc$/;"	c
 BoundingBox_Person_Desc	villa_3d_object_extract/src/BoundingBoxPersonDesc.cpp	/^BoundingBox_Person_Desc::BoundingBox_Person_Desc(float _tl_x, float _tl_y, float _width, float _height):$/;"	f	class:BoundingBox_Person_Desc
@@ -257,8 +263,10 @@ BoundingBox_Person_Desc	villa_3d_object_extract/src/deprecated/object_bounding_b
 BoundingBox_Person_Desc	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^BoundingBox_Person_Desc::BoundingBox_Person_Desc(float _tl_x, float _tl_y, float _width, float _height):$/;"	f	class:BoundingBox_Person_Desc
 BoundingBox_Person_Desc	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^class BoundingBox_Person_Desc$/;"	c	file:
 Bounding_Box_dobject	villa_3d_object_extract/include/BoundingBoxDObject.h	/^class Bounding_Box_dobject{$/;"	c
+Bounding_Box_dobject	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^class Bounding_Box_dobject{$/;"	c
 Bounding_Box_dobject	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^class Bounding_Box_dobject{$/;"	c
 Bounding_Box_dobject	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^Bounding_Box_dobject::Bounding_Box_dobject(): cloud(new pcl::PointCloud<pcl::PointXYZRGB>){$/;"	f	class:Bounding_Box_dobject
+Bounding_Box_dobject	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^Bounding_Box_dobject::Bounding_Box_dobject(): cloud(new pcl::PointCloud<pcl::PointXYZRGB>){$/;"	f	class:Bounding_Box_dobject
 Bounding_Box_dobject	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^Bounding_Box_dobject::Bounding_Box_dobject(): cloud(new pcl::PointCloud<pcl::PointXYZRGB>){$/;"	f	class:Bounding_Box_dobject
 Bounding_Box_dobject	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^class Bounding_Box_dobject{$/;"	c	file:
 Bounding_Box_dobject	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^Bounding_Box_dobject::Bounding_Box_dobject(): cloud(new pcl::PointCloud<pcl::PointXYZRGB>){$/;"	f	class:Bounding_Box_dobject
@@ -301,19 +309,21 @@ CAMERA_INTRINSICS_H	villa_calibration/include/CameraIntrinsics.h	2;"	d
 CAMERA_OPTIMIZATION_PARAMETERS_H	villa_calibration/include/CameraOptimizationParameters.h	2;"	d
 CAMERA_PIXEL_HEIGHT	gender_identification/scripts/gender_identification_server	/^CAMERA_PIXEL_HEIGHT = 480$/;"	v
 CAMERA_PIXEL_HEIGHT	gender_identification/scripts/gender_publisher	/^CAMERA_PIXEL_HEIGHT = 480$/;"	v
+CAMERA_PIXEL_HEIGHT	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	39;"	d
 CAMERA_PIXEL_HEIGHT	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	39;"	d
 CAMERA_PIXEL_HEIGHT	villa_3d_object_extract/src/BoundingBoxDObject.cpp	7;"	d	file:
 CAMERA_PIXEL_HEIGHT	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	7;"	d	file:
 CAMERA_PIXEL_HEIGHT	villa_3d_object_extract/src/TrackingBoxDObject.cpp	8;"	d	file:
 CAMERA_PIXEL_HEIGHT	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	27;"	d	file:
-CAMERA_PIXEL_HEIGHT	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	28;"	d	file:
+CAMERA_PIXEL_HEIGHT	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	30;"	d	file:
 CAMERA_PIXEL_WIDTH	gender_identification/scripts/gender_identification_server	/^CAMERA_PIXEL_WIDTH = 640$/;"	v
 CAMERA_PIXEL_WIDTH	gender_identification/scripts/gender_publisher	/^CAMERA_PIXEL_WIDTH = 640$/;"	v
+CAMERA_PIXEL_WIDTH	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	38;"	d
 CAMERA_PIXEL_WIDTH	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	38;"	d
 CAMERA_PIXEL_WIDTH	villa_3d_object_extract/src/BoundingBoxDObject.cpp	6;"	d	file:
 CAMERA_PIXEL_WIDTH	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	6;"	d	file:
 CAMERA_PIXEL_WIDTH	villa_3d_object_extract/src/TrackingBoxDObject.cpp	7;"	d	file:
-CAMERA_PIXEL_WIDTH	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	27;"	d	file:
+CAMERA_PIXEL_WIDTH	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	29;"	d	file:
 CAPTCHA_DATA	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    CLASSIFICATION_DATA, DETECTION_DATA, CAPTCHA_DATA, REGION_DATA, IMAGE_DATA, COMPARE_DATA, WRITING_DATA, SWAG_DATA, TAG_DATA, OLD_CLASSIFICATION_DATA, STUDY_DATA, DET_DATA, SUPER_DATA$/;"	e	enum:__anon84
 CASE	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	1338;"	d
 CASE	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	1356;"	d
@@ -323,6 +333,7 @@ CASE	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	4042;"	d
 CASE	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	4055;"	d
 CC	tmc_darknet_ros/tmc_darknet/Makefile	/^CC=gcc$/;"	m
 CFLAGS	tmc_darknet_ros/tmc_darknet/Makefile	/^CFLAGS=-Wall -Wfatal-errors $/;"	m
+CHAIR_BOXES_NAMESPACE	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	43;"	d
 CHECK_FOR_INTERRUPT	rtabmap/corelib/src/sqlite3/sqlite3.c	66586;"	d	file:
 CHECK_PAGE	rtabmap/corelib/src/sqlite3/sqlite3.c	40302;"	d	file:
 CHECK_PAGE	rtabmap/corelib/src/sqlite3/sqlite3.c	40313;"	d	file:
@@ -335,18 +346,20 @@ CLOUDVIEWER_H_	rtabmap/guilib/include/rtabmap/gui/CloudViewer.h	29;"	d
 CLUSTER_3D_BOUNDING_BOX_DISTANCE_COMPARE_H	villa_3d_object_extract/include/Cluster3DBoundingBoxDistanceCompare.h	2;"	d
 CLUSTER_3D_BOUNDING_BOX_H	villa_3d_object_extract/include/Cluster3DBoundingBox.h	2;"	d
 CLUSTER_3D_BOUNDING_BOX_H	villa_3d_object_extract/include/Mean3DTrackingBox.h	2;"	d
+CLUSTER_BOXES_NAMESPACE	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	44;"	d
 CLUSTER_BOXES_NAMESPACE	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	44;"	d
 CLUSTER_BOXES_NAMESPACE	villa_3d_object_extract/src/BoundingBoxDObject.cpp	15;"	d	file:
 CLUSTER_BOXES_NAMESPACE	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	15;"	d	file:
 CLUSTER_BOXES_NAMESPACE	villa_3d_object_extract/src/TrackingBoxDObject.cpp	16;"	d	file:
 CLUSTER_BOXES_NAMESPACE	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	30;"	d	file:
-CLUSTER_BOXES_NAMESPACE	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	31;"	d	file:
+CLUSTER_BOXES_NAMESPACE	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	33;"	d	file:
+CLUSTER_DIST_TOLERANCE	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	42;"	d
 CLUSTER_DIST_TOLERANCE	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	42;"	d
 CLUSTER_DIST_TOLERANCE	villa_3d_object_extract/src/BoundingBoxDObject.cpp	11;"	d	file:
 CLUSTER_DIST_TOLERANCE	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	11;"	d	file:
 CLUSTER_DIST_TOLERANCE	villa_3d_object_extract/src/TrackingBoxDObject.cpp	12;"	d	file:
 CLUSTER_DIST_TOLERANCE	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	29;"	d	file:
-CLUSTER_DIST_TOLERANCE	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	30;"	d	file:
+CLUSTER_DIST_TOLERANCE	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	32;"	d	file:
 CODEC1	rtabmap/corelib/src/sqlite3/sqlite3.c	39515;"	d	file:
 CODEC1	rtabmap/corelib/src/sqlite3/sqlite3.c	39521;"	d	file:
 CODEC2	rtabmap/corelib/src/sqlite3/sqlite3.c	39517;"	d	file:
@@ -429,10 +442,11 @@ CURSOR_INVALID	rtabmap/corelib/src/sqlite3/sqlite3.c	49958;"	d	file:
 CURSOR_REQUIRESEEK	rtabmap/corelib/src/sqlite3/sqlite3.c	49961;"	d	file:
 CURSOR_SKIPNEXT	rtabmap/corelib/src/sqlite3/sqlite3.c	49960;"	d	file:
 CURSOR_VALID	rtabmap/corelib/src/sqlite3/sqlite3.c	49959;"	d	file:
+CUTOFF_NUM	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	49;"	d
 CUTOFF_NUM	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	49;"	d
 CUTOFF_NUM	villa_3d_object_extract/src/Tracking.cpp	27;"	d	file:
 CUTOFF_NUM	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	35;"	d	file:
-CUTOFF_NUM	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	36;"	d	file:
+CUTOFF_NUM	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	38;"	d	file:
 CUTOFF_NUM	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	32;"	d	file:
 CUTOFF_NUM	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	32;"	d	file:
 CUTOFF_NUM	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	34;"	d	file:
@@ -541,9 +555,12 @@ CloudInfoPtr	rtabmap_ros/src/rviz/MapCloudDisplay.h	/^	typedef boost::shared_ptr
 CloudViewer	rtabmap/guilib/include/rtabmap/gui/CloudViewer.h	/^class RTABMAPGUI_EXP CloudViewer : public QVTKWidget$/;"	c	namespace:rtabmap
 CloudViewer	rtabmap/guilib/src/CloudViewer.cpp	/^CloudViewer::CloudViewer(QWidget *parent) :$/;"	f	class:rtabmap::CloudViewer
 Cluster3D_BoundingBox	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^class Cluster3D_BoundingBox{$/;"	c
+Cluster3D_BoundingBox	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^class Cluster3D_BoundingBox{$/;"	c
 Cluster3D_BoundingBox	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^class Cluster3D_BoundingBox{$/;"	c
 Cluster3D_BoundingBox	villa_3d_object_extract/src/Cluster3DBoundingBox.cpp	/^Cluster3D_BoundingBox::Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
 Cluster3D_BoundingBox	villa_3d_object_extract/src/Cluster3DBoundingBox.cpp	/^Cluster3D_BoundingBox::Cluster3D_BoundingBox(const float _x_min, const float _x_max, $/;"	f	class:Cluster3D_BoundingBox
+Cluster3D_BoundingBox	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^Cluster3D_BoundingBox::Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
+Cluster3D_BoundingBox	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^Cluster3D_BoundingBox::Cluster3D_BoundingBox(const float _x_min, const float _x_max, $/;"	f	class:Cluster3D_BoundingBox
 Cluster3D_BoundingBox	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^Cluster3D_BoundingBox::Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
 Cluster3D_BoundingBox	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^Cluster3D_BoundingBox::Cluster3D_BoundingBox(const float _x_min, const float _x_max, $/;"	f	class:Cluster3D_BoundingBox
 Cluster3D_BoundingBox	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^class Cluster3D_BoundingBox{$/;"	c	file:
@@ -553,6 +570,7 @@ Cluster3D_BoundingBox	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extr
 Cluster3D_BoundingBox	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^Cluster3D_BoundingBox::Cluster3D_BoundingBox(const float _x_min, const float _x_max, $/;"	f	class:Cluster3D_BoundingBox
 Cluster3D_BoundingBox	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^class Cluster3D_BoundingBox{$/;"	c	file:
 Cluster3D_BoundingBox_distance_compare	villa_3d_object_extract/include/Cluster3DBoundingBoxDistanceCompare.h	/^struct Cluster3D_BoundingBox_distance_compare {$/;"	s
+Cluster3D_BoundingBox_distance_compare	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^struct Cluster3D_BoundingBox_distance_compare {$/;"	s	file:
 Cluster3D_BoundingBox_distance_compare	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^struct Cluster3D_BoundingBox_distance_compare {$/;"	s	file:
 Cluster3D_BoundingBox_distance_compare	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^struct Cluster3D_BoundingBox_distance_compare {$/;"	s	file:
 Cluster3D_BoundingBox_distance_compare	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^struct Cluster3D_BoundingBox_distance_compare {$/;"	s	file:
@@ -655,12 +673,13 @@ DEGREE_2_RADIANS	rtabmap/app/android/jni/tango-gl/include/tango-gl/util.h	46;"	d
 DELTANEXTU16	rtabmap/corelib/src/rtflann/ext/lz4hc.c	107;"	d	file:
 DEMO	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/demo.h	2;"	d
 DEPS	tmc_darknet_ros/tmc_darknet/Makefile	/^DEPS = $(wildcard src\/*.h) Makefile$/;"	m
+DEPTH_MAX	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	59;"	d
 DEPTH_MAX	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	59;"	d
 DEPTH_MAX	villa_3d_object_extract/src/BoundingBoxDObject.cpp	13;"	d	file:
 DEPTH_MAX	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	13;"	d	file:
 DEPTH_MAX	villa_3d_object_extract/src/TrackingBoxDObject.cpp	14;"	d	file:
 DEPTH_MAX	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	45;"	d	file:
-DEPTH_MAX	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	46;"	d	file:
+DEPTH_MAX	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	48;"	d	file:
 DETECTION	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    DETECTION,$/;"	e	enum:__anon106
 DETECTION_DATA	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    CLASSIFICATION_DATA, DETECTION_DATA, CAPTCHA_DATA, REGION_DATA, IMAGE_DATA, COMPARE_DATA, WRITING_DATA, SWAG_DATA, TAG_DATA, OLD_CLASSIFICATION_DATA, STUDY_DATA, DET_DATA, SUPER_DATA$/;"	e	enum:__anon84
 DETECTION_LAYER_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/detection_layer.h	2;"	d
@@ -1062,7 +1081,6 @@ FaceDectectors	face_recognition/scripts/face_recog_service.py	/^class FaceDectec
 FaceDectectors	face_recognition/scripts/face_recog_srv_client.py	/^class FaceDectectors(object):$/;"	c
 FaceDectectors	face_recognition/scripts/face_service.py	/^class FaceDectectors(object):$/;"	c
 FaceDectectors	face_recognition/scripts/test_ros	/^class FaceDectectors(object):$/;"	c
-FaceDectectors	face_recognition/scripts/test_ros.bak	/^class FaceDectectors(object):$/;"	c
 FaceDectectors_photo	face_recognition/scripts/take_photo_server.py	/^class FaceDectectors_photo(object):$/;"	c
 FaceDetector	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^class FaceDetector(object):$/;"	c
 FaceDetector	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^class FaceDetector(object):$/;"	c
@@ -1072,9 +1090,8 @@ Face_manager	face_recognition/scripts/face_recog_action.py	/^	Face_manager = Fac
 Face_manager	face_recognition/scripts/face_recog_service.py	/^	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)$/;"	v	class:FaceDectectors
 Face_manager	face_recognition/scripts/face_recog_srv_client.py	/^	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)$/;"	v	class:FaceDectectors
 Face_manager	face_recognition/scripts/face_service.py	/^	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)$/;"	v	class:FaceDectectors
-Face_manager	face_recognition/scripts/take_photo_server.py	/^    Face_manager = FaceDectectors_photo(robot)$/;"	v	class:FaceDectectors_photo
+Face_manager	face_recognition/scripts/take_photo_server.py	/^    Face_manager = FaceDectectors_photo()$/;"	v	class:FaceDectectors_photo
 Face_manager	face_recognition/scripts/test_ros	/^	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)$/;"	v	class:FaceDectectors
-Face_manager	face_recognition/scripts/test_ros.bak	/^	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)$/;"	v	class:FaceDectectors
 Feature2D	rtabmap/corelib/include/rtabmap/core/Features2d.h	/^class RTABMAP_EXP Feature2D {$/;"	c	namespace:rtabmap
 Feature2D	rtabmap/corelib/src/Features2d.cpp	/^Feature2D::Feature2D(const ParametersMap & parameters) :$/;"	f	class:rtabmap::Feature2D
 FeatureIndex	rtabmap/corelib/src/rtflann/util/lsh_table.h	/^typedef uint32_t FeatureIndex;$/;"	t	namespace:rtflann::lsh
@@ -1486,12 +1503,13 @@ GRAPHVIEWER_H_	rtabmap/guilib/include/rtabmap/gui/GraphViewer.h	29;"	d
 GRAPH_DRAWABLE_H_	rtabmap/app/android/jni/graph_drawable.h	29;"	d
 GRAPH_FILE_NAME	rtabmap/corelib/src/Rtabmap.cpp	59;"	d	file:
 GRAPH_H_	rtabmap/corelib/include/rtabmap/core/Graph.h	29;"	d
-GREEN_COLOR	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	62;"	d
+GREEN_COLOR	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	61;"	d
+GREEN_COLOR	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	61;"	d
 GREEN_COLOR	villa_3d_object_extract/src/BoundingBoxDObject.cpp	18;"	d	file:
 GREEN_COLOR	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	18;"	d	file:
 GREEN_COLOR	villa_3d_object_extract/src/TrackingBoxDObject.cpp	19;"	d	file:
 GREEN_COLOR	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	48;"	d	file:
-GREEN_COLOR	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	49;"	d	file:
+GREEN_COLOR	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	51;"	d	file:
 GRU	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    GRU,$/;"	e	enum:__anon106
 GRU_LAYER_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/gru_layer.h	3;"	d
 GUIWRAPPER_H_	rtabmap_ros/src/GuiWrapper.h	29;"	d
@@ -1596,6 +1614,7 @@ Hash	rtabmap/corelib/src/sqlite3/sqlite3.c	/^struct Hash {$/;"	s	file:
 Hash	rtabmap/corelib/src/sqlite3/sqlite3.c	/^typedef struct Hash Hash;$/;"	t	typeref:struct:Hash	file:
 HashElem	rtabmap/corelib/src/sqlite3/sqlite3.c	/^struct HashElem {$/;"	s	file:
 HashElem	rtabmap/corelib/src/sqlite3/sqlite3.c	/^typedef struct HashElem HashElem;$/;"	t	typeref:struct:HashElem	file:
+Head_vel	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<double> Head_vel;$/;"	m	class:Bounding_Box_dobject
 Head_vel	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<double> Head_vel;$/;"	m	class:Bounding_Box_dobject
 Heap	rtabmap/corelib/src/rtflann/util/heap.h	/^    Heap(int size)$/;"	f	class:rtflann::Heap
 Heap	rtabmap/corelib/src/rtflann/util/heap.h	/^class Heap$/;"	c	namespace:rtflann
@@ -1644,6 +1663,7 @@ ISAUTOVACUUM	rtabmap/corelib/src/sqlite3/sqlite3.c	50041;"	d	file:
 ISAUTOVACUUM	rtabmap/corelib/src/sqlite3/sqlite3.c	50043;"	d	file:
 ISFINITE	rtabmap/corelib/src/OdometryF2M.cpp	50;"	d	file:
 ISFINITE	rtabmap/corelib/src/OdometryF2M.cpp	52;"	d	file:
+ISRobotMoving	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^bool Bounding_Box_dobject::ISRobotMoving(double _x, double _y, double _t)$/;"	f	class:Bounding_Box_dobject
 ISRobotMoving	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^bool Bounding_Box_dobject::ISRobotMoving(double _x, double _y, double _t)$/;"	f	class:Bounding_Box_dobject
 IS_BIG_INT	rtabmap/corelib/src/sqlite3/sqlite3.c	7884;"	d	file:
 IS_LOCK_ERROR	rtabmap/corelib/src/sqlite3/sqlite3.c	23281;"	d	file:
@@ -1726,6 +1746,7 @@ InvalidHandle	rtabmap/utilite/include/rtabmap/utilite/Posix/UThreadC.h	57;"	d
 InvalidHandle	rtabmap/utilite/include/rtabmap/utilite/Win32/UThreadC.h	84;"	d
 IsComment	rtabmap/corelib/src/SimpleIni.h	/^    inline bool IsComment(SI_CHAR ch) const {$/;"	f	class:CSimpleIniTempl
 IsEmpty	rtabmap/corelib/src/SimpleIni.h	/^    bool IsEmpty() const { return m_data.empty(); }$/;"	f	class:CSimpleIniTempl
+IsHeadMoving	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	bool IsHeadMoving;$/;"	m	class:Bounding_Box_dobject
 IsHeadMoving	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	bool IsHeadMoving;$/;"	m	class:Bounding_Box_dobject
 IsHiddenColumn	rtabmap/corelib/src/sqlite3/sqlite3.c	10719;"	d	file:
 IsHiddenColumn	rtabmap/corelib/src/sqlite3/sqlite3.c	10722;"	d	file:
@@ -1794,6 +1815,7 @@ Java_com_introlab_rtabmap_RTABMapLib_setupGraphic	rtabmap/app/android/jni/jni_in
 Join	rtabmap/utilite/include/rtabmap/utilite/Posix/UThreadC.h	/^    static int Join( Handle H )$/;"	f	class:UThreadC
 Join	rtabmap/utilite/include/rtabmap/utilite/UThread.h	/^    static int Join( Handle H )$/;"	f	class:UThread
 Join	rtabmap/utilite/include/rtabmap/utilite/Win32/UThreadC.h	/^    static int Join( const Handle &H )$/;"	f	class:UThreadC
+Joint_states_sub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber 		   Joint_states_sub;$/;"	m	class:Bounding_Box_dobject
 Joint_states_sub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber 		   Joint_states_sub;$/;"	m	class:Bounding_Box_dobject
 JournalFile	rtabmap/corelib/src/sqlite3/sqlite3.c	/^struct JournalFile {$/;"	s	file:
 JournalFile	rtabmap/corelib/src/sqlite3/sqlite3.c	/^typedef struct JournalFile JournalFile;$/;"	t	typeref:struct:JournalFile	file:
@@ -1813,10 +1835,11 @@ KDTreeSingleIndex	rtabmap/corelib/src/rtflann/algorithms/kdtree_single_index.h	/
 KDTreeSingleIndexParams	rtabmap/corelib/src/rtflann/algorithms/kdtree_single_index.h	/^    KDTreeSingleIndexParams(int leaf_max_size = 10, bool reorder = true)$/;"	f	struct:rtflann::KDTreeSingleIndexParams
 KDTreeSingleIndexParams	rtabmap/corelib/src/rtflann/algorithms/kdtree_single_index.h	/^struct KDTreeSingleIndexParams : public IndexParams$/;"	s	namespace:rtflann
 KEYPOINTITEM_H_	rtabmap/guilib/include/rtabmap/gui/KeypointItem.h	29;"	d
+KINECT_HEIGHT	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	47;"	d
 KINECT_HEIGHT	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	47;"	d
 KINECT_HEIGHT	villa_3d_object_extract/src/Tracking.cpp	25;"	d	file:
 KINECT_HEIGHT	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	33;"	d	file:
-KINECT_HEIGHT	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	34;"	d	file:
+KINECT_HEIGHT	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	36;"	d	file:
 KINECT_HEIGHT	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	30;"	d	file:
 KINECT_HEIGHT	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	30;"	d	file:
 KINECT_HEIGHT	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	32;"	d	file:
@@ -2140,10 +2163,11 @@ MAXPOOL	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    MAXPOOL,$/
 MAXPOOL_LAYER_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/maxpool_layer.h	2;"	d
 MAX_6BYTE	rtabmap/corelib/src/sqlite3/sqlite3.c	63747;"	d	file:
 MAX_DISTANCE	rtabmap/corelib/src/rtflann/ext/lz4.c	231;"	d	file:
-MAX_HEIGHT_TOL	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	65;"	d
+MAX_HEIGHT_TOL	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	62;"	d
+MAX_HEIGHT_TOL	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	62;"	d
 MAX_HEIGHT_TOL	villa_3d_object_extract/src/Tracking.cpp	39;"	d	file:
 MAX_HEIGHT_TOL	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	51;"	d	file:
-MAX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	52;"	d	file:
+MAX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	54;"	d	file:
 MAX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	44;"	d	file:
 MAX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	44;"	d	file:
 MAX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	46;"	d	file:
@@ -2734,6 +2758,7 @@ Ogre	rtabmap_ros/src/rviz/MapGraphDisplay.h	/^namespace Ogre$/;"	n
 OnTouchEvent	rtabmap/app/android/jni/RTABMapApp.cpp	/^void RTABMapApp::OnTouchEvent(int touch_count,$/;"	f	class:RTABMapApp
 OnTouchEvent	rtabmap/app/android/jni/scene.cpp	/^void Scene::OnTouchEvent(int touch_count,$/;"	f	class:Scene
 OnTouchEvent	rtabmap/app/android/jni/tango-gl/gesture_camera.cpp	/^void GestureCamera::OnTouchEvent(int touch_count, TouchEvent event, float x0,$/;"	f	class:tango_gl::GestureCamera
+One_People_pos_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  One_People_pos_pub;$/;"	m	class:Bounding_Box_dobject
 One_People_pos_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  One_People_pos_pub;$/;"	m	class:Bounding_Box_dobject
 Op	rtabmap/corelib/src/sqlite3/sqlite3.c	/^typedef struct VdbeOp Op;$/;"	t	typeref:struct:VdbeOp	file:
 OpHelp	rtabmap/corelib/src/sqlite3/sqlite3.c	22935;"	d	file:
@@ -2905,10 +2930,11 @@ PTRMAP_OVERFLOW2	rtabmap/corelib/src/sqlite3/sqlite3.c	50022;"	d	file:
 PTRMAP_PAGENO	rtabmap/corelib/src/sqlite3/sqlite3.c	49984;"	d	file:
 PTRMAP_PTROFFSET	rtabmap/corelib/src/sqlite3/sqlite3.c	49985;"	d	file:
 PTRMAP_ROOTPAGE	rtabmap/corelib/src/sqlite3/sqlite3.c	50019;"	d	file:
-PURPLE_COLOR	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	61;"	d
+PURPLE_COLOR	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	60;"	d
+PURPLE_COLOR	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	60;"	d
 PURPLE_COLOR	villa_3d_object_extract/src/Tracking.cpp	37;"	d	file:
 PURPLE_COLOR	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	47;"	d	file:
-PURPLE_COLOR	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	48;"	d	file:
+PURPLE_COLOR	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	50;"	d	file:
 PURPLE_COLOR	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	42;"	d	file:
 PURPLE_COLOR	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	42;"	d	file:
 PURPLE_COLOR	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	44;"	d	file:
@@ -2945,7 +2971,9 @@ PdfPlotItem	rtabmap/guilib/include/rtabmap/gui/PdfPlot.h	/^class RTABMAPGUI_EXP 
 PdfPlotItem	rtabmap/guilib/src/PdfPlot.cpp	/^PdfPlotItem::PdfPlotItem(float dataX, float dataY, float width, int childCount) :$/;"	f	class:rtabmap::PdfPlotItem
 PendingList	rtabmap/corelib/src/sqlite3/sqlite3.c	/^struct PendingList {$/;"	s	file:
 PendingList	rtabmap/corelib/src/sqlite3/sqlite3.c	/^typedef struct PendingList PendingList;$/;"	t	typeref:struct:PendingList	file:
+People_coordinate_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  People_coordinate_pub;		\/\/MK$/;"	m	class:Bounding_Box_dobject
 People_coordinate_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  People_coordinate_pub;		\/\/MK$/;"	m	class:Bounding_Box_dobject
+People_pos_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  People_pos_pub;$/;"	m	class:Bounding_Box_dobject
 People_pos_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  People_pos_pub;$/;"	m	class:Bounding_Box_dobject
 Person	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^class Person:$/;"	c
 PgFreeslot	rtabmap/corelib/src/sqlite3/sqlite3.c	/^struct PgFreeslot {$/;"	s	file:
@@ -5310,16 +5338,18 @@ VECTORIZE4_VEC_VEC	rtabmap/app/android/jni/third-party/include/glm/detail/_vecto
 VECTORIZE_VEC	rtabmap/app/android/jni/third-party/include/glm/detail/_vectorize.hpp	78;"	d
 VECTORIZE_VEC_SCA	rtabmap/app/android/jni/third-party/include/glm/detail/_vectorize.hpp	138;"	d
 VECTORIZE_VEC_VEC	rtabmap/app/android/jni/third-party/include/glm/detail/_vectorize.hpp	198;"	d
+VEL_CRITERION	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	41;"	d
 VEL_CRITERION	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	41;"	d
 VERSION_GTE_0_12_0	villa_rude_carnie_ros/src/rude_carnie/data.py	/^VERSION_GTE_0_12_0 = LooseVersion(tf.__version__) >= LooseVersion('0.12.0')$/;"	v
 VFUNCTION	rtabmap/corelib/src/sqlite3/sqlite3.c	10458;"	d	file:
 VILLAOCTOMAP_H	villa_octomap_mapping/villa_octomap_server/include/villa_octomap_server/VillaOctomap.h	3;"	d
+VOXEL_SIZE	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	40;"	d
 VOXEL_SIZE	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	40;"	d
 VOXEL_SIZE	villa_3d_object_extract/src/BoundingBoxDObject.cpp	9;"	d	file:
 VOXEL_SIZE	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	9;"	d	file:
 VOXEL_SIZE	villa_3d_object_extract/src/TrackingBoxDObject.cpp	10;"	d	file:
 VOXEL_SIZE	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	28;"	d	file:
-VOXEL_SIZE	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	29;"	d	file:
+VOXEL_SIZE	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	31;"	d	file:
 VPATH	tmc_darknet_ros/tmc_darknet/Makefile	/^VPATH=.\/src\/$/;"	m
 VTable	rtabmap/corelib/src/sqlite3/sqlite3.c	/^struct VTable {$/;"	s	file:
 VTable	rtabmap/corelib/src/sqlite3/sqlite3.c	/^typedef struct VTable VTable;$/;"	t	typeref:struct:VTable	file:
@@ -5666,7 +5696,6 @@ __has_extension	rtabmap/app/android/jni/third-party/include/glm/detail/setup.hpp
 __has_feature	rtabmap/app/android/jni/third-party/include/glm/detail/setup.hpp	488;"	d
 __init__	activity_detection/scripts/activityDetection_action.py	/^    def __init__(self, name):$/;"	m	class:ActivityDetection_Action
 __init__	age_identification/scripts/age_classifier.py	/^    def __init__(self):$/;"	m	class:AgeClassifier
-__init__	face_recognition/scripts/age_classifier.py	/^    def __init__(self):$/;"	m	class:AgeClassifier
 __init__	face_recognition/scripts/example_action.py	/^    def __init__(self, name):$/;"	m	class:FindObjectAction
 __init__	face_recognition/scripts/face_action_server.py	/^	def __init__(self, name, wait=0.0):$/;"	m	class:FaceDectector_Action
 __init__	face_recognition/scripts/face_photo_action.py	/^	def __init__(self, name, wait=0.0):$/;"	m	class:FaceDectector_Action
@@ -5675,9 +5704,8 @@ __init__	face_recognition/scripts/face_recog_manager.py	/^	def __init__(self, wa
 __init__	face_recognition/scripts/face_recog_service.py	/^	def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
 __init__	face_recognition/scripts/face_recog_srv_client.py	/^	def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
 __init__	face_recognition/scripts/face_service.py	/^	def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
-__init__	face_recognition/scripts/take_photo_server.py	/^    def __init__(self, robot, wait=0.0):$/;"	m	class:FaceDectectors_photo
-__init__	face_recognition/scripts/test_ros	/^    def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
-__init__	face_recognition/scripts/test_ros.bak	/^	def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
+__init__	face_recognition/scripts/take_photo_server.py	/^    def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors_photo
+__init__	face_recognition/scripts/test_ros	/^	def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
 __init__	gender_identification/scripts/gender_classifier.py	/^    def __init__(self):$/;"	m	class:GenderClassifier
 __init__	tmc_darknet_ros/tmc_yolo2_ros/src/tmc_yolo2_ros/yolo2_image_node.py	/^    def __init__(self):$/;"	m	class:Yolo2ImageNode
 __init__	villa_pointcloud_accumulator/src/accumulator.py	/^    def __init__(self, node_name='accumulator', srv_name='add_point_cloud', pub_name='villa_merged_point_cloud', rate=10):$/;"	m	class:PointCloudAccumulator
@@ -5689,7 +5717,7 @@ __init__	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^    def __init__(self,
 __init__	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def __init__(self):$/;"	m	class:ImageCoder
 __init__	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def __init__(self, model_name, basename = 'frontal-face', tgtdir = '.'):$/;"	m	class:FaceDetector
 __init__	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def __init__(self, tl_x, tl_y, width, height):$/;"	m	class:Person
-__localization_callback	face_recognition/scripts/task_speech.py	/^def __localization_callback(omni_base, detect_person, data):$/;"	f	file:
+__localization_callback	face_recognition/scripts/task_sppech.py	/^def __localization_callback(omni_base, detect_person, data):$/;"	f	file:
 _aAddHorizontalLine	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	QAction * _aAddHorizontalLine;$/;"	m	class:UPlot
 _aAddVerticalLine	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	QAction * _aAddVerticalLine;$/;"	m	class:UPlot
 _aAutoScreenCapture	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	QAction * _aAutoScreenCapture;$/;"	m	class:UPlot
@@ -6664,7 +6692,7 @@ acquire	rtabmap/utilite/include/rtabmap/utilite/USemaphore.h	/^	bool acquire(int
 acquire	rtabmap/utilite/include/rtabmap/utilite/USemaphore.h	/^	bool acquire(int n = 1, int ms = 0)$/;"	f	class:USemaphore
 acquireTry	rtabmap/utilite/include/rtabmap/utilite/USemaphore.h	/^	int acquireTry() const$/;"	f	class:USemaphore
 acquireTry	rtabmap/utilite/include/rtabmap/utilite/USemaphore.h	/^	int acquireTry(int n)$/;"	f	class:USemaphore
-act	face_recognition/scripts/task_speech.py	/^def act(robot):$/;"	f
+act	face_recognition/scripts/task_sppech.py	/^def act(robot):$/;"	f
 actionName	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static const char *actionName(u8 action){$/;"	f	file:
 activate	rtabmap_ros/src/costmap_2d/static_layer.cpp	/^void StaticLayer::activate()$/;"	f	class:rtabmap_ros::StaticLayer
 activate	tmc_darknet_ros/tmc_darknet/src/activations.c	/^float activate(float x, ACTIVATION a)$/;"	f
@@ -6821,7 +6849,6 @@ afpSetLock	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int afpSetLock($/;"	f	
 afpUnlock	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int afpUnlock(sqlite3_file *id, int eFileLock) {$/;"	f	file:
 afpfsByteRangeLock2FSCTL	rtabmap/corelib/src/sqlite3/sqlite3.c	25933;"	d	file:
 age	rtabmap/corelib/src/Memory.cpp	/^	int weight, age, id;$/;"	m	class:rtabmap::WeightAgeIdKey	file:
-age_classifier	face_recognition/scripts/take_photo_server.py	/^    age_classifier = AgeClassifier()$/;"	v	class:FaceDectectors_photo
 aggregate	rtabmap/corelib/src/util3d_features.cpp	/^std::multimap<int, cv::KeyPoint> aggregate($/;"	f	namespace:rtabmap::util3d
 aggregate	rtabmap/tools/EpipolarGeometry/main.cpp	/^std::multimap<int, cv::KeyPoint> aggregate(const std::list<int> & wordIds, const std::vector<cv::KeyPoint> & keypoints)$/;"	f
 aggregate_context	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  void * (*aggregate_context)(sqlite3_context*,int nBytes);$/;"	m	struct:sqlite3_api_routines	file:
@@ -7286,21 +7313,27 @@ bottom	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    float left, 
 bounding_box_	rtabmap/app/android/jni/tango-gl/include/tango-gl/mesh.h	/^  BoundingBox* bounding_box_;$/;"	m	class:tango_gl::Mesh
 bounding_box_clusters_3D	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	std::vector< std::vector<Cluster3D_BoundingBox> > bounding_box_clusters_3D; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject
 bounding_box_clusters_3D	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	std::vector< std::vector<Cluster3D_BoundingBox> > bounding_box_clusters_3D; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject_nicolas
+bounding_box_clusters_3D	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<Cluster3D_BoundingBox> > bounding_box_clusters_3D; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject
 bounding_box_clusters_3D	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<Cluster3D_BoundingBox> > bounding_box_clusters_3D; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject
 bounding_box_clusters_3D	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	std::vector< std::vector<Cluster3D_BoundingBox> > bounding_box_clusters_3D; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject	file:
 bounding_box_clusters_3D	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	std::vector< std::vector<Cluster3D_BoundingBox> > bounding_box_clusters_3D; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject	file:
+bounding_box_clusters_humans	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<Cluster3D_BoundingBox>  bounding_box_clusters_humans; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject
 bounding_box_clusters_humans	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<Cluster3D_BoundingBox>  bounding_box_clusters_humans; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject
+bounding_box_humans_3D	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<Cluster3D_BoundingBox> > bounding_box_humans_3D; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject
 bounding_box_humans_3D	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<Cluster3D_BoundingBox> > bounding_box_humans_3D; \/\/ each element is a bounding box which contains a vector of 3d boxes for the cluster$/;"	m	class:Bounding_Box_dobject
 bounding_box_points	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZRGB> > bounding_box_points;$/;"	m	class:Bounding_Box_dobject
 bounding_box_points	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZRGB> > bounding_box_points;$/;"	m	class:Bounding_Box_dobject_nicolas
+bounding_box_points	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZRGB> > bounding_box_points;$/;"	m	class:Bounding_Box_dobject
 bounding_box_points	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZRGB> > bounding_box_points;$/;"	m	class:Bounding_Box_dobject
 bounding_box_points	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	std::vector< pcl::PointCloud<pcl::PointXYZRGB> > bounding_box_points;$/;"	m	class:Bounding_Box_dobject	file:
 bounding_box_points	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	std::vector< pcl::PointCloud<pcl::PointXYZRGB> > bounding_box_points;$/;"	m	class:Bounding_Box_dobject	file:
 bounding_boxes_clusters	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	std::vector< std::vector<pcl::PointIndices> > bounding_boxes_clusters; \/\/ each element is a bounding box which contains a vector of cluster indices$/;"	m	class:Bounding_Box_dobject
 bounding_boxes_clusters	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	std::vector< std::vector<pcl::PointIndices> > bounding_boxes_clusters; \/\/ each element is a bounding box which contains a vector of cluster indices$/;"	m	class:Bounding_Box_dobject_nicolas
+bounding_boxes_clusters	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<pcl::PointIndices> > bounding_boxes_clusters; \/\/ each element is a bounding box which contains a vector of cluster indices$/;"	m	class:Bounding_Box_dobject
 bounding_boxes_clusters	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<pcl::PointIndices> > bounding_boxes_clusters; \/\/ each element is a bounding box which contains a vector of cluster indices$/;"	m	class:Bounding_Box_dobject
 bounding_boxes_clusters	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	std::vector< std::vector<pcl::PointIndices> > bounding_boxes_clusters; \/\/ each element is a bounding box which contains a vector of cluster indices$/;"	m	class:Bounding_Box_dobject	file:
 bounding_boxes_clusters	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	std::vector< std::vector<pcl::PointIndices> > bounding_boxes_clusters; \/\/ each element is a bounding box which contains a vector of cluster indices$/;"	m	class:Bounding_Box_dobject	file:
+bounding_boxes_humans	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<pcl::PointIndices> > bounding_boxes_humans; \/\/ each element is a bounding box which contains a vector of cluster indices$/;"	m	class:Bounding_Box_dobject
 bounding_boxes_humans	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<pcl::PointIndices> > bounding_boxes_humans; \/\/ each element is a bounding box which contains a vector of cluster indices$/;"	m	class:Bounding_Box_dobject
 bounding_max_	rtabmap/app/android/jni/tango-gl/include/tango-gl/bounding_box.h	/^  glm::vec3 bounding_max_;$/;"	m	class:tango_gl::BoundingBox
 bounding_min_	rtabmap/app/android/jni/tango-gl/include/tango-gl/bounding_box.h	/^  glm::vec3 bounding_min_;$/;"	m	class:tango_gl::BoundingBox
@@ -7311,34 +7344,42 @@ box	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/box.h	/^} box;$/;"	t	typeref
 box_intersection	tmc_darknet_ros/tmc_darknet/src/box.c	/^float box_intersection(box a, box b)$/;"	f
 box_iou	tmc_darknet_ros/tmc_darknet/src/box.c	/^float box_iou(box a, box b)$/;"	f
 box_label	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^} box_label;$/;"	t	typeref:struct:__anon85
+box_pos_size	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	int  box_pos_size;$/;"	m	class:Bounding_Box_dobject
 box_pos_size	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	int  box_pos_size;$/;"	m	class:Bounding_Box_dobject
+box_pos_vec	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<double> > box_pos_vec;$/;"	m	class:Bounding_Box_dobject
 box_pos_vec	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< std::vector<double> > box_pos_vec;$/;"	m	class:Bounding_Box_dobject
 box_rmse	tmc_darknet_ros/tmc_darknet/src/box.c	/^float box_rmse(box a, box b)$/;"	f
 box_union	tmc_darknet_ros/tmc_darknet/src/box.c	/^float box_union(box a, box b)$/;"	f
 box_x_center	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox
 box_x_center	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Mean3DTrackingBox
+box_x_center	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox
 box_x_center	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox
 box_x_center	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox	file:
 box_x_center	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox	file:
 box_x_size	villa_3d_object_extract/src/Cluster3DBoundingBox.cpp	/^float Cluster3D_BoundingBox::box_x_size(){$/;"	f	class:Cluster3D_BoundingBox
+box_x_size	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::box_x_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_x_size	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^float Cluster3D_BoundingBox::box_x_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_x_size	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::box_x_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_x_size	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::box_x_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_y_center	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox
 box_y_center	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Mean3DTrackingBox
+box_y_center	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox
 box_y_center	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox
 box_y_center	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox	file:
 box_y_center	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox	file:
 box_y_size	villa_3d_object_extract/src/Cluster3DBoundingBox.cpp	/^float Cluster3D_BoundingBox::box_y_size(){$/;"	f	class:Cluster3D_BoundingBox
+box_y_size	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::box_y_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_y_size	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^float Cluster3D_BoundingBox::box_y_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_y_size	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::box_y_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_y_size	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::box_y_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_z_center	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox
 box_z_center	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Mean3DTrackingBox
+box_z_center	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox
 box_z_center	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox
 box_z_center	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox	file:
 box_z_center	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float box_x_center; float box_y_center; float box_z_center;$/;"	m	class:Cluster3D_BoundingBox	file:
 box_z_size	villa_3d_object_extract/src/Cluster3DBoundingBox.cpp	/^float Cluster3D_BoundingBox::box_z_size(){$/;"	f	class:Cluster3D_BoundingBox
+box_z_size	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::box_z_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_z_size	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^float Cluster3D_BoundingBox::box_z_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_z_size	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::box_z_size(){$/;"	f	class:Cluster3D_BoundingBox
 box_z_size	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::box_z_size(){$/;"	f	class:Cluster3D_BoundingBox
@@ -7347,6 +7388,7 @@ boxes	tmc_darknet_ros/tmc_darknet/src/demo.c	/^static box *boxes;$/;"	v	file:
 boxes	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	std::vector<BoundingBox_Person_Desc> boxes;$/;"	m	class:Bounding_Box_dobject
 boxes	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	std::vector<BoundingBox_Person_Desc> boxes;$/;"	m	class:Bounding_Box_dobject_nicolas
 boxes	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	std::vector<TrackingBox_Person_Desc> boxes;$/;"	m	class:Tracking_Box_dobject
+boxes	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<BoundingBox_Person_Desc> boxes;$/;"	m	class:Bounding_Box_dobject
 boxes	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<BoundingBox_Person_Desc> boxes;$/;"	m	class:Bounding_Box_dobject
 boxes	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	std::vector<BoundingBox_Person_Desc> boxes;$/;"	m	class:Bounding_Box_dobject	file:
 boxes	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	std::vector<BoundingBox_Person_Desc> boxes;$/;"	m	class:Bounding_Box_dobject	file:
@@ -7675,7 +7717,6 @@ classifier	gender_identification/scripts/gender_identification_server	/^classifi
 classifier	gender_identification/scripts/gender_publisher	/^    classifier = GenderClassifier()$/;"	v
 classifier	gender_identification/scripts/gender_publisher	/^classifier = None$/;"	v
 classify	age_identification/scripts/age_classifier.py	/^    def classify(self, image_data):$/;"	m	class:AgeClassifier
-classify	face_recognition/scripts/age_classifier.py	/^    def classify(self, image_data):$/;"	m	class:AgeClassifier
 classify	gender_identification/scripts/gender_classifier.py	/^    def classify(self, image_data):$/;"	m	class:GenderClassifier
 classify	villa_rude_carnie_ros/src/rude_carnie/guess.py	/^def classify(sess, label_list, softmax_output, coder, images, image_file):$/;"	f
 cleanRemovedPoints	rtabmap/corelib/src/rtflann/algorithms/nn_index.h	/^    void cleanRemovedPoints()$/;"	f	class:rtflann::NNIndex
@@ -7772,6 +7813,7 @@ cloud	rtabmap/app/android/jni/RTABMapApp.h	/^		pcl::PointCloud<pcl::PointXYZRGB>
 cloud	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud;$/;"	m	class:Bounding_Box_dobject
 cloud	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud;$/;"	m	class:Bounding_Box_dobject_nicolas
 cloud	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud;$/;"	m	class:Tracking_Box_dobject
+cloud	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud;$/;"	m	class:Bounding_Box_dobject
 cloud	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud;$/;"	m	class:Bounding_Box_dobject
 cloud	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud;$/;"	m	class:Bounding_Box_dobject	file:
 cloud	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud;$/;"	m	class:Bounding_Box_dobject	file:
@@ -7818,6 +7860,7 @@ cloud_	rtabmap_ros/src/rviz/MapCloudDisplay.h	/^		boost::shared_ptr<rviz::PointC
 cloud_callback	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::cloud_callback(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 cloud_callback	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::cloud_callback(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject_nicolas
 cloud_callback	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::cloud_callback(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Tracking_Box_dobject
+cloud_callback	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::cloud_callback(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 cloud_callback	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::cloud_callback(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 cloud_callback	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::cloud_callback(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 cloud_callback	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::cloud_callback(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
@@ -7837,18 +7880,21 @@ clusterRadius	rtabmap/guilib/src/PostProcessingDialog.cpp	/^double PostProcessin
 clusterRadius_	rtabmap_ros/src/nodelets/obstacles_detection.cpp	/^	double clusterRadius_;$/;"	m	class:rtabmap_ros::ObstaclesDetection	file:
 cluster_boxes_array	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	visualization_msgs::MarkerArray cluster_boxes_array; $/;"	m	class:Bounding_Box_dobject
 cluster_boxes_array	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	visualization_msgs::MarkerArray cluster_boxes_array; $/;"	m	class:Bounding_Box_dobject_nicolas
+cluster_boxes_array	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	visualization_msgs::MarkerArray cluster_boxes_array; $/;"	m	class:Bounding_Box_dobject
 cluster_boxes_array	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	visualization_msgs::MarkerArray cluster_boxes_array; $/;"	m	class:Bounding_Box_dobject
 cluster_boxes_array	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	visualization_msgs::MarkerArray cluster_boxes_array; $/;"	m	class:Bounding_Box_dobject	file:
 cluster_boxes_array	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	visualization_msgs::MarkerArray cluster_boxes_array; $/;"	m	class:Bounding_Box_dobject	file:
 cluster_boxes_array_pub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Publisher            cluster_boxes_array_pub; \/\/bounding box for candidate dobjects$/;"	m	class:Bounding_Box_dobject
 cluster_boxes_array_pub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Publisher            cluster_boxes_array_pub; \/\/bounding box for candidate dobjects$/;"	m	class:Bounding_Box_dobject_nicolas
 cluster_boxes_array_pub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Publisher            cluster_boxes_array_pub; \/\/bounding box for candidate dobjects$/;"	m	class:Tracking_Box_dobject
+cluster_boxes_array_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher            cluster_boxes_array_pub; \/\/bounding box for candidate dobjects$/;"	m	class:Bounding_Box_dobject
 cluster_boxes_array_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher            cluster_boxes_array_pub; \/\/bounding box for candidate dobjects$/;"	m	class:Bounding_Box_dobject
 cluster_boxes_array_pub	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::Publisher            cluster_boxes_array_pub; \/\/bounding box for candidate dobjects$/;"	m	class:Bounding_Box_dobject	file:
 cluster_boxes_array_pub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Publisher            cluster_boxes_array_pub; \/\/bounding box for candidate dobjects$/;"	m	class:Bounding_Box_dobject	file:
 cluster_voxels_pub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Publisher 			  cluster_voxels_pub;	$/;"	m	class:Bounding_Box_dobject
 cluster_voxels_pub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Publisher 			  cluster_voxels_pub;	$/;"	m	class:Bounding_Box_dobject_nicolas
 cluster_voxels_pub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Publisher 			  cluster_voxels_pub;	$/;"	m	class:Tracking_Box_dobject
+cluster_voxels_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  cluster_voxels_pub;	$/;"	m	class:Bounding_Box_dobject
 cluster_voxels_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  cluster_voxels_pub;	$/;"	m	class:Bounding_Box_dobject
 cluster_voxels_pub	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::Publisher 			  cluster_voxels_pub;	$/;"	m	class:Bounding_Box_dobject	file:
 cluster_voxels_pub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Publisher 			  cluster_voxels_pub;	$/;"	m	class:Bounding_Box_dobject	file:
@@ -7922,6 +7968,7 @@ color_virtual_property_	rtabmap_ros/src/rviz/MapGraphDisplay.h	/^  ColorProperty
 colormap	villa_3d_object_extract/include/BoundingBoxDObject.h	/^    std::map<int, std::vector<int> > colormap;$/;"	m	class:Bounding_Box_dobject
 colormap	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^    std::map<int, std::vector<int> > colormap;$/;"	m	class:Bounding_Box_dobject_nicolas
 colormap	villa_3d_object_extract/include/TrackingBoxDObject.h	/^    std::map<int, std::vector<int> > colormap;$/;"	m	class:Tracking_Box_dobject
+colormap	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::map<int, std::vector<int> > colormap;$/;"	m	class:Bounding_Box_dobject
 colormap	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::map<int, std::vector<int> > colormap;$/;"	m	class:Bounding_Box_dobject
 colormap	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^    std::map<int, std::vector<int> > colormap;$/;"	m	class:Bounding_Box_dobject	file:
 colormap	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^    std::map<int, std::vector<int> > colormap;$/;"	m	class:Bounding_Box_dobject	file:
@@ -8259,6 +8306,7 @@ createAndAddProjectionMap	rtabmap/guilib/src/MainWindow.cpp	/^void MainWindow::c
 createAndAddScanToMap	rtabmap/guilib/src/MainWindow.cpp	/^void MainWindow::createAndAddScanToMap(int nodeId, const Transform & pose, int mapId)$/;"	f	class:rtabmap::MainWindow
 createBoundingBoxMarker	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^visualization_msgs::Marker Bounding_Box_dobject::createBoundingBoxMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject
 createBoundingBoxMarker	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^visualization_msgs::Marker Bounding_Box_dobject_nicolas::createBoundingBoxMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject_nicolas
+createBoundingBoxMarker	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^visualization_msgs::Marker Bounding_Box_dobject::createBoundingBoxMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject
 createBoundingBoxMarker	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^visualization_msgs::Marker Bounding_Box_dobject::createBoundingBoxMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject
 createBoundingBoxMarker	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^visualization_msgs::Marker Bounding_Box_dobject::createBoundingBoxMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject
 createBoundingBoxMarker	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^visualization_msgs::Marker Bounding_Box_dobject::createBoundingBoxMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject
@@ -8269,7 +8317,9 @@ createCollation	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int createCollati
 createDefaultWorkingDirectory	rtabmap/corelib/src/Parameters.cpp	/^std::string Parameters::createDefaultWorkingDirectory()$/;"	f	class:rtabmap::Parameters
 createFeatureDetector	rtabmap/corelib/src/RegistrationVis.cpp	/^Feature2D * RegistrationVis::createFeatureDetector() const$/;"	f	class:rtabmap::RegistrationVis
 createFile	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int createFile(JournalFile *p){$/;"	f	file:
+createHumanMarker	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^visualization_msgs::Marker Bounding_Box_dobject::createHumanMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject
 createHumanMarker	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^visualization_msgs::Marker Bounding_Box_dobject::createHumanMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject
+createHumanPositionMarker	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::createHumanPositionMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject
 createHumanPositionMarker	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::createHumanPositionMarker(const std::string &array_namespace,$/;"	f	class:Bounding_Box_dobject
 createIcon	rtabmap/guilib/src/GraphViewer.cpp	/^QIcon createIcon(const QColor & color)$/;"	f	namespace:rtabmap
 createInstance	rtabmap/utilite/src/ULogger.cpp	/^ULogger* ULogger::createInstance()$/;"	f	class:ULogger
@@ -8315,7 +8365,6 @@ create_module_v2	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  int (*create_module_v
 create_module_v2	rtabmap/corelib/src/sqlite3/sqlite3ext.h	/^  int (*create_module_v2)(sqlite3*,const char*,const sqlite3_module*,void*,$/;"	m	struct:sqlite3_api_routines
 createdMeshes_	rtabmap/app/android/jni/RTABMapApp.h	/^	std::map<int, Mesh> createdMeshes_;$/;"	m	class:RTABMapApp
 crop_face	age_identification/scripts/age_classifier.py	/^    def crop_face(self, image_data):$/;"	m	class:AgeClassifier
-crop_face	face_recognition/scripts/age_classifier.py	/^    def crop_face(self, image_data):$/;"	m	class:AgeClassifier
 crop_face	face_recognition/scripts/face_action_server.py	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectector_Action
 crop_face	face_recognition/scripts/face_photo_action.py	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectector_Action
 crop_face	face_recognition/scripts/face_recog_action.py	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectector_Action
@@ -8323,12 +8372,13 @@ crop_face	face_recognition/scripts/face_recog_manager.py	/^	def crop_face(self,i
 crop_face	face_recognition/scripts/face_recog_service.py	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectectors
 crop_face	face_recognition/scripts/face_recog_srv_client.py	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectectors
 crop_face	face_recognition/scripts/face_service.py	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectectors
+crop_face	face_recognition/scripts/hc_test.py	/^def crop_face(image_data):$/;"	f
 crop_face	face_recognition/scripts/take_photo_server.py	/^    def crop_face(self, image_data):$/;"	m	class:FaceDectectors_photo
-crop_face	face_recognition/scripts/test_ros	/^    def crop_face(self,image_data):$/;"	m	class:FaceDectectors
-crop_face	face_recognition/scripts/test_ros.bak	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectectors
+crop_face	face_recognition/scripts/test_ros	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectectors
 crop_face	gender_identification/scripts/gender_classifier.py	/^    def crop_face(self, image_data):$/;"	m	class:GenderClassifier
 crop_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^image crop_image(image im, int dx, int dy, int w, int h)$/;"	f
 crop_layer	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/crop_layer.h	/^typedef layer crop_layer;$/;"	t
+cropped_face	face_recognition/scripts/hc_test.py	/^cropped_face=crop_face(image)$/;"	v
 csr	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  Fts3MultiSegReader csr;        \/* Must be right after "base" *\/$/;"	m	struct:Fts3auxCursor	file:
 csv_to_matrix	tmc_darknet_ros/tmc_darknet/src/matrix.c	/^matrix csv_to_matrix(char *filename)$/;"	f
 ctimeFunc	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void ctimeFunc($/;"	f	file:
@@ -8583,9 +8633,11 @@ deleteCell	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int deleteCell(Rtree *
 deleteLocation	rtabmap/corelib/src/Memory.cpp	/^void Memory::deleteLocation(int locationId, std::list<int> * deletedWords)$/;"	f	class:rtabmap::Memory
 deleteMemory	rtabmap/guilib/src/MainWindow.cpp	/^void MainWindow::deleteMemory()$/;"	f	class:rtabmap::MainWindow
 deleteUnusedWords	rtabmap/corelib/src/VWDictionary.cpp	/^void VWDictionary::deleteUnusedWords()$/;"	f	class:rtabmap::VWDictionary
+delete_previous_human_markers	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::delete_previous_human_markers(){$/;"	f	class:Bounding_Box_dobject
 delete_previous_human_markers	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::delete_previous_human_markers(){$/;"	f	class:Bounding_Box_dobject
 delete_previous_markers	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::delete_previous_markers(){$/;"	f	class:Bounding_Box_dobject
 delete_previous_markers	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::delete_previous_markers(){$/;"	f	class:Bounding_Box_dobject_nicolas
+delete_previous_markers	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::delete_previous_markers(){$/;"	f	class:Bounding_Box_dobject
 delete_previous_markers	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::delete_previous_markers(){$/;"	f	class:Bounding_Box_dobject
 delete_previous_markers	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::delete_previous_markers(){$/;"	f	class:Bounding_Box_dobject
 delete_previous_markers	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::delete_previous_markers(){$/;"	f	class:Bounding_Box_dobject
@@ -8740,6 +8792,7 @@ detect_in_thread	tmc_darknet_ros/tmc_darknet/src/demo.c	/^void *detect_in_thread
 detectedObjects_sub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject
 detectedObjects_sub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject_nicolas
 detectedObjects_sub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Tracking_Box_dobject
+detectedObjects_sub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject
 detectedObjects_sub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject
 detectedObjects_sub	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject	file:
 detectedObjects_sub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject	file:
@@ -8818,12 +8871,14 @@ distanceTravelled	rtabmap/corelib/include/rtabmap/core/OdometryInfo.h	/^	float d
 distanceTravelled_	rtabmap/corelib/include/rtabmap/core/Odometry.h	/^	float distanceTravelled_;$/;"	m	class:rtabmap::Odometry
 distance_	rtabmap/corelib/src/rtflann/algorithms/center_chooser.h	/^	const Distance distance_;$/;"	m	class:rtflann::CenterChooser
 distance_	rtabmap/corelib/src/rtflann/algorithms/nn_index.h	/^    Distance distance_;$/;"	m	class:rtflann::NNIndex
+distance_compare_obj	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^} distance_compare_obj;$/;"	v	typeref:struct:Cluster3D_BoundingBox_distance_compare
 distance_compare_obj	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^} distance_compare_obj;$/;"	v	typeref:struct:Cluster3D_BoundingBox_distance_compare
 distance_compare_obj	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^} distance_compare_obj;$/;"	v	typeref:struct:Cluster3D_BoundingBox_distance_compare
 distance_compare_obj	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^} distance_compare_obj;$/;"	v	typeref:struct:Cluster3D_BoundingBox_distance_compare
 distance_dependent_	rtabmap/corelib/src/pcl18/surface/organized_fast_mesh.h	/^      bool distance_dependent_;$/;"	m	class:pcl::OrganizedFastMesh
 distance_from_edge	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^static inline float distance_from_edge(int x, int max)$/;"	f
 distance_from_origin	villa_3d_object_extract/src/Cluster3DBoundingBox.cpp	/^float Cluster3D_BoundingBox::distance_from_origin() const{$/;"	f	class:Cluster3D_BoundingBox
+distance_from_origin	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::distance_from_origin() const{$/;"	f	class:Cluster3D_BoundingBox
 distance_from_origin	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^float Cluster3D_BoundingBox::distance_from_origin() const{$/;"	f	class:Cluster3D_BoundingBox
 distance_from_origin	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::distance_from_origin() const{$/;"	f	class:Cluster3D_BoundingBox
 distance_from_origin	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^float Cluster3D_BoundingBox::distance_from_origin() const{$/;"	f	class:Cluster3D_BoundingBox
@@ -8874,6 +8929,8 @@ dmat4x4	rtabmap/app/android/jni/third-party/include/glm/detail/type_mat.hpp	/^	t
 dn_extract_points	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::dn_extract_points(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 dn_extract_points	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::dn_extract_points(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject_nicolas
 dn_extract_points	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::dn_extract_points(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Tracking_Box_dobject
+dn_extract_points	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::dn_extract_points(){$/;"	f	class:Bounding_Box_dobject
+dn_extract_points	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::dn_extract_points(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 dn_extract_points	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::dn_extract_points(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 dn_extract_points	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::dn_extract_points(){$/;"	f	class:Bounding_Box_dobject
 dn_extract_points	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::dn_extract_points(const sensor_msgs::PointCloud2ConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
@@ -8887,29 +8944,34 @@ do_nms_sort	tmc_darknet_ros/tmc_darknet/src/box.c	/^void do_nms_sort(box *boxes,
 do_transform_cloud	villa_pointcloud_accumulator/src/tf2_sensor_msgs.py	/^def do_transform_cloud(cloud, transform):$/;"	f
 dobject_3D_boxes	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	std::vector<Cluster3D_BoundingBox> dobject_3D_boxes;$/;"	m	class:Bounding_Box_dobject
 dobject_3D_boxes	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	std::vector<Cluster3D_BoundingBox> dobject_3D_boxes;$/;"	m	class:Bounding_Box_dobject_nicolas
+dobject_3D_boxes	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<Cluster3D_BoundingBox> dobject_3D_boxes;$/;"	m	class:Bounding_Box_dobject
 dobject_3D_boxes	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<Cluster3D_BoundingBox> dobject_3D_boxes;$/;"	m	class:Bounding_Box_dobject
 dobject_3D_boxes	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	std::vector<Cluster3D_BoundingBox> dobject_3D_boxes;$/;"	m	class:Bounding_Box_dobject	file:
 dobject_3D_boxes	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	std::vector<Cluster3D_BoundingBox> dobject_3D_boxes;$/;"	m	class:Bounding_Box_dobject	file:
+dobject_BOXES_NAMESPACE	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	45;"	d
 dobject_BOXES_NAMESPACE	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	45;"	d
 dobject_BOXES_NAMESPACE	villa_3d_object_extract/src/BoundingBoxDObject.cpp	16;"	d	file:
 dobject_BOXES_NAMESPACE	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	16;"	d	file:
 dobject_BOXES_NAMESPACE	villa_3d_object_extract/src/TrackingBoxDObject.cpp	17;"	d	file:
 dobject_BOXES_NAMESPACE	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	31;"	d	file:
-dobject_BOXES_NAMESPACE	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	32;"	d	file:
+dobject_BOXES_NAMESPACE	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	34;"	d	file:
 dobject_boxes_array	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	visualization_msgs::MarkerArray dobject_boxes_array;$/;"	m	class:Bounding_Box_dobject
 dobject_boxes_array	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	visualization_msgs::MarkerArray dobject_boxes_array;$/;"	m	class:Bounding_Box_dobject_nicolas
+dobject_boxes_array	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	visualization_msgs::MarkerArray dobject_boxes_array;$/;"	m	class:Bounding_Box_dobject
 dobject_boxes_array	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	visualization_msgs::MarkerArray dobject_boxes_array;$/;"	m	class:Bounding_Box_dobject
 dobject_boxes_array	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	visualization_msgs::MarkerArray dobject_boxes_array;$/;"	m	class:Bounding_Box_dobject	file:
 dobject_boxes_array	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	visualization_msgs::MarkerArray dobject_boxes_array;$/;"	m	class:Bounding_Box_dobject	file:
 dobject_boxes_array_pub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Publisher 			  dobject_boxes_array_pub; \/\/bounding box for extracted dobject$/;"	m	class:Bounding_Box_dobject
 dobject_boxes_array_pub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Publisher 			  dobject_boxes_array_pub; \/\/bounding box for extracted dobject$/;"	m	class:Bounding_Box_dobject_nicolas
 dobject_boxes_array_pub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Publisher 			  dobject_boxes_array_pub; \/\/bounding box for extracted dobject$/;"	m	class:Tracking_Box_dobject
+dobject_boxes_array_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  dobject_boxes_array_pub; \/\/bounding box for extracted dobject$/;"	m	class:Bounding_Box_dobject
 dobject_boxes_array_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  dobject_boxes_array_pub; \/\/bounding box for extracted dobject$/;"	m	class:Bounding_Box_dobject
 dobject_boxes_array_pub	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::Publisher 			  dobject_boxes_array_pub; \/\/bounding box for extracted dobject$/;"	m	class:Bounding_Box_dobject	file:
 dobject_boxes_array_pub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Publisher 			  dobject_boxes_array_pub; \/\/bounding box for extracted dobject$/;"	m	class:Bounding_Box_dobject	file:
 dobject_points_pub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Publisher 			  dobject_points_pub; \/\/ publish point cloud of dobject points;$/;"	m	class:Bounding_Box_dobject
 dobject_points_pub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Publisher 			  dobject_points_pub; \/\/ publish point cloud of dobject points;$/;"	m	class:Bounding_Box_dobject_nicolas
 dobject_points_pub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Publisher 			  dobject_points_pub; \/\/ publish point cloud of dobject points;$/;"	m	class:Tracking_Box_dobject
+dobject_points_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  dobject_points_pub; \/\/ publish point cloud of dobject points;$/;"	m	class:Bounding_Box_dobject
 dobject_points_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  dobject_points_pub; \/\/ publish point cloud of dobject points;$/;"	m	class:Bounding_Box_dobject
 dobject_points_pub	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::Publisher 			  dobject_points_pub; \/\/ publish point cloud of dobject points;$/;"	m	class:Bounding_Box_dobject	file:
 dobject_points_pub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Publisher 			  dobject_points_pub; \/\/ publish point cloud of dobject points;$/;"	m	class:Bounding_Box_dobject	file:
@@ -8923,7 +8985,6 @@ dontloadscales	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    int
 doomed_	rtabmap/utilite/include/rtabmap/utilite/UDestroyer.h	/^    T* doomed_;$/;"	m	class:UDestroyer
 dot	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float dot;$/;"	m	struct:layer
 dot_cpu	tmc_darknet_ros/tmc_darknet/src/blas.c	/^float dot_cpu(int N, float *X, int INCX, float *Y, int INCY)$/;"	f
-dot_idx	face_recognition/scripts/test_ros	/^			dot_idx = img_name.rfind('.')$/;"	v	class:FaceDectectors
 dotlockCheckReservedLock	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int dotlockCheckReservedLock(sqlite3_file *id, int *pResOut) {$/;"	f	file:
 dotlockClose	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int dotlockClose(sqlite3_file *id) {$/;"	f	file:
 dotlockLock	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int dotlockLock(sqlite3_file *id, int eFileLock) {$/;"	f	file:
@@ -9305,20 +9366,24 @@ extractXYZCorrespondencesImpl	rtabmap/corelib/src/util3d_correspondences.cpp	/^i
 extractXYZCorrespondencesRANSAC	rtabmap/corelib/src/util3d_correspondences.cpp	/^void extractXYZCorrespondencesRANSAC(const std::multimap<int, pcl::PointXYZ> & words1,$/;"	f	namespace:rtabmap::util3d
 extract_candidate_dobject_boxes	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::extract_candidate_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_candidate_dobject_boxes	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::extract_candidate_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject_nicolas
+extract_candidate_dobject_boxes	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_candidate_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_candidate_dobject_boxes	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::extract_candidate_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_candidate_dobject_boxes	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_candidate_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_candidate_dobject_boxes	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_candidate_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_cifar	tmc_darknet_ros/tmc_darknet/src/cifar.c	/^void extract_cifar()$/;"	f
 extract_clusters	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::extract_clusters(){$/;"	f	class:Bounding_Box_dobject
 extract_clusters	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::extract_clusters(){$/;"	f	class:Bounding_Box_dobject_nicolas
+extract_clusters	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_clusters(){$/;"	f	class:Bounding_Box_dobject
 extract_clusters	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::extract_clusters(){$/;"	f	class:Bounding_Box_dobject
 extract_clusters	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_clusters(){$/;"	f	class:Bounding_Box_dobject
 extract_clusters	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_clusters(){$/;"	f	class:Bounding_Box_dobject
 extract_dobject_boxes	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::extract_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_dobject_boxes	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::extract_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject_nicolas
+extract_dobject_boxes	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_dobject_boxes	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::extract_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_dobject_boxes	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_dobject_boxes	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_dobject_boxes(){$/;"	f	class:Bounding_Box_dobject
+extract_human_boxes	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_human_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_human_boxes	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_human_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_means_dobject_boxes	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::extract_means_dobject_boxes(){$/;"	f	class:Tracking_Box_dobject
 extract_voxel	tmc_darknet_ros/tmc_darknet/src/voxel.c	/^void extract_voxel(char *lfile, char *rfile, char *prefix)$/;"	f
@@ -9476,9 +9541,7 @@ f64vec4	rtabmap/app/android/jni/third-party/include/glm/gtc/type_precision.hpp	/
 fErrorOrAux	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u8 fErrorOrAux;       \/* isError!=0 or pVdbe->pAuxData modified *\/$/;"	m	struct:sqlite3_context	file:
 face_action_client	face_recognition/scripts/client_test.py	/^def face_action_client():$/;"	f
 face_action_client	face_recognition/scripts/face_action_client.py	/^def face_action_client():$/;"	f
-face_detect	face_recognition/scripts/test_ros	/^		face_detect = face_detection_model('\/usr\/share\/opencv\/haarcascades\/haarcascade_frontalface_default.xml')$/;"	v	class:FaceDectectors
 face_detection_model	villa_rude_carnie_ros/src/rude_carnie/detect.py	/^def face_detection_model(model_path):$/;"	f
-face_files	face_recognition/scripts/test_ros	/^		face_files = face_detect.run(image_data)$/;"	v	class:FaceDectectors
 face_image	face_recognition/scripts/from PIL import Image.py	/^    face_image = image[top:bottom, left:right]$/;"	v
 face_locations	face_recognition/scripts/from PIL import Image.py	/^face_locations = face_recognition.face_locations(image)$/;"	v
 face_pub	gender_identification/scripts/gender_publisher	/^    face_pub = rospy.Publisher('\/villa\/face', Image, queue_size=1)$/;"	v
@@ -9527,7 +9590,6 @@ file_error	tmc_darknet_ros/tmc_darknet/src/utils.c	/^void file_error(char *s)$/;
 file_format	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u8 file_format;      \/* Schema format version for this file *\/$/;"	m	struct:Schema	file:
 filename	tmc_darknet_ros/tmc_darknet/src/compare.c	/^    char *filename;$/;"	m	struct:__anon78	file:
 filenames	rtabmap/corelib/src/CameraRGB.cpp	/^std::vector<std::string> CameraImages::filenames() const$/;"	f	class:rtabmap::CameraImages
-files	face_recognition/scripts/test_ros	/^		files = []$/;"	v	class:FaceDectectors
 fillDepthHoles	rtabmap/corelib/src/util2d.cpp	/^cv::Mat fillDepthHoles(const cv::Mat & registeredDepth, int maximumHoleSize, float errorRatio)$/;"	f	namespace:rtabmap::util2d
 fillEdgeInfo	rtabmap/corelib/src/toro3d/posegraph.hxx	/^void TreePoseGraph<Ops>::fillEdgeInfo(Edge* e){$/;"	f	class:TreePoseGraph
 fillEdgesInfo	rtabmap/corelib/src/toro3d/posegraph.hxx	/^void TreePoseGraph<Ops>::fillEdgesInfo(){$/;"	f	class:TreePoseGraph
@@ -10270,7 +10332,6 @@ genScanMinDepth_	rtabmap_ros/src/CoreWrapper.h	/^	double genScanMinDepth_;$/;"	m
 genScan_	rtabmap_ros/src/CoreWrapper.h	/^	bool genScan_;$/;"	m	class:CoreWrapper
 genType	rtabmap/app/android/jni/third-party/include/glm/detail/type_gentype.hpp	/^	struct genType$/;"	s	namespace:glm::detail
 gender_pub	gender_identification/scripts/gender_publisher	/^    gender_pub = rospy.Publisher('\/villa\/gender_identification', String, queue_size=1)$/;"	v
-gender_service	face_recognition/scripts/take_photo_server.py	/^    gender_service = rospy.ServiceProxy('gender_identification_srv', GenderIdentification)$/;"	v	class:FaceDectectors_photo
 generate3DLaserScans	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::generate3DLaserScans()$/;"	f	class:rtabmap::DatabaseViewer
 generate3DMap	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::generate3DMap()$/;"	f	class:rtabmap::DatabaseViewer
 generateColumnNames	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void generateColumnNames($/;"	f	file:
@@ -10428,6 +10489,7 @@ getDetectionRate	rtabmap/guilib/src/PreferencesDialog.cpp	/^float PreferencesDia
 getDigits	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int getDigits(const char *zDate, ...){$/;"	f	file:
 getDir	rtabmap/utilite/src/UDirectory.cpp	/^std::string UDirectory::getDir(const std::string & filePath)$/;"	f	class:UDirectory
 getDistance	rtabmap/corelib/src/Transform.cpp	/^float Transform::getDistance(const Transform & t) const$/;"	f	class:rtabmap::Transform
+getDistance	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^double Bounding_Box_dobject::getDistance(double _x, double _y, double _t)$/;"	f	class:Bounding_Box_dobject
 getDistance	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^double Bounding_Box_dobject::getDistance(double _x, double _y, double _t)$/;"	f	class:Bounding_Box_dobject
 getDistanceSquared	rtabmap/corelib/src/Transform.cpp	/^float Transform::getDistanceSquared(const Transform & t) const$/;"	f	class:rtabmap::Transform
 getDistanceToBorder	rtabmap/corelib/src/rtflann/algorithms/kmeans_index.h	/^    DistanceType getDistanceToBorder(DistanceType* p, DistanceType* c, DistanceType* q) const$/;"	f	class:rtflann::KMeansIndex
@@ -11073,8 +11135,11 @@ globalCount_	rtabmap_ros/src/rviz/InfoDisplay.h	/^	int globalCount_;$/;"	m	class
 globalOptimization_	rtabmap_ros/src/MapOptimizerNode.cpp	/^	bool globalOptimization_;$/;"	m	class:MapOptimizer	file:
 globalPathPub_	rtabmap_ros/src/CoreWrapper.h	/^	ros::Publisher globalPathPub_;$/;"	m	class:CoreWrapper
 global_frame_	rtabmap_ros/src/costmap_2d/static_layer.h	/^  std::string global_frame_; \/\/\/< @brief The global frame for the costmap$/;"	m	class:rtabmap_ros::StaticLayer
+global_pos_sub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber 		   global_pos_sub;$/;"	m	class:Bounding_Box_dobject
 global_pos_sub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber 		   global_pos_sub;$/;"	m	class:Bounding_Box_dobject
+global_pose	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<double> global_pose;$/;"	m	class:Bounding_Box_dobject
 global_pose	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<double> global_pose;$/;"	m	class:Bounding_Box_dobject
+global_pose_callback	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::global_pose_callback(const geometry_msgs::PoseStamped::ConstPtr& msg)$/;"	f	class:Bounding_Box_dobject
 global_pose_callback	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::global_pose_callback(const geometry_msgs::PoseStamped::ConstPtr& msg)$/;"	f	class:Bounding_Box_dobject
 global_recover	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  int  (*global_recover)(void);$/;"	m	struct:sqlite3_api_routines	file:
 global_recover	rtabmap/corelib/src/sqlite3/sqlite3ext.h	/^  int  (*global_recover)(void);$/;"	m	struct:sqlite3_api_routines
@@ -11254,6 +11319,7 @@ heap	rtabmap/corelib/src/rtflann/util/heap.h	/^    std::vector<Interval> heap;$/
 heap	rtabmap/corelib/src/rtflann/util/heap.h	/^    std::vector<T> heap;$/;"	m	class:rtflann::Heap
 height	villa_3d_object_extract/include/BoundingBoxPersonDesc.h	/^  float height;  $/;"	m	class:BoundingBox_Person_Desc
 height	villa_3d_object_extract/include/TrackingBoxPersonDesc.h	/^  float height;  $/;"	m	class:TrackingBox_Person_Desc
+height	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^  float height;  $/;"	m	class:BoundingBox_Person_Desc
 height	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^  float height;  $/;"	m	class:BoundingBox_Person_Desc
 height	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^  float height;  $/;"	m	class:BoundingBox_Person_Desc	file:
 height	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^  float height;  $/;"	m	class:BoundingBox_Person_Desc	file:
@@ -11544,9 +11610,13 @@ hue	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    float hue;$/
 hue_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^void hue_image(image im, float hue)$/;"	f
 huff_ac	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   stbi__huffman huff_ac[4];$/;"	m	struct:__anon93
 huff_dc	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   stbi__huffman huff_dc[4];$/;"	m	struct:__anon93
+human_box_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  human_box_pub;$/;"	m	class:Bounding_Box_dobject
 human_box_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  human_box_pub;$/;"	m	class:Bounding_Box_dobject
+human_boxes_array	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	visualization_msgs::MarkerArray human_boxes_array;$/;"	m	class:Bounding_Box_dobject
 human_boxes_array	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	visualization_msgs::MarkerArray human_boxes_array;$/;"	m	class:Bounding_Box_dobject
+human_boxes_array_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  human_boxes_array_pub; \/\/bounding box for extracted dobject$/;"	m	class:Bounding_Box_dobject
 human_boxes_array_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  human_boxes_array_pub; \/\/bounding box for extracted dobject$/;"	m	class:Bounding_Box_dobject
+human_markers_array	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	visualization_msgs::MarkerArray human_markers_array;$/;"	m	class:Bounding_Box_dobject
 human_markers_array	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	visualization_msgs::MarkerArray human_markers_array;$/;"	m	class:Bounding_Box_dobject
 i	grabcut/grabCut.py	/^    i = 1$/;"	v
 i	rtabmap/corelib/src/sqlite3/sqlite3.c	/^    i64 i;              \/* Integer value used when MEM_Int is set in flags *\/$/;"	m	union:Mem::__anon28	file:
@@ -11894,7 +11964,8 @@ im	rtabmap/corelib/src/toro3d/transformation3.hxx	/^inline Vector3<T> Quaternion
 im	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    image *im;$/;"	m	struct:load_args
 im2col_cpu	tmc_darknet_ros/tmc_darknet/src/im2col.c	/^void im2col_cpu(float* data_im,$/;"	f
 im2col_get_pixel	tmc_darknet_ros/tmc_darknet/src/im2col.c	/^float im2col_get_pixel(float *im, int height, int width, int channels,$/;"	f
-image	face_recognition/scripts/from PIL import Image.py	/^image = face_recognition.load_image_file("minkyu.jpeg")$/;"	v
+image	face_recognition/scripts/from PIL import Image.py	/^image = face_recognition.load_image_file("ut_student2.jpg")$/;"	v
+image	face_recognition/scripts/hc_test.py	/^image = face_recognition.load_image_file("ut_student2.jpg")$/;"	v
 image	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/image.h	/^} image;$/;"	t	typeref:struct:__anon108
 imageCompressed	rtabmap/corelib/include/rtabmap/core/SensorData.h	/^	const cv::Mat & imageCompressed() const {return _imageCompressed;}$/;"	f	class:rtabmap::SensorData
 imageDepthPub_	rtabmap_ros/src/nodelets/data_odom_sync.cpp	/^	image_transport::Publisher imageDepthPub_;$/;"	m	class:rtabmap_ros::DataOdomSyncNodelet	file:
@@ -11935,7 +12006,6 @@ imageView_	rtabmap/guilib/include/rtabmap/gui/OdometryViewer.h	/^	ImageView* ima
 imageWidth	rtabmap/corelib/include/rtabmap/core/CameraModel.h	/^	int imageWidth() const {return imageSize_.width;}$/;"	f	class:rtabmap::CameraModel
 image_	rtabmap/corelib/include/rtabmap/core/Compression.h	/^	bool image_;$/;"	m	class:rtabmap::CompressionThread
 image_	rtabmap/guilib/include/rtabmap/utilite/UCv2Qt.h	/^	cv::Mat image_;$/;"	m	class:UCvMat2QImageThread
-image_batch	face_recognition/scripts/test_ros	/^		image_batch = image_data$/;"	v	class:FaceDectectors
 image_callback	face_recognition/scripts/face_action_server.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectector_Action
 image_callback	face_recognition/scripts/face_photo_action.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectector_Action
 image_callback	face_recognition/scripts/face_recog_action.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectector_Action
@@ -11944,8 +12014,7 @@ image_callback	face_recognition/scripts/face_recog_service.py	/^	def image_callb
 image_callback	face_recognition/scripts/face_recog_srv_client.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectectors
 image_callback	face_recognition/scripts/face_service.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectectors
 image_callback	face_recognition/scripts/take_photo_server.py	/^    def image_callback(self, msg):$/;"	m	class:FaceDectectors_photo
-image_callback	face_recognition/scripts/test_ros	/^    def image_callback(self,msg):$/;"	m	class:FaceDectectors
-image_callback	face_recognition/scripts/test_ros.bak	/^    def image_callback(self,msg):$/;"	f	function:FaceDectectors.crop_face
+image_callback	face_recognition/scripts/test_ros	/^	def image_callback(self,msg):$/;"	m	class:FaceDectectors
 image_callback	gender_identification/scripts/gender_identification_server	/^def image_callback(req):$/;"	f
 image_callback	gender_identification/scripts/gender_publisher	/^def image_callback(data):$/;"	f
 image_cb	rtabmap/corelib/src/CameraRGBD.cpp	/^void CameraOpenni::image_cb ($/;"	f	class:rtabmap::CameraOpenni
@@ -11968,7 +12037,6 @@ image_sub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Subscribe
 image_sub_	rtabmap_ros/src/nodelets/data_odom_sync.cpp	/^	image_transport::SubscriberFilter image_sub_;$/;"	m	class:rtabmap_ros::DataOdomSyncNodelet	file:
 image_sub_	rtabmap_ros/src/nodelets/data_throttle.cpp	/^	image_transport::SubscriberFilter image_sub_;$/;"	m	class:rtabmap_ros::DataThrottleNodelet	file:
 image_sub_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  image_transport::Subscriber image_sub_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
-image_topic	face_recognition/scripts/test_ros	/^		image_topic = "\/hsrb\/head_rgbd_sensor\/rgb\/image_rect_color"$/;"	v	class:FaceDectectors
 image_w	tmc_darknet_ros/tmc_yolo2_ros/src/single_image.cpp	/^uint32_t image_w;$/;"	v
 image_w_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  uint32_t image_w_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
 images	tmc_darknet_ros/tmc_darknet/src/demo.c	/^static image images[FRAMES];$/;"	v	file:
@@ -12009,7 +12077,6 @@ imat4x3	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/
 imat4x4	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/^	typedef highp_imat4x4							imat4x4;$/;"	t	namespace:glm
 imat4x4	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/^	typedef lowp_imat4x4							imat4x4;$/;"	t	namespace:glm
 imat4x4	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/^	typedef mediump_imat4x4							imat4x4;$/;"	t	namespace:glm
-img	face_recognition/scripts/test_ros	/^			img = face_recognition.load_image_file(self.known_folder +'\/'+img_name)$/;"	v	class:FaceDectectors
 img	grabcut/sample_grabCut.py	/^    img = cv2.imread(img_name)$/;"	v
 img	villa_3d_object_extract/include/BoundingBoxDObject.h	/^ 	sensor_msgs::Image 		  img;$/;"	m	class:Bounding_Box_dobject
 img	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^ 	sensor_msgs::Image 		  img;$/;"	m	class:Bounding_Box_dobject_nicolas
@@ -12147,6 +12214,7 @@ initRectificationMap	rtabmap/corelib/src/CameraModel.cpp	/^void CameraModel::ini
 init_vars	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^bool Bounding_Box_dobject::init_vars(){$/;"	f	class:Bounding_Box_dobject
 init_vars	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^bool Bounding_Box_dobject_nicolas::init_vars(){$/;"	f	class:Bounding_Box_dobject_nicolas
 init_vars	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^bool Tracking_Box_dobject::init_vars(){$/;"	f	class:Tracking_Box_dobject
+init_vars	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^bool Bounding_Box_dobject::init_vars(){$/;"	f	class:Bounding_Box_dobject
 init_vars	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^bool Bounding_Box_dobject::init_vars(){$/;"	f	class:Bounding_Box_dobject
 init_vars	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^bool Bounding_Box_dobject::init_vars(){$/;"	f	class:Bounding_Box_dobject
 init_vars	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^bool Bounding_Box_dobject::init_vars(){$/;"	f	class:Bounding_Box_dobject
@@ -12405,6 +12473,7 @@ isMatchinfoNeeded	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  int isMatchinfoNeede
 isMinMaxValid	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	virtual bool isMinMaxValid() const {return _minMax.size();}$/;"	f	class:UPlotCurve
 isMinMaxValid	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	virtual bool isMinMaxValid() const {return false;}$/;"	f	class:UPlotCurveThreshold
 isModified	rtabmap/corelib/include/rtabmap/core/Signature.h	/^	bool isModified() const {return _modified || _linksModified;}$/;"	f	class:rtabmap::Signature
+isMoving	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	bool isMoving;$/;"	m	class:Bounding_Box_dobject
 isMoving	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	bool isMoving;$/;"	m	class:Bounding_Box_dobject
 isMultiWrite	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u8 isMultiWrite;     \/* True if statement may modify\/insert multiple rows *\/$/;"	m	struct:Parse	file:
 isMutexInit	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  int isMutexInit;                  \/* True after mutexes are initialized *\/$/;"	m	struct:Sqlite3Config	file:
@@ -12578,6 +12647,7 @@ jitter	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float jitte
 join	rtabmap/utilite/src/UThread.cpp	/^void UThread::join(bool killFirst)$/;"	f	class:UThread
 joinTrashThread	rtabmap/corelib/src/Memory.cpp	/^void Memory::joinTrashThread()$/;"	f	class:rtabmap::Memory
 joint	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    int joint;$/;"	m	struct:layer
+joint_states_callback	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::joint_states_callback(const sensor_msgs::JointState::ConstPtr& msg)$/;"	f	class:Bounding_Box_dobject
 joint_states_callback	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::joint_states_callback(const sensor_msgs::JointState::ConstPtr& msg)$/;"	f	class:Bounding_Box_dobject
 jointype	rtabmap/corelib/src/sqlite3/sqlite3.c	/^    u8 jointype;      \/* Type of join between this able and the previous *\/$/;"	m	struct:SrcList::SrcList_item	file:
 journalHdr	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  i64 journalHdr;             \/* Byte offset to previous journal header *\/$/;"	m	struct:Pager	file:
@@ -12832,8 +12902,7 @@ key_callback	face_recognition/scripts/face_recog_action.py	/^	def key_callback(s
 key_callback	face_recognition/scripts/face_recog_manager.py	/^	def key_callback(self,msg):		#"p"$/;"	m	class:FaceDectectors
 key_callback	face_recognition/scripts/face_recog_srv_client.py	/^	def key_callback(self,msg):		#"p"$/;"	m	class:FaceDectectors
 key_callback	face_recognition/scripts/face_service.py	/^	def key_callback(self,msg):		#"p"$/;"	m	class:FaceDectectors
-key_callback	face_recognition/scripts/test_ros	/^    def key_callback(self,msg):		#"p"$/;"	m	class:FaceDectectors
-key_callback	face_recognition/scripts/test_ros.bak	/^	def key_callback(self,msg):		#"p"$/;"	m	class:FaceDectectors
+key_callback	face_recognition/scripts/test_ros	/^	def key_callback(self,msg):		#"p"$/;"	m	class:FaceDectectors
 key_size_	rtabmap/corelib/src/rtflann/algorithms/lsh_index.h	/^    unsigned int key_size_;$/;"	m	class:rtflann::LshIndex
 key_size_	rtabmap/corelib/src/rtflann/util/lsh_table.h	/^    unsigned int key_size_;$/;"	m	class:rtflann::lsh::LshTable
 keypointFromROS	rtabmap_ros/src/MsgConversion.cpp	/^cv::KeyPoint keypointFromROS(const rtabmap_ros::KeyPoint & msg)$/;"	f	namespace:rtabmap_ros
@@ -13011,7 +13080,7 @@ list_indices	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	std::vector
 list_insert	tmc_darknet_ros/tmc_darknet/src/list.c	/^void list_insert(list *l, void *val)$/;"	f
 list_pop	tmc_darknet_ros/tmc_darknet/src/list.c	/^void *list_pop(list *l){$/;"	f
 list_to_array	tmc_darknet_ros/tmc_darknet/src/list.c	/^void **list_to_array(list *l)$/;"	f
-listen	face_recognition/scripts/task_speech.py	/^listen = None$/;"	v
+listen	face_recognition/scripts/task_sppech.py	/^listen = None$/;"	v
 listen_changes	villa_octomap_mapping/villa_octomap_server/include/villa_octomap_server/TrackingOctomapServer.h	/^  bool listen_changes;$/;"	m	class:villa_octomap_server::TrackingOctomapServer
 listener	face_recognition/scripts/face_action_server.py	/^	def listener(self,wait=0.0):$/;"	m	class:FaceDectector_Action
 listener	face_recognition/scripts/face_photo_action.py	/^	def listener(self,goal,wait=0.0):$/;"	m	class:FaceDectector_Action
@@ -13021,8 +13090,8 @@ listener	face_recognition/scripts/face_recog_service.py	/^	def listener(self):$/
 listener	face_recognition/scripts/face_recog_srv_client.py	/^	def listener(self):$/;"	m	class:FaceDectectors
 listener	face_recognition/scripts/face_service.py	/^	def listener(self):$/;"	m	class:FaceDectectors
 listener	face_recognition/scripts/take_photo_server.py	/^    def listener(self):$/;"	m	class:FaceDectectors_photo
-listener	face_recognition/scripts/test_ros	/^    def listener(self,wait=0.0):$/;"	m	class:FaceDectectors
-listener	face_recognition/scripts/test_ros.bak	/^	def listener(self,wait=0.0):$/;"	m	class:FaceDectectors
+listener	face_recognition/scripts/test_ros	/^	def listener(self,wait=0.0):$/;"	m	class:FaceDectectors
+listener	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::TransformListener 	  listener;$/;"	m	class:Bounding_Box_dobject
 listener	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::TransformListener 	  listener;$/;"	m	class:Bounding_Box_dobject
 listener_	rtabmap/corelib/include/rtabmap/core/CameraRGBD.h	/^	libfreenect2::SyncMultiFrameListener * listener_;$/;"	m	class:rtabmap::CameraFreenect2
 littleendian	rtabmap/tools/StereoEval/io.h	/^int littleendian()$/;"	f
@@ -13702,6 +13771,7 @@ magic	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u32 magic;              \/* Magi
 magic1	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u32 magic1;   \/* Magic number to detect structure corruption. *\/$/;"	m	struct:winMemData	file:
 magic2	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u32 magic2;   \/* Magic number to detect structure corruption. *\/$/;"	m	struct:winMemData	file:
 main	face_recognition/test.py	/^def main():$/;"	f
+main	face_recognition/test_hc.py	/^def main():$/;"	f
 main	rtabmap/app/android/jni/third-party/include/glm/detail/dummy.cpp	/^int main()$/;"	f
 main	rtabmap/app/src/main.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	rtabmap/examples/BOWMapping/main.cpp	/^int main(int argc, char * argv[])$/;"	f
@@ -13740,6 +13810,7 @@ main	tmc_darknet_ros/tmc_yolo2_ros/src/yolo2_node_main.cpp	/^int main(int argc, 
 main	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^int main(int argc, char** argv) {$/;"	f
 main	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node_stub.cpp	/^int main(int argc, char** argv) {$/;"	f
 main	villa_3d_object_extract/src/Tracking.cpp	/^int main(int argc, char **argv)$/;"	f
+main	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^int main(int argc, char **argv)$/;"	f
 main	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^int main(int argc, char **argv)$/;"	f
 main	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^int main(int argc, char **argv)$/;"	f
 main	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^int main(int argc, char **argv)$/;"	f
@@ -14001,16 +14072,19 @@ mean_delta_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    flo
 mean_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * mean_gpu;$/;"	m	struct:layer
 mean_x	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float mean_x;$/;"	m	class:Cluster3D_BoundingBox
 mean_x	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float mean_x;$/;"	m	class:Mean3DTrackingBox
+mean_x	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float mean_x;$/;"	m	class:Cluster3D_BoundingBox
 mean_x	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float mean_x;$/;"	m	class:Cluster3D_BoundingBox
 mean_x	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float mean_x;$/;"	m	class:Cluster3D_BoundingBox	file:
 mean_x	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float mean_x;$/;"	m	class:Cluster3D_BoundingBox	file:
 mean_y	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float mean_y;$/;"	m	class:Cluster3D_BoundingBox
 mean_y	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float mean_y;$/;"	m	class:Mean3DTrackingBox
+mean_y	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float mean_y;$/;"	m	class:Cluster3D_BoundingBox
 mean_y	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float mean_y;$/;"	m	class:Cluster3D_BoundingBox
 mean_y	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float mean_y;$/;"	m	class:Cluster3D_BoundingBox	file:
 mean_y	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float mean_y;$/;"	m	class:Cluster3D_BoundingBox	file:
 mean_z	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float mean_z;$/;"	m	class:Cluster3D_BoundingBox
 mean_z	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float mean_z;$/;"	m	class:Mean3DTrackingBox
+mean_z	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float mean_z;$/;"	m	class:Cluster3D_BoundingBox
 mean_z	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float mean_z;$/;"	m	class:Cluster3D_BoundingBox
 mean_z	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float mean_z;$/;"	m	class:Cluster3D_BoundingBox	file:
 mean_z	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float mean_z;$/;"	m	class:Cluster3D_BoundingBox	file:
@@ -14386,7 +14460,6 @@ moveBindings	face_recognition/scripts/face_photo_action.py	/^moveBindings = {$/;
 moveBindings	face_recognition/scripts/face_recog_action.py	/^moveBindings = {$/;"	v
 moveBindings	face_recognition/scripts/face_service.py	/^moveBindings = {$/;"	v
 moveBindings	face_recognition/scripts/test_ros	/^moveBindings = {$/;"	v
-moveBindings	face_recognition/scripts/test_ros.bak	/^moveBindings = {$/;"	v
 moveCurve	rtabmap/guilib/src/utilite/UPlot.cpp	/^void UPlot::moveCurve(const UPlotCurve * curve, int index)$/;"	f	class:UPlot
 moveDown	rtabmap/guilib/src/utilite/UPlot.cpp	/^void UPlotLegend::moveDown(UPlotLegendItem * item)$/;"	f	class:UPlotLegend
 moveEvent	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::moveEvent(QMoveEvent* anEvent)$/;"	f	class:rtabmap::DatabaseViewer
@@ -14400,7 +14473,7 @@ moveToRoot	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int moveToRoot(BtCurso
 moveToTrash	rtabmap/corelib/src/Memory.cpp	/^void Memory::moveToTrash(Signature * s, bool keepLinkedToGraph, std::list<int> * deletedWords)$/;"	f	class:rtabmap::Memory
 moveUp	rtabmap/guilib/src/utilite/UPlot.cpp	/^void UPlotLegend::moveUp(UPlotLegendItem * item)$/;"	f	class:UPlotLegend
 move_go	tmc_darknet_ros/tmc_darknet/src/go.c	/^void move_go(float *b, int p, int r, int c)$/;"	f
-move_robot	face_recognition/scripts/task_speech.py	/^def move_robot(omni_base, azimuth):$/;"	f
+move_robot	face_recognition/scripts/task_sppech.py	/^def move_robot(omni_base, azimuth):$/;"	f
 moves	tmc_darknet_ros/tmc_darknet/src/go.c	/^} moves;$/;"	t	typeref:struct:__anon76	file:
 movetoTarget	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  i64 movetoTarget;     \/* Argument to the deferred sqlite3BtreeMoveto() *\/$/;"	m	struct:VdbeCursor	file:
 mpl	rtabmap/corelib/src/toro3d/treeoptimizer3.hh	/^  int mpl;$/;"	m	struct:AISNavigation::TreeOptimizer3
@@ -14783,7 +14856,6 @@ nWork	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  int nWork;                      
 nXField	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u16 nXField;        \/* Number of columns beyond the key columns *\/$/;"	m	struct:KeyInfo	file:
 nZero	rtabmap/corelib/src/sqlite3/sqlite3.c	/^    int nZero;          \/* Used when bit MEM_Zero is set in flags *\/$/;"	m	union:Mem::__anon28	file:
 n_buckets_	rtabmap/corelib/src/rtflann/util/lsh_table.h	/^    size_t n_buckets_;$/;"	m	struct:rtflann::lsh::LshStats
-name	face_recognition/scripts/test_ros	/^			name = img_name[0:dot_idx]$/;"	v	class:FaceDectectors
 name	rtabmap/corelib/include/rtabmap/core/CameraModel.h	/^	const std::string & name() const {return name_;}$/;"	f	class:rtabmap::CameraModel
 name	rtabmap/corelib/include/rtabmap/core/StereoCameraModel.h	/^	const std::string & name() const {return name_;}$/;"	f	class:rtabmap::StereoCameraModel
 name	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	QString name() const {return _name;}$/;"	f	class:UPlotCurve
@@ -14880,6 +14952,7 @@ node	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/list.h	/^} node;$/;"	t	type
 node	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::NodeHandle 		  node;$/;"	m	class:Bounding_Box_dobject
 node	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::NodeHandle 		  node;$/;"	m	class:Bounding_Box_dobject_nicolas
 node	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::NodeHandle 		  node;$/;"	m	class:Tracking_Box_dobject
+node	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::NodeHandle 		  node;$/;"	m	class:Bounding_Box_dobject
 node	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::NodeHandle 		  node;$/;"	m	class:Bounding_Box_dobject
 node	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::NodeHandle 		  node;$/;"	m	class:Bounding_Box_dobject	file:
 node	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::NodeHandle 		  node;$/;"	m	class:Bounding_Box_dobject	file:
@@ -14992,6 +15065,7 @@ numberOfCachePages	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int numberOfCa
 number_of_detected_dobjects_pub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Publisher 			  number_of_detected_dobjects_pub; \/\/give number of detected dobjects$/;"	m	class:Bounding_Box_dobject
 number_of_detected_dobjects_pub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Publisher 			  number_of_detected_dobjects_pub; \/\/give number of detected dobjects$/;"	m	class:Bounding_Box_dobject_nicolas
 number_of_detected_dobjects_pub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Publisher 			  number_of_detected_dobjects_pub; \/\/give number of detected dobjects$/;"	m	class:Tracking_Box_dobject
+number_of_detected_dobjects_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  number_of_detected_dobjects_pub; \/\/give number of detected dobjects$/;"	m	class:Bounding_Box_dobject
 number_of_detected_dobjects_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  number_of_detected_dobjects_pub; \/\/give number of detected dobjects$/;"	m	class:Bounding_Box_dobject
 number_of_detected_dobjects_pub	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::Publisher 			  number_of_detected_dobjects_pub; \/\/give number of detected dobjects$/;"	m	class:Bounding_Box_dobject	file:
 number_of_detected_dobjects_pub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Publisher 			  number_of_detected_dobjects_pub; \/\/give number of detected dobjects$/;"	m	class:Bounding_Box_dobject	file:
@@ -15213,6 +15287,7 @@ operator ()	rtabmap/corelib/src/rtflann/util/heap.h	/^        bool operator()(co
 operator ()	rtabmap/corelib/src/rtflann/util/random.h	/^    ptrdiff_t operator() (ptrdiff_t i) { return rand_int(i); }$/;"	f	class:rtflann::RandomGenerator
 operator ()	rtabmap/corelib/src/toro3d/posegraph.hh	/^  inline bool operator() (const E& e1, const E& e2){$/;"	f	struct:AISNavigation::EVComparator
 operator ()	villa_3d_object_extract/include/Cluster3DBoundingBoxDistanceCompare.h	/^	bool operator() (const Cluster3D_BoundingBox &lhs, const Cluster3D_BoundingBox &rhs) const{ $/;"	f	struct:Cluster3D_BoundingBox_distance_compare
+operator ()	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^	bool operator() (const Cluster3D_BoundingBox &lhs, const Cluster3D_BoundingBox &rhs) const{ $/;"	f	struct:Cluster3D_BoundingBox_distance_compare
 operator ()	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	bool operator() (const Cluster3D_BoundingBox &lhs, const Cluster3D_BoundingBox &rhs) const{ $/;"	f	struct:Cluster3D_BoundingBox_distance_compare
 operator ()	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^	bool operator() (const Cluster3D_BoundingBox &lhs, const Cluster3D_BoundingBox &rhs) const{ $/;"	f	struct:Cluster3D_BoundingBox_distance_compare
 operator ()	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	bool operator() (const Cluster3D_BoundingBox &lhs, const Cluster3D_BoundingBox &rhs) const{ $/;"	f	struct:Cluster3D_BoundingBox_distance_compare
@@ -16201,6 +16276,7 @@ pcl	rtabmap/corelib/include/rtabmap/core/CameraRGBD.h	/^namespace pcl$/;"	n
 pcl	rtabmap/corelib/src/pcl18/surface/organized_fast_mesh.h	/^namespace pcl$/;"	n
 pcl	rtabmap/guilib/include/rtabmap/gui/CloudViewer.h	/^namespace pcl {$/;"	n
 pen	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	const QPen & pen() const {return _pen;}$/;"	f	class:UPlotCurve
+people	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<people_msgs::PositionMeasurement> people;$/;"	m	class:Bounding_Box_dobject
 people	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<people_msgs::PositionMeasurement> people;$/;"	m	class:Bounding_Box_dobject
 perform	rtabmap/corelib/src/toro3d/posegraph.hxx	/^  void perform(typename TPG::Vertex* v){$/;"	f	struct:LevelAssigner
 perform	rtabmap/corelib/src/toro3d/posegraph.hxx	/^  void perform(typename TPG::Vertex* v){$/;"	f	struct:LoopChecker
@@ -16223,7 +16299,7 @@ pf_resample	rtabmap/Matlab/ParticleFilter/pf_resample.m	/^function newParticles=
 pgno	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  Pgno pgno;                     \/* Page number for this page *\/$/;"	m	struct:PgHdr	file:
 pgno	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  Pgno pgno;           \/* Page number for this page *\/$/;"	m	struct:MemPage	file:
 pgnoRoot	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  Pgno pgnoRoot;            \/* The root page of this tree *\/$/;"	m	struct:BtCursor	file:
-pil_image	face_recognition/scripts/from PIL import Image.py	/^    pil_image = Image.fromarray(face_image)$/;"	v
+pil_image	face_recognition/scripts/from PIL import Image.py	/^    pil_image = image.fromarray(face_image)$/;"	v
 pipesMutex_	rtabmap/utilite/include/rtabmap/utilite/UEventsManager.h	/^    UMutex pipesMutex_;$/;"	m	class:UEventsManager
 pipes_	rtabmap/utilite/include/rtabmap/utilite/UEventsManager.h	/^    std::list<Pipe> pipes_;$/;"	m	class:UEventsManager
 pitch	rtabmap/corelib/src/toro3d/transformation3.hh	/^  inline T& pitch()              {return DVector<T>::elems[1];}$/;"	f	struct:AISNavigation::Pose3
@@ -16427,6 +16503,7 @@ priority_	rtabmap/utilite/include/rtabmap/utilite/UThread.h	/^    Priority prior
 prism_voxels_pub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Publisher 			  prism_voxels_pub;$/;"	m	class:Bounding_Box_dobject
 prism_voxels_pub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Publisher 			  prism_voxels_pub;$/;"	m	class:Bounding_Box_dobject_nicolas
 prism_voxels_pub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Publisher 			  prism_voxels_pub;$/;"	m	class:Tracking_Box_dobject
+prism_voxels_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  prism_voxels_pub;$/;"	m	class:Bounding_Box_dobject
 prism_voxels_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  prism_voxels_pub;$/;"	m	class:Bounding_Box_dobject
 prism_voxels_pub	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::Publisher 			  prism_voxels_pub;$/;"	m	class:Bounding_Box_dobject	file:
 prism_voxels_pub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Publisher 			  prism_voxels_pub;$/;"	m	class:Bounding_Box_dobject	file:
@@ -16574,30 +16651,37 @@ publishStats	rtabmap_ros/src/CoreWrapper.cpp	/^void CoreWrapper::publishStats(co
 publishTf_	rtabmap_ros/src/nodelets/OdometryROS.h	/^	bool publishTf_;$/;"	m	class:rtabmap_ros::OdometryROS
 publish_clusters	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::publish_clusters(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::publish_clusters(){$/;"	f	class:Bounding_Box_dobject_nicolas
+publish_clusters	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_clusters(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::publish_clusters(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_clusters(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_clusters(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters_boxes	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::publish_clusters_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters_boxes	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::publish_clusters_boxes(){$/;"	f	class:Bounding_Box_dobject_nicolas
+publish_clusters_boxes	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_clusters_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters_boxes	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::publish_clusters_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters_boxes	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_clusters_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters_boxes	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_clusters_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_dn_points	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::publish_dn_points(){$/;"	f	class:Bounding_Box_dobject
 publish_dn_points	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::publish_dn_points(){$/;"	f	class:Bounding_Box_dobject_nicolas
+publish_dn_points	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_dn_points(){$/;"	f	class:Bounding_Box_dobject
 publish_dn_points	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::publish_dn_points(){$/;"	f	class:Bounding_Box_dobject
 publish_dn_points	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_dn_points(){$/;"	f	class:Bounding_Box_dobject
 publish_dn_points	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_dn_points(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_3D_boxes	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::publish_dobject_3D_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_3D_boxes	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::publish_dobject_3D_boxes(){$/;"	f	class:Bounding_Box_dobject_nicolas
+publish_dobject_3D_boxes	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_dobject_3D_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_3D_boxes	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::publish_dobject_3D_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_3D_boxes	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_dobject_3D_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_3D_boxes	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_dobject_3D_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_points	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::publish_dobject_points(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_points	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::publish_dobject_points(){$/;"	f	class:Bounding_Box_dobject_nicolas
+publish_dobject_points	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_dobject_points(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_points	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::publish_dobject_points(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_points	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_dobject_points(){$/;"	f	class:Bounding_Box_dobject
 publish_dobject_points	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_dobject_points(){$/;"	f	class:Bounding_Box_dobject
+publish_human_boxes	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_human_boxes(){$/;"	f	class:Bounding_Box_dobject
 publish_human_boxes	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_human_boxes(){$/;"	f	class:Bounding_Box_dobject
+publish_human_boxes_delayed	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_human_boxes_delayed()$/;"	f	class:Bounding_Box_dobject
 publish_human_boxes_delayed	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_human_boxes_delayed()$/;"	f	class:Bounding_Box_dobject
 publish_objects_points	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::publish_objects_points(){$/;"	f	class:Bounding_Box_dobject_nicolas
 publish_tracked	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::publish_tracked()$/;"	f	class:Tracking_Box_dobject
@@ -16835,6 +16919,7 @@ registerTrace	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void registerTrace(
 registered_cloud_sub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Subscriber           registered_cloud_sub;$/;"	m	class:Bounding_Box_dobject
 registered_cloud_sub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Subscriber           registered_cloud_sub;$/;"	m	class:Bounding_Box_dobject_nicolas
 registered_cloud_sub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Subscriber           registered_cloud_sub;$/;"	m	class:Tracking_Box_dobject
+registered_cloud_sub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber           registered_cloud_sub;$/;"	m	class:Bounding_Box_dobject
 registered_cloud_sub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber           registered_cloud_sub;$/;"	m	class:Bounding_Box_dobject
 registered_cloud_sub	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::Subscriber           registered_cloud_sub;$/;"	m	class:Bounding_Box_dobject	file:
 registered_cloud_sub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Subscriber           registered_cloud_sub;$/;"	m	class:Bounding_Box_dobject	file:
@@ -17124,7 +17209,6 @@ rightArm	activity_detection/scripts/activityDetection_action.py	/^    def rightA
 rightNullSpace	villa_calibration/src/LinearAlgebraShortcuts.cc	/^MatrixXd rightNullSpace(MatrixXd A) {$/;"	f
 rightRaw	rtabmap/corelib/include/rtabmap/core/SensorData.h	/^	cv::Mat rightRaw() const {return _depthOrRightRaw.type()==CV_8UC1?_depthOrRightRaw:cv::Mat();}$/;"	f	class:rtabmap::SensorData
 right_	rtabmap/corelib/include/rtabmap/core/StereoCameraModel.h	/^	CameraModel right_;$/;"	m	class:rtabmap::StereoCameraModel
-robot	face_recognition/scripts/take_photo_server.py	/^    robot = Robot()$/;"	v	class:FaceDectectors_photo
 robust_	rtabmap/corelib/include/rtabmap/core/Optimizer.h	/^	bool robust_;$/;"	m	class:rtabmap::Optimizer
 robust_close	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void robust_close(unixFile *pFile, int h, int lineno){$/;"	f	file:
 robust_flock	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int robust_flock(int fd, int op){$/;"	f	file:
@@ -18450,16 +18534,16 @@ spanSet	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  static void spanSet(ExprSpan *
 spanUnaryPostfix	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  static void spanUnaryPostfix($/;"	f	file:
 spanUnaryPrefix	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  static void spanUnaryPrefix($/;"	f	file:
 spatial_mean	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * spatial_mean;$/;"	m	struct:layer
-speak_time	face_recognition/scripts/task_speech.py	/^speak_time = 0$/;"	v
+speak_time	face_recognition/scripts/task_sppech.py	/^speak_time = 0$/;"	v
 spec_end	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            spec_end;$/;"	m	struct:__anon93
 spec_start	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            spec_start;$/;"	m	struct:__anon93
 speckleRange_	rtabmap/corelib/include/rtabmap/core/StereoDense.h	/^	int speckleRange_;      \/\/4$/;"	m	class:rtabmap::StereoBM
 speckleWindowSize_	rtabmap/corelib/include/rtabmap/core/StereoDense.h	/^	int speckleWindowSize_; \/\/100$/;"	m	class:rtabmap::StereoBM
 specular	rtabmap/app/android/jni/third-party/include/glm/detail/dummy.cpp	/^	glm::vec4 specular; \/\/ Scli$/;"	m	struct:light	file:
 specular	rtabmap/app/android/jni/third-party/include/glm/detail/dummy.cpp	/^	glm::vec4 specular; \/\/ Scm$/;"	m	struct:material	file:
-speech	face_recognition/scripts/task_speech.py	/^speech = None$/;"	v
-speech_time	face_recognition/scripts/task_speech.py	/^speech_time = 0$/;"	v
-speech_transcript	face_recognition/scripts/task_speech.py	/^speech_transcript = ''$/;"	v
+speech	face_recognition/scripts/task_sppech.py	/^speech = None$/;"	v
+speech_time	face_recognition/scripts/task_sppech.py	/^speech_time = 0$/;"	v
+speech_transcript	face_recognition/scripts/task_sppech.py	/^speech_transcript = ''$/;"	v
 speed	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^void speed(char *cfgfile, int tics)$/;"	f
 speed_level_	rtabmap/corelib/src/rtflann/util/lsh_table.h	/^    SpeedLevel speed_level_;$/;"	m	class:rtflann::lsh::LshTable
 speedup_	rtabmap/corelib/src/rtflann/algorithms/autotuned_index.h	/^    float speedup_;$/;"	m	class:rtflann::AutotunedIndex
@@ -21119,11 +21203,13 @@ tkTRIGGER	rtabmap/corelib/src/sqlite3/sqlite3.c	118674;"	d	file:
 tkWS	rtabmap/corelib/src/sqlite3/sqlite3.c	118668;"	d	file:
 tl_x	villa_3d_object_extract/include/BoundingBoxPersonDesc.h	/^  float tl_x;$/;"	m	class:BoundingBox_Person_Desc
 tl_x	villa_3d_object_extract/include/TrackingBoxPersonDesc.h	/^  float tl_x;$/;"	m	class:TrackingBox_Person_Desc
+tl_x	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^  float tl_x;$/;"	m	class:BoundingBox_Person_Desc
 tl_x	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^  float tl_x;$/;"	m	class:BoundingBox_Person_Desc
 tl_x	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^  float tl_x;$/;"	m	class:BoundingBox_Person_Desc	file:
 tl_x	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^  float tl_x;$/;"	m	class:BoundingBox_Person_Desc	file:
 tl_y	villa_3d_object_extract/include/BoundingBoxPersonDesc.h	/^  float tl_y;$/;"	m	class:BoundingBox_Person_Desc
 tl_y	villa_3d_object_extract/include/TrackingBoxPersonDesc.h	/^  float tl_y;$/;"	m	class:TrackingBox_Person_Desc
+tl_y	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^  float tl_y;$/;"	m	class:BoundingBox_Person_Desc
 tl_y	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^  float tl_y;$/;"	m	class:BoundingBox_Person_Desc
 tl_y	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^  float tl_y;$/;"	m	class:BoundingBox_Person_Desc	file:
 tl_y	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^  float tl_y;$/;"	m	class:BoundingBox_Person_Desc	file:
@@ -21271,6 +21357,7 @@ transformToPoseMsg	rtabmap_ros/src/MsgConversion.cpp	/^void transformToPoseMsg(c
 transformToTF	rtabmap_ros/src/MsgConversion.cpp	/^void transformToTF(const rtabmap::Transform & transform, tf::Transform & tfTransform)$/;"	f	namespace:rtabmap_ros
 transform_	rtabmap/corelib/include/rtabmap/core/Link.h	/^	Transform transform_;$/;"	m	class:rtabmap::Link
 transform_	rtabmap/guilib/include/rtabmap/gui/LoopClosureViewer.h	/^	Transform transform_;$/;"	m	class:rtabmap::LoopClosureViewer
+transform_base_head	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::StampedTransform 	  transform_base_head;			\/\/MK$/;"	m	class:Bounding_Box_dobject
 transform_base_head	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::StampedTransform 	  transform_base_head;			\/\/MK$/;"	m	class:Bounding_Box_dobject
 transform_to_kdl	villa_pointcloud_accumulator/src/tf2_sensor_msgs.py	/^def transform_to_kdl(t):$/;"	f
 transformation	rtabmap/corelib/src/toro3d/posegraph.hh	/^    Transformation transformation;    \/**< Transformation describing the constraint (relative mapping) **\/$/;"	m	struct:AISNavigation::TreePoseGraph::Edge
@@ -21705,7 +21792,7 @@ umat4x4	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/
 umat4x4	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/^	typedef lowp_umat4x4							umat4x4;$/;"	t	namespace:glm
 umat4x4	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/^	typedef mediump_umat4x4							umat4x4;$/;"	t	namespace:glm
 unLockFlag	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  unsigned char unLockFlag;         \/* 1 = unlock, 0 = lock *\/$/;"	m	struct:ByteRangeLockPB2	file:
-unanswered	face_recognition/scripts/task_speech.py	/^unanswered = False$/;"	v
+unanswered	face_recognition/scripts/task_sppech.py	/^unanswered = False$/;"	v
 uncompressData	rtabmap/corelib/src/Compression.cpp	/^cv::Mat uncompressData(const cv::Mat & bytes)$/;"	f	namespace:rtabmap
 uncompressData	rtabmap/corelib/src/Compression.cpp	/^cv::Mat uncompressData(const std::vector<unsigned char> & bytes)$/;"	f	namespace:rtabmap
 uncompressData	rtabmap/corelib/src/Compression.cpp	/^cv::Mat uncompressData(const unsigned char * bytes, unsigned long size)$/;"	f	namespace:rtabmap
@@ -21950,7 +22037,7 @@ update_convolutional_layer	tmc_darknet_ros/tmc_darknet/src/convolutional_layer.c
 update_crnn_layer	tmc_darknet_ros/tmc_darknet/src/crnn_layer.c	/^void update_crnn_layer(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
 update_crnn_layer_gpu	tmc_darknet_ros/tmc_darknet/src/crnn_layer.c	/^void update_crnn_layer_gpu(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
 update_deconvolutional_layer	tmc_darknet_ros/tmc_darknet/src/deconvolutional_layer.c	/^void update_deconvolutional_layer(deconvolutional_layer l, float learning_rate, float momentum, float decay)$/;"	f
-update_face	face_recognition/scripts/task_speech.py	/^def update_face(s):$/;"	f
+update_face	face_recognition/scripts/task_sppech.py	/^def update_face(s):$/;"	f
 update_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    void (*update_gpu)    (struct layer, int, float, float, float);$/;"	m	struct:layer
 update_gru_layer	tmc_darknet_ros/tmc_darknet/src/gru_layer.c	/^void update_gru_layer(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
 update_gru_layer_gpu	tmc_darknet_ros/tmc_darknet/src/gru_layer.c	/^void update_gru_layer_gpu(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
@@ -21961,7 +22048,7 @@ update_local_layer_gpu	tmc_darknet_ros/tmc_darknet/src/local_layer.c	/^void upda
 update_network	tmc_darknet_ros/tmc_darknet/src/network.c	/^void update_network(network net)$/;"	f
 update_rnn_layer	tmc_darknet_ros/tmc_darknet/src/rnn_layer.c	/^void update_rnn_layer(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
 update_rnn_layer_gpu	tmc_darknet_ros/tmc_darknet/src/rnn_layer.c	/^void update_rnn_layer_gpu(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
-update_speech	face_recognition/scripts/task_speech.py	/^def update_speech(s):$/;"	f
+update_speech	face_recognition/scripts/task_sppech.py	/^def update_speech(s):$/;"	f
 upperFunc	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void upperFunc(sqlite3_context *context, int argc, sqlite3_value **argv){$/;"	f	file:
 upright_	rtabmap/corelib/include/rtabmap/core/Features2d.h	/^	bool upright_;$/;"	m	class:rtabmap::SURF
 uri_boolean	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  int (*uri_boolean)(const char*,const char*,int);$/;"	m	struct:sqlite3_api_routines	file:
@@ -22316,11 +22403,13 @@ voxelSize_	rtabmap_ros/src/nodelets/point_cloud_xyzrgb.cpp	/^	double voxelSize_;
 voxelSpin_	rtabmap/guilib/include/rtabmap/gui/OdometryViewer.h	/^	QDoubleSpinBox * voxelSpin_;$/;"	m	class:rtabmap::OdometryViewer
 voxel_box_index	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	int voxel_box_index;$/;"	m	class:Cluster3D_BoundingBox
 voxel_box_index	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	int voxel_box_index;$/;"	m	class:Mean3DTrackingBox
+voxel_box_index	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	int voxel_box_index;$/;"	m	class:Cluster3D_BoundingBox
 voxel_box_index	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	int voxel_box_index;$/;"	m	class:Cluster3D_BoundingBox
 voxel_box_index	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	int voxel_box_index;$/;"	m	class:Cluster3D_BoundingBox	file:
 voxel_box_index	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	int voxel_box_index;$/;"	m	class:Cluster3D_BoundingBox	file:
 voxel_indices	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	pcl::PointIndices voxel_indices;$/;"	m	class:Cluster3D_BoundingBox
 voxel_indices	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	pcl::PointIndices voxel_indices;$/;"	m	class:Mean3DTrackingBox
+voxel_indices	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	pcl::PointIndices voxel_indices;$/;"	m	class:Cluster3D_BoundingBox
 voxel_indices	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	pcl::PointIndices voxel_indices;$/;"	m	class:Cluster3D_BoundingBox
 voxel_indices	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	pcl::PointIndices voxel_indices;$/;"	m	class:Cluster3D_BoundingBox	file:
 voxel_indices	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	pcl::PointIndices voxel_indices;$/;"	m	class:Cluster3D_BoundingBox	file:
@@ -22330,17 +22419,20 @@ voxelize	rtabmap/corelib/src/util3d_filtering.cpp	/^pcl::PointCloud<pcl::PointXY
 voxelize	rtabmap/corelib/src/util3d_filtering.cpp	/^pcl::PointCloud<pcl::PointXYZRGBNormal>::Ptr voxelize($/;"	f	namespace:rtabmap::util3d
 voxelize_points	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::voxelize_points(){$/;"	f	class:Bounding_Box_dobject
 voxelize_points	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::voxelize_points(){$/;"	f	class:Bounding_Box_dobject_nicolas
+voxelize_points	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::voxelize_points(){$/;"	f	class:Bounding_Box_dobject
 voxelize_points	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^void Bounding_Box_dobject::voxelize_points(){$/;"	f	class:Bounding_Box_dobject
 voxelize_points	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::voxelize_points(){$/;"	f	class:Bounding_Box_dobject
 voxelize_points	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::voxelize_points(){$/;"	f	class:Bounding_Box_dobject
 voxelized_bounding_box_points	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZ> > voxelized_bounding_box_points;	$/;"	m	class:Bounding_Box_dobject
 voxelized_bounding_box_points	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZ> > voxelized_bounding_box_points;	$/;"	m	class:Bounding_Box_dobject_nicolas
+voxelized_bounding_box_points	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZ> > voxelized_bounding_box_points;	$/;"	m	class:Bounding_Box_dobject
 voxelized_bounding_box_points	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZ> > voxelized_bounding_box_points;	$/;"	m	class:Bounding_Box_dobject
 voxelized_bounding_box_points	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	std::vector< pcl::PointCloud<pcl::PointXYZ> > voxelized_bounding_box_points;	$/;"	m	class:Bounding_Box_dobject	file:
 voxelized_bounding_box_points	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	std::vector< pcl::PointCloud<pcl::PointXYZ> > voxelized_bounding_box_points;	$/;"	m	class:Bounding_Box_dobject	file:
 voxelized_pub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Publisher 			  voxelized_pub; \/\/ publish point cloud of dobject points;	$/;"	m	class:Bounding_Box_dobject
 voxelized_pub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Publisher 			  voxelized_pub; \/\/ publish point cloud of dobject points;	$/;"	m	class:Bounding_Box_dobject_nicolas
 voxelized_pub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Publisher 			  voxelized_pub; \/\/ publish point cloud of dobject points;	$/;"	m	class:Tracking_Box_dobject
+voxelized_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  voxelized_pub; \/\/ publish point cloud of dobject points;	$/;"	m	class:Bounding_Box_dobject
 voxelized_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  voxelized_pub; \/\/ publish point cloud of dobject points;	$/;"	m	class:Bounding_Box_dobject
 voxelized_pub	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	ros::Publisher 			  voxelized_pub; \/\/ publish point cloud of dobject points;	$/;"	m	class:Bounding_Box_dobject	file:
 voxelized_pub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Publisher 			  voxelized_pub; \/\/ publish point cloud of dobject points;	$/;"	m	class:Bounding_Box_dobject	file:
@@ -22496,6 +22588,7 @@ width	rtabmap/app/android/jni/third-party/include/glm/gtx/io.hpp	/^			unsigned  
 width	rtabmap/app/android/jni/third-party/include/glm/gtx/io.hpp	/^		struct width$/;"	s	namespace:glm::io
 width	villa_3d_object_extract/include/BoundingBoxPersonDesc.h	/^  float width;$/;"	m	class:BoundingBox_Person_Desc
 width	villa_3d_object_extract/include/TrackingBoxPersonDesc.h	/^  float width;$/;"	m	class:TrackingBox_Person_Desc
+width	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^  float width;$/;"	m	class:BoundingBox_Person_Desc
 width	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^  float width;$/;"	m	class:BoundingBox_Person_Desc
 width	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^  float width;$/;"	m	class:BoundingBox_Person_Desc	file:
 width	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^  float width;$/;"	m	class:BoundingBox_Person_Desc	file:
@@ -22970,11 +23063,13 @@ x_	rtabmap_ros/src/costmap_2d/static_layer.h	/^  unsigned int x_,y_,width_,heigh
 x_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * x_gpu;$/;"	m	struct:layer
 x_max	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox
 x_max	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float x_min; float x_max;$/;"	m	class:Mean3DTrackingBox
+x_max	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox
 x_max	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox
 x_max	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox	file:
 x_max	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox	file:
 x_min	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox
 x_min	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float x_min; float x_max;$/;"	m	class:Mean3DTrackingBox
+x_min	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox
 x_min	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox
 x_min	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox	file:
 x_min	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float x_min; float x_max;$/;"	m	class:Cluster3D_BoundingBox	file:
@@ -23022,11 +23117,13 @@ yDbMask	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  typedef unsigned int yDbMask;$
 y_	rtabmap_ros/src/costmap_2d/static_layer.h	/^  unsigned int x_,y_,width_,height_;$/;"	m	class:rtabmap_ros::StaticLayer
 y_max	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox
 y_max	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float y_min; float y_max;$/;"	m	class:Mean3DTrackingBox
+y_max	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox
 y_max	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox
 y_max	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox	file:
 y_max	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox	file:
 y_min	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox
 y_min	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float y_min; float y_max;$/;"	m	class:Mean3DTrackingBox
+y_min	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox
 y_min	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox
 y_min	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox	file:
 y_min	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float y_min; float y_max;$/;"	m	class:Cluster3D_BoundingBox	file:
@@ -23039,11 +23136,13 @@ ynVar	rtabmap/corelib/src/sqlite3/sqlite3.c	/^typedef int ynVar;$/;"	t	file:
 yolo_detectedObjects_sub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Subscriber			  yolo_detectedObjects_sub;	$/;"	m	class:Bounding_Box_dobject
 yolo_detectedObjects_sub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Subscriber			  yolo_detectedObjects_sub;	$/;"	m	class:Bounding_Box_dobject_nicolas
 yolo_detectedObjects_sub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Subscriber			  yolo_detectedObjects_sub;	$/;"	m	class:Tracking_Box_dobject
+yolo_detectedObjects_sub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber			  yolo_detectedObjects_sub;	$/;"	m	class:Bounding_Box_dobject
 yolo_detectedObjects_sub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber			  yolo_detectedObjects_sub;	$/;"	m	class:Bounding_Box_dobject
 yolo_detectedObjects_sub	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	ros::Subscriber			  yolo_detectedObjects_sub;	$/;"	m	class:Bounding_Box_dobject	file:
 yolo_detected_obj_callback	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::yolo_detected_obj_callback(const tmc_yolo2_ros::DetectionsConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 yolo_detected_obj_callback	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::yolo_detected_obj_callback(const tmc_yolo2_ros::DetectionsConstPtr &msg){$/;"	f	class:Bounding_Box_dobject_nicolas
 yolo_detected_obj_callback	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::yolo_detected_obj_callback(const tmc_yolo2_ros::DetectionsConstPtr &msg){$/;"	f	class:Tracking_Box_dobject
+yolo_detected_obj_callback	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::yolo_detected_obj_callback(const tmc_yolo2_ros::DetectionsConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 yolo_detected_obj_callback	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::yolo_detected_obj_callback(const tmc_yolo2_ros::DetectionsConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 yolo_detected_obj_callback	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::yolo_detected_obj_callback(const tmc_yolo2_ros::DetectionsConstPtr &msg){$/;"	f	class:Bounding_Box_dobject
 ypos	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int ypos;    \/\/ which pre-expansion row we're on$/;"	m	struct:__anon95
@@ -23219,11 +23318,13 @@ z_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float *z_gpu
 z_length	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   stbi__zhuffman z_length, z_distance;$/;"	m	struct:__anon97
 z_max	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox
 z_max	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float z_min; float z_max;	$/;"	m	class:Mean3DTrackingBox
+z_max	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox
 z_max	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox
 z_max	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox	file:
 z_max	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox	file:
 z_min	villa_3d_object_extract/include/Cluster3DBoundingBox.h	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox
 z_min	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^	float z_min; float z_max;	$/;"	m	class:Mean3DTrackingBox
+z_min	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox
 z_min	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox
 z_min	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox	file:
 z_min	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float z_min; float z_max;	$/;"	m	class:Cluster3D_BoundingBox	file:
@@ -23243,11 +23344,13 @@ zout_start	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   char
 ~AutotunedIndex	rtabmap/corelib/src/rtflann/algorithms/autotuned_index.h	/^    virtual ~AutotunedIndex()$/;"	f	class:rtflann::AutotunedIndex
 ~BRISK	rtabmap/corelib/src/Features2d.cpp	/^BRISK::~BRISK()$/;"	f	class:rtabmap::BRISK
 ~BayesFilter	rtabmap/corelib/src/BayesFilter.cpp	/^BayesFilter::~BayesFilter() {$/;"	f	class:rtabmap::BayesFilter
+~BoundingBox_Person_Desc	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^BoundingBox_Person_Desc::~BoundingBox_Person_Desc(){}$/;"	f	class:BoundingBox_Person_Desc
 ~BoundingBox_Person_Desc	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^BoundingBox_Person_Desc::~BoundingBox_Person_Desc(){}$/;"	f	class:BoundingBox_Person_Desc
 ~BoundingBox_Person_Desc	villa_3d_object_extract/src/BoundingBoxPersonDesc.cpp	/^BoundingBox_Person_Desc::~BoundingBox_Person_Desc(){}$/;"	f	class:BoundingBox_Person_Desc
 ~BoundingBox_Person_Desc	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^BoundingBox_Person_Desc::~BoundingBox_Person_Desc(){}$/;"	f	class:BoundingBox_Person_Desc
 ~BoundingBox_Person_Desc	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^BoundingBox_Person_Desc::~BoundingBox_Person_Desc(){}$/;"	f	class:BoundingBox_Person_Desc
 ~Bounding_Box_dobject	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^Bounding_Box_dobject::~Bounding_Box_dobject(){}$/;"	f	class:Bounding_Box_dobject
+~Bounding_Box_dobject	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^Bounding_Box_dobject::~Bounding_Box_dobject(){}$/;"	f	class:Bounding_Box_dobject
 ~Bounding_Box_dobject	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^Bounding_Box_dobject::~Bounding_Box_dobject(){}$/;"	f	class:Bounding_Box_dobject
 ~Bounding_Box_dobject	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^Bounding_Box_dobject::~Bounding_Box_dobject(){}$/;"	f	class:Bounding_Box_dobject
 ~Bounding_Box_dobject	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^Bounding_Box_dobject::~Bounding_Box_dobject(){}$/;"	f	class:Bounding_Box_dobject
@@ -23282,6 +23385,7 @@ zout_start	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   char
 ~CloudInfo	rtabmap_ros/src/rviz/MapCloudDisplay.cpp	/^MapCloudDisplay::CloudInfo::~CloudInfo()$/;"	f	class:rtabmap_ros::MapCloudDisplay::CloudInfo
 ~CloudViewer	rtabmap/guilib/src/CloudViewer.cpp	/^CloudViewer::~CloudViewer()$/;"	f	class:rtabmap::CloudViewer
 ~Cluster3D_BoundingBox	villa_3d_object_extract/src/Cluster3DBoundingBox.cpp	/^Cluster3D_BoundingBox::~Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
+~Cluster3D_BoundingBox	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^Cluster3D_BoundingBox::~Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
 ~Cluster3D_BoundingBox	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^Cluster3D_BoundingBox::~Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
 ~Cluster3D_BoundingBox	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^Cluster3D_BoundingBox::~Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
 ~Cluster3D_BoundingBox	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^Cluster3D_BoundingBox::~Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
