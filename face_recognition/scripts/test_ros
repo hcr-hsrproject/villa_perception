@@ -20,13 +20,10 @@ import select, termios, tty
 import face_recognition
 from villa_task import tts
 
-
 import tensorflow as tf
 from rude_carnie.model import select_model, get_checkpoint
 from rude_carnie import paths
 from rude_carnie.detect import face_detection_model
-
-
 
 moveBindings = {
 		'i':(4,3,0,0),

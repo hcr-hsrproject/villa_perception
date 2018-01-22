@@ -24,14 +24,14 @@ add_action_files(
   FILES FaceRecog.action
 )
 
-  generate_messages(
+generate_messages(
    DEPENDENCIES
    std_msgs
    geometry_msgs
    actionlib_msgs
  )
 
- catkin_package(
+catkin_package(
   CATKIN_DEPENDS actionlib_msgs
 )
 

@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 from __future__ import print_function
+from villa_task import tts
 import rospy
 
 # Brings in the SimpleActionClient
@@ -17,6 +18,10 @@ def face_action_client():
 	client = actionlib.SimpleActionClient('face_recog_action', face_recognition_ros.msg.FaceRecogAction)
 	# Waits until the action server has started up and started
 	# listening for goals.
+
+        speech = tts.TextToSpeech()
+        speech.say("Hello. Please.... Look at me!", wait=True)
+        rospy.sleep(3.0)
 	print("wait for server")
 	client.wait_for_server()
 	# print("wait for server")
@@ -25,10 +30,10 @@ def face_action_client():
 	# goal.goal.start=True
 	# goal_publisher.publish(goal)
 	# client.wait_for_server()
-	print("wait for server")
+	# print("wait for server")
 	# Sends the goal to the action server.
 	client.send_goal(goal)
-	print("goal sent")
+	# print("goal sent")
 	# Waits for the server to finish performing the action.
 	client.wait_for_result()
 	# ROS_INFO("Start action")
@@ -42,6 +47,7 @@ if __name__ == '__main__':
 		# publish and subscribe over ROS.
 		rospy.init_node('face_recog_action_client')
 		result = face_action_client()
+                print(result)
 		# print("Result:", ', '.join([str(n) for n in result.sequence]))
 	except rospy.ROSInterruptException:
 		print("program interrupted before completion", file=sys.stderr)

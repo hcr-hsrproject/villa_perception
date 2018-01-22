@@ -12,6 +12,7 @@ from sensor_msgs.msg import Image
 from std_msgs.msg import String
 from keyboard.msg import Key 
 from cv_bridge import CvBridge, CvBridgeError
+import os
 from os import listdir
 from os.path import isfile, join, exists
 import numpy as np
@@ -35,26 +36,24 @@ class FaceDectector_Action(object):
 		image_topic = "/hsrb/head_rgbd_sensor/rgb/image_rect_color"
 		rospy.Subscriber(image_topic, Image, self.image_callback)
 		# image_topic = "/hsrb/head_rgbd_sensor/rgb/image_rect_color"
-		# rospy.Subscriber(image_topic, Image, self.image_callback)
-		# rospy.Subscriber(image_topic, Image, self.image_callback)
-		# rospy.Subscriber("keyboard/keydown",Key,self.key_callback)
 		self.string_pub = rospy.Publisher('/face_detected_name', String, queue_size=10)
 		self.bridge = CvBridge()
-		self.path =exists("known_faces")
-		print self.path
 		self.takepicture = False
 		self.threshold = 0.6
 		#self.known_folder = "/home/hsr-user/workspaces/help_me/src/villa_perception/face_recognition/scripts/known_faces"
-		self.known_folder = "/home/mk/robocup_home_ws/src/villa_perception/face_recognition/scripts/known_faces"
+		# self.known_folder = "/home/mk/robocup_home_ws/src/villa_perception/face_recognition/scripts/known_faces"
+
+                dirname = os.path.dirname(__file__)  # get current file path
+		self.known_folder =dirname+"/known_faces" 
 		self.known_imgs = [f for f in listdir(self.known_folder) if isfile(join(self.known_folder, f))]
 		print self.known_imgs
 		self.known_img_names = []
 		self.known_encodings = []
 		self.count=0
 		self.num_faces=0
+                self.detected_face="unknown person"
 		self.Isrecognized =False
 		self.detected_msg =std_msgs.msg.String()
-		
 
 		for img_name in self.known_imgs:
 			img = face_recognition.load_image_file(self.known_folder +'/'+img_name)
@@ -73,11 +72,12 @@ class FaceDectector_Action(object):
 		success = False
 		print('save picture')
 		self.takepicture = True
-		self._feedback.Is_people_Yolo = True
-		self._result.name="unknown"
-		self._result.human_index = self.self.num_faces
+		# self._feedback.Is_people_Yolo = True
+		self._result.name=self.detected_face
+		self._result.Isknownperson= self.Isrecognized
+                self._result.numfaces= self.num_faces
+                self._feedback.num_face= self.num_faces
 		self._as.set_succeeded(self._result)
-	 
 
 	def listener(self,wait=0.0):
 		rospy.spin()
@@ -86,8 +86,8 @@ class FaceDectector_Action(object):
 	def key_callback(self,msg):		#"p"
 		self.code=msg.code
 		if self.code==112:
-		   self.takepicture = True
-		   print('take picture')
+                   self.takepicture = True
+                   print('take picture')
 		print msg.code
 
 	def crop_face(self,image_data):
@@ -107,27 +107,30 @@ class FaceDectector_Action(object):
 			facelists =self.crop_face(self.cv2_img)
 			self.num_faces=0
 			
-			for face in facelists:
-				unknown_encoding = face_recognition.face_encodings(face)[0]
-				distances = face_recognition.face_distance(self.known_encodings, unknown_encoding)
-				if(min(distances)<self.threshold):
-					match_idx = np.argmin(distances)
-					print('matched: '+self.known_img_names[match_idx])
-					self.detected_msg.data =self.known_img_names[match_idx]
-					self.count=self.count+1
-					self.num_faces= self.num_faces+1
-					self.Isrecognized =True
-					if(self.count>5):
-						self.string_pub.publish(self.detected_msg)
-						self.count=0
-					# self.tts.say('matched')
-					
-				else:
-					print('unknown')
-					self.detected_msg.data ='unknown'
-					self.Isrecognized =False
-					self.count=0
-					self.num_faces=0
+                        if(len(facelists)>0):
+                            for face in facelists:
+                                if(face_recognition.face_encodings(face)):
+                                    unknown_encoding = face_recognition.face_encodings(face)[0]
+                                    distances = face_recognition.face_distance(self.known_encodings, unknown_encoding)
+                                    if(min(distances)<self.threshold):
+                                        match_idx = np.argmin(distances)
+                                        print('matched: '+self.known_img_names[match_idx])
+                                        self.detected_msg.data =self.known_img_names[match_idx]
+                                        self.detected_face=self.detected_msg.data
+                                        self.count=self.count+1
+                                        self.num_faces= self.num_faces+1
+                                        self.Isrecognized =True
+                                        if(self.count>5):
+                                            self.string_pub.publish(self.detected_msg)
+                                            self.count=0
+                                        # self.tts.say('matched')
+
+                                    else:
+                                        print('unknown')
+                                        self.detected_msg.data ='unknown'
+                                        self.Isrecognized =False
+                                        self.count=0
+                                        self.num_faces=0
 
 		except CvBridgeError, e:
 			print(e)
@@ -156,8 +159,8 @@ if __name__ == '__main__':
 
 	# print("Pre Initialize node")
 	rospy.init_node('face_recog_action')
-	print("Initialize node")
-	print(rospy.get_name())
+	print("Initialize face action node")
+	# print(rospy.get_name())
 	Face_manager = FaceDectector_Action('face_recog_action')
 	print("Object created")
 	#rospy.spin()

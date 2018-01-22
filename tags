@@ -1084,6 +1084,8 @@ FaceDectectors	face_recognition/scripts/test_ros	/^class FaceDectectors(object):
 FaceDectectors_photo	face_recognition/scripts/take_photo_server.py	/^class FaceDectectors_photo(object):$/;"	c
 FaceDetector	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^class FaceDetector(object):$/;"	c
 FaceDetector	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^class FaceDetector(object):$/;"	c
+FaceTracker	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^class FaceTracker {$/;"	c
+FaceTracker	marty_face_tracker/src/face_tracking.cpp	/^FaceTracker::FaceTracker(ros::NodeHandle &nh) : it_(nh) {$/;"	f	class:FaceTracker
 Face_manager	face_recognition/scripts/face_action_server.py	/^	Face_manager = FaceDectector_Action('face_recog_action')$/;"	v	class:FaceDectector_Action
 Face_manager	face_recognition/scripts/face_photo_action.py	/^	Face_manager = FaceDectector_Action(rospy.get_name())$/;"	v	class:FaceDectector_Action
 Face_manager	face_recognition/scripts/face_recog_action.py	/^	Face_manager = FaceDectector_Action(rospy.get_name())$/;"	v	class:FaceDectector_Action
@@ -7514,6 +7516,7 @@ calibrateSimple	rtabmap/guilib/src/PreferencesDialog.cpp	/^void PreferencesDialo
 callCollNeeded	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void callCollNeeded(sqlite3 *db, int enc, const char *zName){$/;"	f	file:
 callFinaliser	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void callFinaliser(sqlite3 *db, int offset){$/;"	f	file:
 callStatGet	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void callStatGet(Vdbe *v, int regStat4, int iParam, int regOut){$/;"	f	file:
+callback	marty_face_tracker/scripts/track_movement_center.py	/^def callback(data):$/;"	f
 callback	rtabmap_ros/scripts/patrol.py	/^def callback(data):$/;"	f
 callback	rtabmap_ros/src/CameraNode.cpp	/^void callback(rtabmap_ros::CameraConfig &config, uint32_t level)$/;"	f
 callback	rtabmap_ros/src/nodelets/data_odom_sync.cpp	/^	void callback(const sensor_msgs::ImageConstPtr& image,$/;"	f	class:rtabmap_ros::DataOdomSyncNodelet	file:
@@ -7574,6 +7577,7 @@ camera_	rtabmap/corelib/src/CameraStereo.cpp	/^	dc1394camera_t *camera_;$/;"	m	c
 camera_	rtabmap/examples/RGBDMapping/MapBuilder.h	/^	CameraThread * camera_;$/;"	m	class:MapBuilder
 camera_	rtabmap/examples/WifiMapping/MapBuilder.h	/^	CameraThread * camera_;$/;"	m	class:MapBuilder
 camera_	rtabmap_ros/src/CameraNode.cpp	/^	rtabmap::Camera * camera_;$/;"	m	class:CameraWrapper	file:
+camera_detected	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  bool video_output, camera_detected;$/;"	m	class:FaceTracker
 camera_type_	rtabmap/app/android/jni/tango-gl/include/tango-gl/gesture_camera.h	/^  CameraType camera_type_;$/;"	m	class:tango_gl::GestureCamera
 canParseString	rtabmap/corelib/src/Transform.cpp	/^bool Transform::canParseString(const std::string & string)$/;"	f	class:rtabmap::Transform
 cancelGoal	rtabmap/guilib/src/MainWindow.cpp	/^void MainWindow::cancelGoal()$/;"	f	class:rtabmap::MainWindow
@@ -8434,6 +8438,7 @@ currentTimeFunc	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void currentTimeF
 current_class	tmc_darknet_ros/tmc_darknet/src/compare.c	/^int current_class = 0;$/;"	v
 current_map_	rtabmap_ros/src/rviz/MapCloudDisplay.h	/^	std::map<int, rtabmap::Transform> current_map_;$/;"	m	class:rtabmap_ros::MapCloudDisplay
 current_map_mutex_	rtabmap_ros/src/rviz/MapCloudDisplay.h	/^	boost::mutex current_map_mutex_;$/;"	m	class:rtabmap_ros::MapCloudDisplay
+current_position	marty_face_tracker/scripts/track_movement_center.py	/^current_position = 0$/;"	v
 cursorHoldsMutex	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int cursorHoldsMutex(BtCursor *p){$/;"	f	file:
 curve	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	const UPlotCurve * curve() const {return _curve;}$/;"	f	class:UPlotLegendItem
 curveNames	rtabmap/guilib/src/utilite/UPlot.cpp	/^QStringList UPlot::curveNames()$/;"	f	class:UPlot
@@ -8785,9 +8790,12 @@ detail	rtabmap/app/android/jni/third-party/include/glm/gtx/simd_mat4.hpp	/^names
 detail	rtabmap/app/android/jni/third-party/include/glm/gtx/simd_quat.hpp	/^namespace detail$/;"	n	namespace:glm
 detail	rtabmap/app/android/jni/third-party/include/glm/gtx/simd_vec4.hpp	/^namespace detail$/;"	n	namespace:glm
 detectCorners	villa_calibration/src/CVUtil.cc	/^void detectCorners($/;"	f
+detectEyes	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::detectEyes(std::vector<cv::Rect> &eyes_vector, cv::Mat roi) {$/;"	f	class:FaceTracker
+detectFaces	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::detectFaces(std::vector<cv::Rect> &faces_vector,$/;"	f	class:FaceTracker
 detectImpl	rtabmap/corelib/src/opencv/Orb.cpp	/^void CV_ORB::detectImpl( const Mat& image, std::vector<KeyPoint>& keypoints, const Mat& mask) const$/;"	f	class:rtabmap::CV_ORB
 detectMoreLoopClosures	rtabmap/corelib/src/Rtabmap.cpp	/^int Rtabmap::detectMoreLoopClosures(float clusterRadius, float clusterAngle, int iterations)$/;"	f	class:rtabmap::Rtabmap
 detectMoreLoopClosures	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::detectMoreLoopClosures()$/;"	f	class:rtabmap::DatabaseViewer
+detectSmile	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::detectSmile(std::vector<cv::Rect> &smiles_vector,$/;"	f	class:FaceTracker
 detect_in_thread	tmc_darknet_ros/tmc_darknet/src/demo.c	/^void *detect_in_thread(void *ptr)$/;"	f
 detectedObjects_sub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject
 detectedObjects_sub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject_nicolas
@@ -8800,6 +8808,7 @@ detected_obj_callback	villa_3d_object_extract/src/deprecated/object_bounding_box
 detected_people	gender_identification/scripts/gender_identification_server	/^detected_people = []$/;"	v
 detected_people	gender_identification/scripts/gender_publisher	/^detected_people = []$/;"	v
 detection_layer	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/detection_layer.h	/^typedef layer detection_layer;$/;"	t
+detection_parameters	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  float detection_parameters[3][4];$/;"	m	class:FaceTracker
 detection_pub_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  ros::Publisher detection_pub_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
 detections_callback	gender_identification/scripts/gender_publisher	/^def detections_callback(data):$/;"	f
 detections_msg_count_	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^  int detections_msg_count_;$/;"	m	class:tmc_yolo2_ros::Yolo2NodeTest	file:
@@ -9387,6 +9396,15 @@ extract_human_boxes	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_
 extract_human_boxes	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_human_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_means_dobject_boxes	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::extract_means_dobject_boxes(){$/;"	f	class:Tracking_Box_dobject
 extract_voxel	tmc_darknet_ros/tmc_darknet/src/voxel.c	/^void extract_voxel(char *lfile, char *rfile, char *prefix)$/;"	f
+eye_cascade	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_cascade, eye_cascade, smile_cascade;$/;"	m	class:FaceTracker
+eye_classifier	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv::CascadeClassifier face_classifier, eye_classifier, smile_classifier;$/;"	m	class:FaceTracker
+eye_image	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv_bridge::CvImagePtr face_image, eye_image, smile_image, face_region;$/;"	m	class:FaceTracker
+eye_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::Publisher face_pub_, eye_pub_, smile_pub_;$/;"	m	class:FaceTracker
+eye_pub_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_pub_name, eye_pub_name, smile_pub_name;$/;"	m	class:FaceTracker
+eyes	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::vector<cv::Rect> faces, eyes, smiles;$/;"	m	class:FaceTracker
+eyes_centroid	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  marty_msgs::CentroidMsg faces_centroid, smiles_centroid, eyes_centroid;$/;"	m	class:FaceTracker
+eyes_centroid_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string faces_centroid_name, smiles_centroid_name, eyes_centroid_name;$/;"	m	class:FaceTracker
+eyes_centroid_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  ros::Publisher faces_centroid_pub_, smiles_centroid_pub_, eyes_centroid_pub_;$/;"	m	class:FaceTracker
 f	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  RtreeValue f;$/;"	m	union:RtreeCoord	file:
 f32	rtabmap/app/android/jni/third-party/include/glm/fwd.hpp	/^	typedef highp_float32_t f32;$/;"	t	namespace:glm
 f32	rtabmap/app/android/jni/third-party/include/glm/fwd.hpp	/^	typedef lowp_f32 f32;$/;"	t	namespace:glm
@@ -9541,10 +9559,20 @@ f64vec4	rtabmap/app/android/jni/third-party/include/glm/gtc/type_precision.hpp	/
 fErrorOrAux	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u8 fErrorOrAux;       \/* isError!=0 or pVdbe->pAuxData modified *\/$/;"	m	struct:sqlite3_context	file:
 face_action_client	face_recognition/scripts/client_test.py	/^def face_action_client():$/;"	f
 face_action_client	face_recognition/scripts/face_action_client.py	/^def face_action_client():$/;"	f
+face_cascade	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_cascade, eye_cascade, smile_cascade;$/;"	m	class:FaceTracker
+face_classifier	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv::CascadeClassifier face_classifier, eye_classifier, smile_classifier;$/;"	m	class:FaceTracker
 face_detection_model	villa_rude_carnie_ros/src/rude_carnie/detect.py	/^def face_detection_model(model_path):$/;"	f
 face_image	face_recognition/scripts/from PIL import Image.py	/^    face_image = image[top:bottom, left:right]$/;"	v
+face_image	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv_bridge::CvImagePtr face_image, eye_image, smile_image, face_region;$/;"	m	class:FaceTracker
 face_locations	face_recognition/scripts/from PIL import Image.py	/^face_locations = face_recognition.face_locations(image)$/;"	v
 face_pub	gender_identification/scripts/gender_publisher	/^    face_pub = rospy.Publisher('\/villa\/face', Image, queue_size=1)$/;"	v
+face_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::Publisher face_pub_, eye_pub_, smile_pub_;$/;"	m	class:FaceTracker
+face_pub_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_pub_name, eye_pub_name, smile_pub_name;$/;"	m	class:FaceTracker
+face_region	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv_bridge::CvImagePtr face_image, eye_image, smile_image, face_region;$/;"	m	class:FaceTracker
+faces	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::vector<cv::Rect> faces, eyes, smiles;$/;"	m	class:FaceTracker
+faces_centroid	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  marty_msgs::CentroidMsg faces_centroid, smiles_centroid, eyes_centroid;$/;"	m	class:FaceTracker
+faces_centroid_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string faces_centroid_name, smiles_centroid_name, eyes_centroid_name;$/;"	m	class:FaceTracker
+faces_centroid_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  ros::Publisher faces_centroid_pub_, smiles_centroid_pub_, eyes_centroid_pub_;$/;"	m	class:FaceTracker
 fade	rtabmap/app/android/jni/third-party/include/glm/detail/_noise.hpp	/^	GLM_FUNC_QUALIFIER detail::tvec2<T, P> fade(detail::tvec2<T, P> const & t)$/;"	f	namespace:glm::detail
 fade	rtabmap/app/android/jni/third-party/include/glm/detail/_noise.hpp	/^	GLM_FUNC_QUALIFIER detail::tvec3<T, P> fade(detail::tvec3<T, P> const & t)$/;"	f	namespace:glm::detail
 fade	rtabmap/app/android/jni/third-party/include/glm/detail/_noise.hpp	/^	GLM_FUNC_QUALIFIER detail::tvec4<T, P> fade(detail::tvec4<T, P> const & t)$/;"	f	namespace:glm::detail
@@ -11179,6 +11207,7 @@ graph_shader_program_	rtabmap/app/android/jni/scene.h	/^  GLuint graph_shader_pr
 graphes_	rtabmap/guilib/include/rtabmap/gui/DatabaseViewer.h	/^	std::list<std::map<int, rtabmap::Transform> > graphes_;$/;"	m	class:rtabmap::DatabaseViewer
 grayscale_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^image grayscale_image(image im)$/;"	f
 green_	rtabmap/app/android/jni/tango-gl/include/tango-gl/drawable_object.h	/^  float green_;$/;"	m	class:tango_gl::DrawableObject
+grey_image	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv::Mat grey_image;$/;"	m	class:FaceTracker
 gridCellSize_	rtabmap_ros/src/MapsManager.h	/^	double gridCellSize_;$/;"	m	class:MapsManager
 gridCols_	rtabmap/corelib/include/rtabmap/core/Features2d.h	/^	int gridCols_;$/;"	m	class:rtabmap::FAST
 gridEroded_	rtabmap_ros/src/MapsManager.h	/^	bool gridEroded_;$/;"	m	class:MapsManager
@@ -11967,6 +11996,7 @@ im2col_get_pixel	tmc_darknet_ros/tmc_darknet/src/im2col.c	/^float im2col_get_pix
 image	face_recognition/scripts/from PIL import Image.py	/^image = face_recognition.load_image_file("ut_student2.jpg")$/;"	v
 image	face_recognition/scripts/hc_test.py	/^image = face_recognition.load_image_file("ut_student2.jpg")$/;"	v
 image	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/image.h	/^} image;$/;"	t	typeref:struct:__anon108
+imageCb	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::imageCb(const sensor_msgs::ImageConstPtr &msg) {$/;"	f	class:FaceTracker
 imageCompressed	rtabmap/corelib/include/rtabmap/core/SensorData.h	/^	const cv::Mat & imageCompressed() const {return _imageCompressed;}$/;"	f	class:rtabmap::SensorData
 imageDepthPub_	rtabmap_ros/src/nodelets/data_odom_sync.cpp	/^	image_transport::Publisher imageDepthPub_;$/;"	m	class:rtabmap_ros::DataOdomSyncNodelet	file:
 imageDepthPub_	rtabmap_ros/src/nodelets/data_throttle.cpp	/^	image_transport::Publisher imageDepthPub_;$/;"	m	class:rtabmap_ros::DataThrottleNodelet	file:
@@ -12034,6 +12064,7 @@ image_sub	gender_identification/scripts/gender_publisher	/^    image_sub = rospy
 image_sub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Subscriber           image_sub;$/;"	m	class:Bounding_Box_dobject
 image_sub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Subscriber           image_sub;$/;"	m	class:Bounding_Box_dobject_nicolas
 image_sub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Subscriber           image_sub;$/;"	m	class:Tracking_Box_dobject
+image_sub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::Subscriber image_sub_;$/;"	m	class:FaceTracker
 image_sub_	rtabmap_ros/src/nodelets/data_odom_sync.cpp	/^	image_transport::SubscriberFilter image_sub_;$/;"	m	class:rtabmap_ros::DataOdomSyncNodelet	file:
 image_sub_	rtabmap_ros/src/nodelets/data_throttle.cpp	/^	image_transport::SubscriberFilter image_sub_;$/;"	m	class:rtabmap_ros::DataThrottleNodelet	file:
 image_sub_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  image_transport::Subscriber image_sub_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
@@ -12612,6 +12643,7 @@ is_vector_space_distance	rtabmap/corelib/src/rtflann/algorithms/dist.h	/^    typ
 isfinite	rtabmap/app/android/jni/third-party/include/glm/gtx/compatibility.hpp	54;"	d
 isinf	rtabmap/app/android/jni/third-party/include/glm/detail/_fixes.hpp	48;"	d
 isnan	rtabmap/app/android/jni/third-party/include/glm/detail/_fixes.hpp	43;"	d
+it_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::ImageTransport it_;$/;"	m	class:FaceTracker
 itemsColor	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	QColor itemsColor() const  {return _itemsColor;}$/;"	f	class:UPlotCurve
 itemsSize	rtabmap/guilib/src/utilite/UPlot.cpp	/^int UPlotCurve::itemsSize() const$/;"	f	class:UPlotCurve
 itemtype	rtabmap/corelib/src/util2d.cpp	/^typedef float itemtype;$/;"	t	namespace:rtabmap::util2d	file:
@@ -13091,6 +13123,7 @@ listener	face_recognition/scripts/face_recog_srv_client.py	/^	def listener(self)
 listener	face_recognition/scripts/face_service.py	/^	def listener(self):$/;"	m	class:FaceDectectors
 listener	face_recognition/scripts/take_photo_server.py	/^    def listener(self):$/;"	m	class:FaceDectectors_photo
 listener	face_recognition/scripts/test_ros	/^	def listener(self,wait=0.0):$/;"	m	class:FaceDectectors
+listener	marty_face_tracker/scripts/track_movement_center.py	/^def listener():$/;"	f
 listener	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::TransformListener 	  listener;$/;"	m	class:Bounding_Box_dobject
 listener	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::TransformListener 	  listener;$/;"	m	class:Bounding_Box_dobject
 listener_	rtabmap/corelib/include/rtabmap/core/CameraRGBD.h	/^	libfreenect2::SyncMultiFrameListener * listener_;$/;"	m	class:rtabmap::CameraFreenect2
@@ -13112,6 +13145,7 @@ load	rtabmap/corelib/src/toro3d/posegraph3.cpp	/^bool TreePoseGraph3::load(const
 loadAnalysis	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void loadAnalysis(Parse *pParse, int iDb){$/;"	f	file:
 loadBINCloud	rtabmap/corelib/src/util3d.cpp	/^pcl::PointCloud<pcl::PointXYZ>::Ptr loadBINCloud(const std::string & fileName, int dim)$/;"	f	namespace:rtabmap::util3d
 loadBlock	rtabmap/corelib/src/rtflann/util/serialization.h	/^    void loadBlock(char* buffer_, size_t compSz, FILE* stream)$/;"	f	class:rtflann::serialization::LoadArchive
+loadClassifiers	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::loadClassifiers() {$/;"	f	class:FaceTracker
 loadCloud	rtabmap/corelib/src/util3d.cpp	/^pcl::PointCloud<pcl::PointXYZ>::Ptr loadCloud($/;"	f	namespace:rtabmap::util3d
 loadConfigFrom	rtabmap/guilib/src/PreferencesDialog.cpp	/^void PreferencesDialog::loadConfigFrom()$/;"	f	class:rtabmap::PreferencesDialog
 loadCustomConfig	rtabmap/guilib/src/PreferencesDialog.cpp	/^QString PreferencesDialog::loadCustomConfig(const QString & section, const QString & key)$/;"	f	class:rtabmap::PreferencesDialog
@@ -13140,6 +13174,7 @@ loadNodeData	rtabmap/corelib/src/DBDriver.cpp	/^void DBDriver::loadNodeData(std:
 loadNodeDataQuery	rtabmap/corelib/src/DBDriverSqlite3.cpp	/^void DBDriverSqlite3::loadNodeDataQuery(std::list<Signature *> & signatures) const$/;"	f	class:rtabmap::DBDriverSqlite3
 loadOrSaveDb	rtabmap/corelib/src/DBDriverSqlite3.cpp	/^int DBDriverSqlite3::loadOrSaveDb(sqlite3 *pInMemory, const std::string & fileName, int isSave) const$/;"	f	class:rtabmap::DBDriverSqlite3
 loadParameters	rtabmap_ros/src/CoreWrapper.cpp	/^ParametersMap CoreWrapper::loadParameters(const std::string & configFile)$/;"	f	class:CoreWrapper
+loadParams	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::loadParams() {$/;"	f	class:FaceTracker
 loadQuery	rtabmap/corelib/src/DBDriverSqlite3.cpp	/^void DBDriverSqlite3::loadQuery(VWDictionary * dictionary) const$/;"	f	class:rtabmap::DBDriverSqlite3
 loadScan	rtabmap/corelib/src/util3d.cpp	/^cv::Mat loadScan($/;"	f	namespace:rtabmap::util3d
 loadSettings	rtabmap/guilib/src/CalibrationDialog.cpp	/^void CalibrationDialog::loadSettings(QSettings & settings, const QString & group)$/;"	f	class:rtabmap::CalibrationDialog
@@ -13772,6 +13807,7 @@ magic1	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u32 magic1;   \/* Magic number 
 magic2	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u32 magic2;   \/* Magic number to detect structure corruption. *\/$/;"	m	struct:winMemData	file:
 main	face_recognition/test.py	/^def main():$/;"	f
 main	face_recognition/test_hc.py	/^def main():$/;"	f
+main	marty_face_tracker/src/face_tracking.cpp	/^int main(int argc, char **argv) {$/;"	f
 main	rtabmap/app/android/jni/third-party/include/glm/detail/dummy.cpp	/^int main()$/;"	f
 main	rtabmap/app/src/main.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	rtabmap/examples/BOWMapping/main.cpp	/^int main(int argc, char * argv[])$/;"	f
@@ -14931,6 +14967,7 @@ next_stmt	rtabmap/corelib/src/sqlite3/sqlite3ext.h	/^  sqlite3_stmt *(*next_stmt
 nfeatures	rtabmap/corelib/src/opencv/Orb.h	/^    CV_PROP_RW int nfeatures;$/;"	m	class:rtabmap::CV_ORB
 nfsUnlock	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int nfsUnlock(sqlite3_file *id, int eFileLock){$/;"	f	file:
 nh	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    int nh;$/;"	m	struct:load_args
+nh_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  ros::NodeHandle nh_;$/;"	m	class:FaceTracker
 nh_	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^  ros::NodeHandle nh_;$/;"	m	class:tmc_yolo2_ros::Yolo2NodeTest	file:
 nice	rtabmap/app/android/jni/third-party/include/glm/detail/type_gentype.hpp	/^		nice,$/;"	e	enum:glm::profile
 nicest	rtabmap/app/android/jni/third-party/include/glm/detail/hint.hpp	/^	class nicest {};$/;"	c	namespace:glm
@@ -16624,6 +16661,7 @@ ptrmapPut	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void ptrmapPut(BtShared
 ptrmapPut	rtabmap/corelib/src/sqlite3/sqlite3.c	51234;"	d	file:
 ptrmapPutOvflPtr	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void ptrmapPutOvflPtr(MemPage *pPage, u8 *pCell, int *pRC){$/;"	f	file:
 ptrmapPutOvflPtr	rtabmap/corelib/src/sqlite3/sqlite3.c	51236;"	d	file:
+pub	marty_face_tracker/scripts/track_movement_center.py	/^pub = rospy.Publisher('\/marty\/servo_array', ServoMsgArray, queue_size=10)$/;"	v
 pub	rtabmap_ros/scripts/patrol.py	/^pub = rospy.Publisher('\/rtabmap\/goal_node', Goal, queue_size=1)$/;"	v
 pub16u_	rtabmap_ros/src/nodelets/disparity_to_depth.cpp	/^	image_transport::Publisher pub16u_;$/;"	m	class:rtabmap_ros::DisparityToDepth	file:
 pub32f_	rtabmap_ros/src/nodelets/disparity_to_depth.cpp	/^	image_transport::Publisher pub32f_;$/;"	m	class:rtabmap_ros::DisparityToDepth	file:
@@ -16636,6 +16674,7 @@ publishAll	villa_octomap_mapping/villa_octomap_server/src/OctomapServer.cpp	/^vo
 publishBinaryOctoMap	villa_octomap_mapping/villa_octomap_server/src/ColorOctomapServer.cpp	/^void ColorOctomapServer::publishBinaryOctoMap(const ros::Time& rostime) const{$/;"	f	class:villa_octomap_server::ColorOctomapServer
 publishBinaryOctoMap	villa_octomap_mapping/villa_octomap_server/src/OctomapServer.cpp	/^void OctomapServer::publishBinaryOctoMap(const ros::Time& rostime) const{$/;"	f	class:villa_octomap_server::OctomapServer
 publishCurrentGoal	rtabmap_ros/src/CoreWrapper.cpp	/^void CoreWrapper::publishCurrentGoal(const ros::Time & stamp)$/;"	f	class:CoreWrapper
+publishData	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::publishData(bool image) {$/;"	f	class:FaceTracker
 publishFullOctoMap	villa_octomap_mapping/villa_octomap_server/src/ColorOctomapServer.cpp	/^void ColorOctomapServer::publishFullOctoMap(const ros::Time& rostime) const{$/;"	f	class:villa_octomap_server::ColorOctomapServer
 publishFullOctoMap	villa_octomap_mapping/villa_octomap_server/src/OctomapServer.cpp	/^void OctomapServer::publishFullOctoMap(const ros::Time& rostime) const{$/;"	f	class:villa_octomap_server::OctomapServer
 publishGlobalPath	rtabmap_ros/src/CoreWrapper.cpp	/^void CoreWrapper::publishGlobalPath(const ros::Time & stamp)$/;"	f	class:CoreWrapper
@@ -17065,6 +17104,7 @@ resetAllChanges	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::res
 resetAllPages	rtabmap/guilib/src/ParametersToolBox.cpp	/^void ParametersToolBox::resetAllPages()$/;"	f	class:rtabmap::ParametersToolBox
 resetApply	rtabmap/guilib/src/PreferencesDialog.cpp	/^void PreferencesDialog::resetApply ( QAbstractButton * button )$/;"	f	class:rtabmap::PreferencesDialog
 resetCamera	rtabmap/guilib/src/CloudViewer.cpp	/^void CloudViewer::resetCamera()$/;"	f	class:rtabmap::CloudViewer
+resetCentroidMsg	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::resetCentroidMsg(marty_msgs::CentroidMsg &msg, int size) {$/;"	f	class:FaceTracker
 resetConfig	rtabmap/guilib/src/PreferencesDialog.cpp	/^void PreferencesDialog::resetConfig()$/;"	f	class:rtabmap::PreferencesDialog
 resetConstraint	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::resetConstraint()$/;"	f	class:rtabmap::DatabaseViewer
 resetCountdown_	rtabmap_ros/src/nodelets/OdometryROS.h	/^	int resetCountdown_;$/;"	m	class:rtabmap_ros::OdometryROS
@@ -17233,6 +17273,7 @@ root_	rtabmap/corelib/src/rtflann/algorithms/kmeans_index.h	/^    NodePtr root_;
 root_bbox_	rtabmap/corelib/src/rtflann/algorithms/kdtree_single_index.h	/^    BoundingBox root_bbox_;$/;"	m	class:rtflann::KDTreeSingleIndex
 root_node_	rtabmap/corelib/src/rtflann/algorithms/kdtree_single_index.h	/^    NodePtr root_node_;$/;"	m	class:rtflann::KDTreeSingleIndex
 rosPublisher_	rtabmap_ros/src/CameraNode.cpp	/^	image_transport::Publisher rosPublisher_;$/;"	m	class:CameraWrapper	file:
+rosSetup	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::rosSetup() {$/;"	f	class:FaceTracker
 rotGain	rtabmap/corelib/src/toro3d/treeoptimizer3.hh	/^  double rotGain, trasGain;$/;"	m	struct:AISNavigation::TreeOptimizer3
 rotMat	villa_calibration/src/TransformShortcuts.cc	/^MatrixXd rotMat(MatrixXd inRotVect) {$/;"	f
 rotVariance	rtabmap/corelib/include/rtabmap/core/OdometryEvent.h	/^	double rotVariance() const {return uMax3(_covariance.at<double>(3,3), _covariance.at<double>(4,4), _covariance.at<double>(5,5));}$/;"	f	class:rtabmap::OdometryEvent
@@ -18491,6 +18532,15 @@ sliderIterationsValueChanged	rtabmap/guilib/src/DatabaseViewer.cpp	/^void Databa
 sliderLoopValueChanged	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::sliderLoopValueChanged(int value)$/;"	f	class:rtabmap::DatabaseViewer
 sliderNeighborValueChanged	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::sliderNeighborValueChanged(int value)$/;"	f	class:rtabmap::DatabaseViewer
 small_any_policy	rtabmap/corelib/src/rtflann/util/any.h	/^struct small_any_policy : typed_base_any_policy<T>$/;"	s	namespace:rtflann::anyimpl
+smile_cascade	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_cascade, eye_cascade, smile_cascade;$/;"	m	class:FaceTracker
+smile_classifier	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv::CascadeClassifier face_classifier, eye_classifier, smile_classifier;$/;"	m	class:FaceTracker
+smile_image	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv_bridge::CvImagePtr face_image, eye_image, smile_image, face_region;$/;"	m	class:FaceTracker
+smile_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::Publisher face_pub_, eye_pub_, smile_pub_;$/;"	m	class:FaceTracker
+smile_pub_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_pub_name, eye_pub_name, smile_pub_name;$/;"	m	class:FaceTracker
+smiles	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::vector<cv::Rect> faces, eyes, smiles;$/;"	m	class:FaceTracker
+smiles_centroid	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  marty_msgs::CentroidMsg faces_centroid, smiles_centroid, eyes_centroid;$/;"	m	class:FaceTracker
+smiles_centroid_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string faces_centroid_name, smiles_centroid_name, eyes_centroid_name;$/;"	m	class:FaceTracker
+smiles_centroid_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  ros::Publisher faces_centroid_pub_, smiles_centroid_pub_, eyes_centroid_pub_;$/;"	m	class:FaceTracker
 smooth	tmc_darknet_ros/tmc_darknet/src/nightmare.c	/^void smooth(image recon, image update, float lambda, int num)$/;"	f
 smooth_data	tmc_darknet_ros/tmc_darknet/src/data.c	/^void smooth_data(data d)$/;"	f
 smooth_l1_cpu	tmc_darknet_ros/tmc_darknet/src/blas.c	/^void smooth_l1_cpu(int n, float *pred, float *truth, float *delta, float *error)$/;"	f
@@ -20910,6 +20960,7 @@ sub_	rtabmap_ros/src/nodelets/disparity_to_depth.cpp	/^	ros::Subscriber sub_;$/;
 sub_image	villa_rude_carnie_ros/src/rude_carnie/detect.py	/^    def sub_image(self, name, img, x, y, w, h):$/;"	m	class:ObjectDetectorCascadeOpenCV
 sub_image	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^    def sub_image(self, name, img, x, y, w, h):$/;"	m	class:FaceDetector
 sub_image	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def sub_image(self, name, img, x, y, w, h):$/;"	m	class:FaceDetector
+sub_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string sub_name;$/;"	m	class:FaceTracker
 subdivisions	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    int subdivisions;$/;"	m	struct:network
 subjInMemory	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  u8 subjInMemory;            \/* True to use in-memory sub-journals *\/$/;"	m	struct:Pager	file:
 subjRequiresPage	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int subjRequiresPage(PgHdr *pPg){$/;"	f	file:
@@ -21294,6 +21345,7 @@ trackChanges	villa_octomap_mapping/villa_octomap_server/src/TrackingOctomapServe
 trackMouse	rtabmap/guilib/src/utilite/UPlot.cpp	/^void UPlot::trackMouse(bool tracking)$/;"	f	class:UPlot
 track_changes	villa_octomap_mapping/villa_octomap_server/include/villa_octomap_server/TrackingOctomapServer.h	/^  bool track_changes;$/;"	m	class:villa_octomap_server::TrackingOctomapServer
 track_unknown_space_	rtabmap_ros/src/costmap_2d/static_layer.h	/^  bool track_unknown_space_;$/;"	m	class:rtabmap_ros::StaticLayer
+tracker	marty_face_tracker/scripts/track_movement_center.py	/^def tracker(data):$/;"	f
 tracker	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::tracker(){$/;"	f	class:Tracking_Box_dobject
 tracking_box_points	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZRGB> > tracking_box_points;$/;"	m	class:Tracking_Box_dobject
 trailingBytesForUTF8	rtabmap/corelib/src/ConvertUTF.c	/^static const char trailingBytesForUTF8[256] = {$/;"	v	file:
@@ -22366,6 +22418,7 @@ vfs_register	rtabmap/corelib/src/sqlite3/sqlite3ext.h	/^  int (*vfs_register)(sq
 vfs_unregister	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  int (*vfs_unregister)(sqlite3_vfs*);$/;"	m	struct:sqlite3_api_routines	file:
 vfs_unregister	rtabmap/corelib/src/sqlite3/sqlite3ext.h	/^  int (*vfs_unregister)(sqlite3_vfs*);$/;"	m	struct:sqlite3_api_routines
 viaCoroutine	rtabmap/corelib/src/sqlite3/sqlite3.c	/^    unsigned viaCoroutine :1;  \/* Implemented as a co-routine *\/$/;"	m	struct:SrcList::SrcList_item	file:
+video_output	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  bool video_output, camera_detected;$/;"	m	class:FaceTracker
 view1_	rtabmap/tools/EpipolarGeometry/main.cpp	/^	ImageView * view1_;$/;"	m	class:MainWidget	file:
 view3DLaserScans	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::view3DLaserScans()$/;"	f	class:rtabmap::DatabaseViewer
 view3DMap	rtabmap/guilib/src/DatabaseViewer.cpp	/^void DatabaseViewer::view3DMap()$/;"	f	class:rtabmap::DatabaseViewer
@@ -23414,6 +23467,7 @@ zout_start	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   char
 ~FAST	rtabmap/corelib/src/Features2d.cpp	/^FAST::~FAST()$/;"	f	class:rtabmap::FAST
 ~FAST_BRIEF	rtabmap/corelib/src/Features2d.cpp	/^FAST_BRIEF::~FAST_BRIEF()$/;"	f	class:rtabmap::FAST_BRIEF
 ~FAST_FREAK	rtabmap/corelib/src/Features2d.cpp	/^FAST_FREAK::~FAST_FREAK()$/;"	f	class:rtabmap::FAST_FREAK
+~FaceTracker	marty_face_tracker/src/face_tracking.cpp	/^FaceTracker::~FaceTracker() {}$/;"	f	class:FaceTracker
 ~Feature2D	rtabmap/corelib/src/Features2d.cpp	/^Feature2D::~Feature2D()$/;"	f	class:rtabmap::Feature2D
 ~FlannIndex	rtabmap/corelib/src/VWDictionary.cpp	/^	virtual ~FlannIndex()$/;"	f	class:rtabmap::FlannIndex
 ~FreenectDevice	rtabmap/corelib/src/CameraRGBD.cpp	/^	~FreenectDevice()$/;"	f	class:rtabmap::FreenectDevice
