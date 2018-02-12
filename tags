@@ -12056,6 +12056,7 @@ image_distance	tmc_darknet_ros/tmc_darknet/src/image.c	/^image image_distance(im
 image_h	tmc_darknet_ros/tmc_yolo2_ros/src/single_image.cpp	/^uint32_t image_h;$/;"	v
 image_h_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  uint32_t image_h_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
 image_ids	tmc_darknet_ros/tmc_darknet/scripts/voc_label.py	/^    image_ids = open('VOCdevkit\/VOC%s\/ImageSets\/Main\/%s.txt'%(year, image_set)).read().strip().split()$/;"	v
+image_mk_sub	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  ros::Subscriber image_mk_sub;$/;"	m	class:FaceTracker
 image_mono2_sub_	rtabmap_ros/src/nodelets/rgbd_odometry.cpp	/^	image_transport::SubscriberFilter image_mono2_sub_;$/;"	m	class:rtabmap_ros::RGBDOdometry	file:
 image_mono_sub_	rtabmap_ros/src/nodelets/rgbd_odometry.cpp	/^	image_transport::SubscriberFilter image_mono_sub_;$/;"	m	class:rtabmap_ros::RGBDOdometry	file:
 image_preprocessing	villa_rude_carnie_ros/src/rude_carnie/data.py	/^def image_preprocessing(image_buffer, image_size, train, thread_id=0):$/;"	f
