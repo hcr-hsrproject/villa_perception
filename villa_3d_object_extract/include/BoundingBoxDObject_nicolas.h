@@ -24,7 +24,7 @@
 #include <visualization_msgs/Marker.h>
 #include <visualization_msgs/MarkerArray.h>
 
-#include "grabcut_msgs/srv_picture_to_indices.h" // Adding GrabCut Service
+//#include "grabcut_msgs/srv_picture_to_indices.h" // Adding GrabCut Service
 class Bounding_Box_dobject_nicolas{
 public:
 	ros::NodeHandle 		  node;
@@ -33,7 +33,7 @@ public:
  	sensor_msgs::Image 		  img;
 	std::vector<int> 		  rect;
 	std::vector<int>		  list_indices;
-	grabcut_msgs::srv_picture_to_indices srv;
+	//grabcut_msgs::srv_picture_to_indices srv;
 
 	bool 					  received_image;
 	//

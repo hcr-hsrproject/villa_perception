@@ -16,7 +16,7 @@
 #include <tmc_yolo2_ros/Detections.h>
 #include <tmc_yolo2_ros/Detection.h>
 
-#include "grabcut_msgs/srv_picture_to_indices.h" // Adding GrabCut Service
+//#include "grabcut_msgs/srv_picture_to_indices.h" // Adding GrabCut Service
 
 class Tracking_Box_dobject{
 public:
@@ -26,7 +26,7 @@ public:
  	sensor_msgs::Image 		  img;
 	std::vector<int> 		  rect;
 	std::vector<int>		  list_indices;
-	grabcut_msgs::srv_picture_to_indices srv;
+	//grabcut_msgs::srv_picture_to_indices srv;
 
 	bool 					  received_image;
 	//

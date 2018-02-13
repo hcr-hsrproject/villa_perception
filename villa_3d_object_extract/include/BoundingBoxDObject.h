@@ -24,7 +24,7 @@
 #include <visualization_msgs/Marker.h>
 #include <visualization_msgs/MarkerArray.h>
 
-#include "grabcut_msgs/srv_picture_to_indices.h" // Adding GrabCut Service
+//#include "grabcut_msgs/srv_picture_to_indices.h" // Adding GrabCut Service
 class Bounding_Box_dobject{
 public:
 	ros::NodeHandle 		  node;

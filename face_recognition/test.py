@@ -15,6 +15,7 @@ def main():
 	known_img_names = []
 	known_encodings = []
 
+        print len(known_img_names)
 	for img_name in known_imgs:
 		img = face_recognition.load_image_file(known_folder+'/'+img_name)
 		known_encodings.append(face_recognition.face_encodings(img)[0])

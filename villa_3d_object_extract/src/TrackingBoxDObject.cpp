@@ -65,7 +65,7 @@ bool Tracking_Box_dobject::init_vars(){
 Tracking_Box_dobject::~Tracking_Box_dobject(){}
 
 void Tracking_Box_dobject::ImageCallback(const sensor_msgs::ImageConstPtr& msg) {
-	srv.request.img_input = (*msg);
+	//srv.request.img_input = (*msg);
 /*	for (int i = 0; i < msg->encoding.size(); i++)
 		{std::cout<< msg->encoding[i];}*/
 	//received_image = true;
@@ -86,7 +86,7 @@ if (SyncId == 1)
 	int number_of_objects = objects.size();
 	if (number_of_objects > 0)
 	{
-		srv.request.rect_input.clear();
+		//srv.request.rect_input.clear();
 		boxes.clear();
 		std::vector<int> rect_temp (4);
 
@@ -108,7 +108,7 @@ if (SyncId == 1)
 			rect_temp[1] = tl_y;
 			rect_temp[2] = width_bound;
 			rect_temp[3] = height_bound;
-			srv.request.rect_input.insert( srv.request.rect_input.end(), rect_temp.begin(), rect_temp.end() );
+			//srv.request.rect_input.insert( srv.request.rect_input.end(), rect_temp.begin(), rect_temp.end() );
 			boxes.push_back(TrackingBox_Person_Desc( tl_x, tl_y,  width_bound,  height_bound ) );
 		}
 
@@ -125,20 +125,20 @@ if (SyncId == 1)
 
 void Tracking_Box_dobject::cloud_callback(const sensor_msgs::PointCloud2ConstPtr &msg){
 //std::cout << a << std::endl;
-pcl::fromROSMsg(*msg, *cloud);
-	if (boxes.size() > 0 && client.call(srv))
-	{
-		list_indices = srv.response.indices_output;
-		dn_extract_points(msg); 	// Extract points from each box
-		extract_means_dobject_boxes(); // Get the means of each box
-		if (vector_of_candidate_ids.size()==vector_of_candidate_means.size())
-		{
-			tracker();
-			publish_tracked();
-		}
-		else {std::cout<< "ID vs MEAN : "<<vector_of_candidate_ids.size()<<"  "<<vector_of_candidate_means.size()<<std::endl;
-}
-	}
+//pcl::fromROSMsg(*msg, *cloud);
+	//if (boxes.size() > 0 && client.call(srv))
+	//{
+		//list_indices = srv.response.indices_output;
+		//dn_extract_points(msg); 	// Extract points from each box
+		//extract_means_dobject_boxes(); // Get the means of each box
+		//if (vector_of_candidate_ids.size()==vector_of_candidate_means.size())
+		//{
+			//tracker();
+			//publish_tracked();
+		//}
+		//else {std::cout<< "ID vs MEAN : "<<vector_of_candidate_ids.size()<<"  "<<vector_of_candidate_means.size()<<std::endl;
+//}
+	//}
 // 		// extract_dobject_boxes(); // Extract dobject boxes only;
 
 // 	}

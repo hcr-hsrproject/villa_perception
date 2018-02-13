@@ -76,8 +76,8 @@ bool Bounding_Box_dobject_nicolas::init_vars(){
 Bounding_Box_dobject_nicolas::~Bounding_Box_dobject_nicolas(){}
 
 void Bounding_Box_dobject_nicolas::ImageCallback(const sensor_msgs::ImageConstPtr& msg) {
-	srv.request.img_input = (*msg);
-	received_image = true;
+	//srv.request.img_input = (*msg);
+	//received_image = true;
 	// std::cout << "received_image bool to:" << received_image << std::endl;	
 	}
 
@@ -91,7 +91,7 @@ void Bounding_Box_dobject_nicolas::yolo_detected_obj_callback(const tmc_yolo2_ro
     if (number_of_objects > 0)
     {
     std::vector<int> rect_temp (4);
-    srv.request.rect_input.clear();
+    //srv.request.rect_input.clear();
     boxes.clear();
     for(size_t i = 0; i < objects.size(); i++){
         std::cout << "Object " << i+1 << "    Class Name:" << objects[i].class_name << std::endl;
@@ -125,7 +125,7 @@ void Bounding_Box_dobject_nicolas::yolo_detected_obj_callback(const tmc_yolo2_ro
         rect_temp[2] = width_bound;
         rect_temp[3] = height_bound;
 
-        srv.request.rect_input.insert( srv.request.rect_input.end(), rect_temp.begin(), rect_temp.end() );
+        //srv.request.rect_input.insert( srv.request.rect_input.end(), rect_temp.begin(), rect_temp.end() );
 
 
         boxes.push_back(BoundingBox_Person_Desc( tl_x, tl_y,  width_bound,  height_bound ) );
@@ -146,39 +146,39 @@ void Bounding_Box_dobject_nicolas::yolo_detected_obj_callback(const tmc_yolo2_ro
     newObj.tl_y = top < 0 ? 0 : top;
     newObj.width = right - newObj.tl_x;
     newObj.height = bot - newObj.tl_y;*/
-std::cout<< srv.request.rect_input.size()<<std::endl;
+//std::cout<< srv.request.rect_input.size()<<std::endl;
 std::cout<<" get rect from yolo -> completed "<<std::endl;
 }
 
 void Bounding_Box_dobject_nicolas::cloud_callback(const sensor_msgs::PointCloud2ConstPtr &msg){
 std::cout<< "trying to get pointcloud "<<std::endl;
 
-	pcl::fromROSMsg(*msg, *cloud);
-	pcl::PointCloud<pcl::PointXYZRGB>::Ptr pt_corners_msg (new pcl::PointCloud<pcl::PointXYZRGB>);
+	//pcl::fromROSMsg(*msg, *cloud);
+	//pcl::PointCloud<pcl::PointXYZRGB>::Ptr pt_corners_msg (new pcl::PointCloud<pcl::PointXYZRGB>);
 	// Set the same headers as original point cloud for simplicity   
-	pt_corners_msg->header = (*cloud).header;
-std::cout<< "trying to use grab service "<<std::endl;
+	//pt_corners_msg->header = (*cloud).header;
+//std::cout<< "trying to use grab service "<<std::endl;
 	// 
 	// For each box, cluster points using euclidean clustering
 	// for each box, extract dobject points using euclidean clustering
 	//
-	if (boxes.size() > 0 && client.call(srv)){
-		list_indices = srv.response.indices_output;
-std::cout << "extracting points from pointcloud"<<std::endl;
-		dn_extract_points(msg); 	// Extract points from each box.
+	//if (boxes.size() > 0 && client.call(srv)){
+		//list_indices = srv.response.indices_output;
+//std::cout << "extracting points from pointcloud"<<std::endl;
+		//dn_extract_points(msg); 	// Extract points from each box.
 		// voxelize_points(); 			// filter points from each box.
 		// extract_clusters();			// Cluster the voxels
 		// extract_candidate_dobject_boxes(); // Create bounding boxes on all the clusters
 		// extract_dobject_boxes(); // Extract dobject boxes only;
-std::cout<<"publishing points "<<std::endl;
-		publish_objects_points();	
+//std::cout<<"publishing points "<<std::endl;
+		//publish_objects_points();	
 		// publish_dn_points();		// Visualize voxels bounded by dn box
 		// publish_clusters(); 		//Visualize Clusters
 		// publish_clusters_boxes();		
 		// publish_dobject_3D_boxes();
 		// publish_dobject_points();
-	}
-std::cout<< " finished cloud callback " << std::endl;
+	//}
+//std::cout<< " finished cloud callback " << std::endl;
 
 }
 

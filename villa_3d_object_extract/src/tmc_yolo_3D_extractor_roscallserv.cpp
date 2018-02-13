@@ -78,7 +78,7 @@ int main(int argc, char **argv)
 	// bbh_obj.image_sub = bbh_obj.it.subscribe("image", 1,&Bounding_Box_dobject::ImageCallback, this);
 
 	// Service call
-	bbh_obj.client = bbh_obj.node.serviceClient<grabcut_msgs::srv_picture_to_indices>("grabcut_node_server");
+	//bbh_obj.client = bbh_obj.node.serviceClient<grabcut_msgs::srv_picture_to_indices>("grabcut_node_server");
 
 /*	  message_filters::Subscriber<geometry_msgs::TransformStamped> sub1_;
 	  message_filters::Subscriber<geometry_msgs::TransformStamped> sub2_;
