@@ -77,7 +77,8 @@ class FaceDectectors(object):
 	def crop_face(self,image_data):
 		image_batch = image_data
 		files = []
-		face_detect = face_detection_model('/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml')
+		# face_detect = face_detection_model('/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml')
+		face_detect = face_detection_model('/opt/ros/kinetic/share/OpenCV-3.3.1/haarcascades/haarcascade_frontalface_default.xml')
 		face_files = face_detect.run(image_data)
 		#print(face_files)
 		return face_files
@@ -88,7 +89,7 @@ class FaceDectectors(object):
 		try:
 			# Convert your ROS Image message to OpenCV2
 			cv2_img   = self.bridge.imgmsg_to_cv2(msg,"bgr8")
-			facelists =self.crop_face(cv2_img)
+                        facelists =self.crop_face(cv2_img)
 			
                         if(len(facelists)>0):
                             for face in facelists:
@@ -104,7 +105,6 @@ class FaceDectectors(object):
                                             self.sentence = "Hello " + self.known_img_names[match_idx]
                                             self.string_pub.publish(self.detected_msg)
                                             self.count=0
-                                            # self.tts.say('matched')
 
                                     else:
                                         print('unknown')
