@@ -101,7 +101,7 @@ class FaceDectectors(object):
                                         print('matched: '+self.known_img_names[match_idx])
                                         self.detected_msg.data =self.known_img_names[match_idx]
                                         self.count=self.count+1
-                                        if(self.count>3):
+                                        if(self.count>2):
                                             self.sentence = "Hello " + self.known_img_names[match_idx]
                                             self.string_pub.publish(self.detected_msg)
                                             self.count=0
@@ -117,7 +117,6 @@ class FaceDectectors(object):
 			cv2.imwrite('new_image.jpeg', cv2_img)
 			print('save picture')
 			# self.detected_msg.data="Take a photo"
-			# self.string_pub.publish(self.detected_msg)
 			self.takepicture=False
 		# else:
 			# Save your OpenCV2 image as a jpeg 

@@ -17,6 +17,9 @@ ARCH	tmc_darknet_ros/tmc_darknet/Makefile	/^ARCH= -gencode arch=compute_20,code=
 AVGPOOL	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    AVGPOOL,$/;"	e	enum:__anon28
 AVGPOOL_LAYER_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/avgpool_layer.h	2;"	d
 ActivityDetection_Action	activity_detection/scripts/activityDetection_action.py	/^class ActivityDetection_Action:$/;"	c
+Admin	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Admin ($/;"	t
+Admin.time_enter	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	version TEXT,$/;"	F
+Admin.version	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Admin ($/;"	F
 AgeClassifier	age_identification/scripts/age_classifier.py	/^class AgeClassifier:$/;"	c
 B1	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float B1;$/;"	m	struct:layer
 B1	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    float B1;$/;"	m	struct:network
@@ -217,6 +220,16 @@ DETECTION_LAYER_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/detection_laye
 DET_DATA	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    CLASSIFICATION_DATA, DETECTION_DATA, CAPTCHA_DATA, REGION_DATA, IMAGE_DATA, COMPARE_DATA, WRITING_DATA, SWAG_DATA, TAG_DATA, OLD_CLASSIFICATION_DATA, STUDY_DATA, DET_DATA, SUPER_DATA$/;"	e	enum:__anon7
 DROPOUT	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    DROPOUT,$/;"	e	enum:__anon28
 DROPOUT_LAYER_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/dropout_layer.h	2;"	d
+Data	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Data ($/;"	t
+Data.calibration	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	depth BLOB,               -- compressed image (Depth or Right image)$/;"	F
+Data.depth	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	image BLOB,               -- compressed image (Grayscale or RGB)$/;"	F
+Data.id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Data ($/;"	F
+Data.image	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	id INTEGER NOT NULL,$/;"	F
+Data.scan	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	calibration BLOB,         -- fx, fy, cx, cy, [baseline,] width, height, local_transform$/;"	F
+Data.scan_max_pts	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	scan BLOB,                -- compressed data (Laser scan)$/;"	F
+Data.scan_max_range	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	scan_max_pts INTEGER,     -- Laser scan max points$/;"	F
+Data.time_enter	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	user_data BLOB,           -- compressed data (User data)$/;"	F
+Data.user_data	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	scan_max_range FLOAT,     -- Laser max range$/;"	F
 Detector	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/detector.hpp	/^  Detector() {}$/;"	f	class:tmc_yolo2_ros::Detector
 Detector	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/detector.hpp	/^class Detector {$/;"	c	namespace:tmc_yolo2_ros
 ELU	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/activations.h	/^    LOGISTIC, RELU, RELIE, LINEAR, RAMP, TANH, PLSE, LEAKY, ELU, LOGGY, STAIR, HARDTAN, LHTAN$/;"	e	enum:__anon27
@@ -324,6 +337,14 @@ L_HIP	activity_detection/scripts/activityDetection_action.py	/^L_HIP = 11$/;"	v
 L_KNEE	activity_detection/scripts/activityDetection_action.py	/^L_KNEE = 12$/;"	v
 L_SHOULDER	activity_detection/scripts/activityDetection_action.py	/^L_SHOULDER= 5$/;"	v
 L_WRIST	activity_detection/scripts/activityDetection_action.py	/^L_WRIST = 7$/;"	v
+Link	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Link ($/;"	t
+Link.IDX_Link_from_id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE INDEX IDX_Link_from_id on Link (from_id);$/;"	i
+Link.from_id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Link ($/;"	F
+Link.rot_variance	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	type INTEGER NOT NULL,    -- neighbor=0, loop=1, child=2$/;"	F
+Link.to_id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	from_id INTEGER NOT NULL,$/;"	F
+Link.trans_variance	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	rot_variance FLOAT NOT NULL,$/;"	F
+Link.transform	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	trans_variance FLOAT NOT NULL,$/;"	F
+Link.user_data	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	transform BLOB,$/;"	F
 MASKED	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    SSE, MASKED, SMOOTH$/;"	e	enum:__anon29
 MATRIX_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/matrix.h	2;"	d
 MAXPOOL	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    MAXPOOL,$/;"	e	enum:__anon28
@@ -337,6 +358,21 @@ MAX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor.cpp	44;"	d	file
 MAX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_kinect1.cpp	44;"	d	file:
 MAX_HEIGHT_TOL	villa_3d_object_extract/src/tmc_yolo_3D_extractor_roscallserv.cpp	46;"	d	file:
 MOM	villa_rude_carnie_ros/src/rude_carnie/train.py	/^MOM = 0.9$/;"	v
+Map_Node_Word	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Map_Node_Word ($/;"	t
+Map_Node_Word.IDX_Map_Node_Word_node_id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE INDEX IDX_Map_Node_Word_node_id on Map_Node_Word (node_id);$/;"	i
+Map_Node_Word.depth_x	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	response FLOAT NOT NULL,$/;"	F
+Map_Node_Word.depth_y	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	depth_x FLOAT,$/;"	F
+Map_Node_Word.depth_z	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	depth_y FLOAT,$/;"	F
+Map_Node_Word.descriptor	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	descriptor_size INTEGER,$/;"	F
+Map_Node_Word.descriptor_size	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	depth_z FLOAT,$/;"	F
+Map_Node_Word.dir	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	size INTEGER NOT NULL,$/;"	F
+Map_Node_Word.insert_Map_Node_Word	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TRIGGER insert_Map_Node_Word BEFORE INSERT ON Map_Node_Word $/;"	T
+Map_Node_Word.node_id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Map_Node_Word ($/;"	F
+Map_Node_Word.pos_x	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	word_id INTEGER NOT NULL,$/;"	F
+Map_Node_Word.pos_y	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	pos_x FLOAT NOT NULL,$/;"	F
+Map_Node_Word.response	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	dir FLOAT NOT NULL,$/;"	F
+Map_Node_Word.size	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	pos_y FLOAT NOT NULL,$/;"	F
+Map_Node_Word.word_id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	node_id INTEGER NOT NULL,$/;"	F
 Mean3DTrackingBox	villa_3d_object_extract/include/Mean3DTrackingBox.h	/^class Mean3DTrackingBox{$/;"	c
 Mean3DTrackingBox	villa_3d_object_extract/src/Mean3DTrackingBox.cpp	/^Mean3DTrackingBox::Mean3DTrackingBox(){}$/;"	f	class:Mean3DTrackingBox
 Mean3DTrackingBox	villa_3d_object_extract/src/Mean3DTrackingBox.cpp	/^Mean3DTrackingBox::Mean3DTrackingBox(const float _mean_x, const float _mean_y, const float _mean_z):$/;"	f	class:Mean3DTrackingBox
@@ -350,6 +386,17 @@ NOSE	activity_detection/scripts/activityDetection_action.py	/^NOSE = 0  $/;"	v
 NUMCHARS	tmc_darknet_ros/tmc_darknet/src/data.c	331;"	d	file:
 NVCC	tmc_darknet_ros/tmc_darknet/Makefile	/^NVCC=nvcc $/;"	m
 NewClass	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	std::vector<int> NewClass;$/;"	m	class:Tracking_Box_dobject
+Node	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Node ($/;"	t
+Node.IDX_node_label	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE UNIQUE INDEX IDX_node_label on Node (label);$/;"	i
+Node.ground_truth_pose	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	pose BLOB,$/;"	F
+Node.id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Node ($/;"	F
+Node.insert_Node_timeEnter	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TRIGGER insert_Node_timeEnter AFTER INSERT ON Node$/;"	T
+Node.label	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	ground_truth_pose BLOB,$/;"	F
+Node.map_id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	id INTEGER NOT NULL,$/;"	F
+Node.pose	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	stamp FLOAT,$/;"	F
+Node.stamp	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	weight INTEGER,$/;"	F
+Node.time_enter	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	label TEXT,$/;"	F
+Node.weight	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	map_id INTEGER NOT NULL,$/;"	F
 OBJ	tmc_darknet_ros/tmc_darknet/Makefile	/^OBJ=gemm.o utils.o cuda.o convolutional_layer.o list.o image.o activations.o im2col.o col2im.o blas.o crop_layer.o dropout_layer.o maxpool_layer.o softmax_layer.o data.o matrix.o network.o connected_layer.o cost_layer.o parser.o option_list.o darknet.o detection_layer.o captcha.o route_layer.o writing.o box.o nightmare.o normalization_layer.o avgpool_layer.o coco.o dice.o yolo.o detector.o layer.o compare.o classifier.o local_layer.o swag.o shortcut_layer.o activation_layer.o rnn_layer.o gru_layer.o rnn.o rnn_vid.o crnn_layer.o demo.o tag.o cifar.o go.o batchnorm_layer.o art.o region_layer.o reorg_layer.o super.o voxel.o tree.o$/;"	m
 OBJDIR	tmc_darknet_ros/tmc_darknet/Makefile	/^OBJDIR=.\/obj\/$/;"	m
 OBJS	tmc_darknet_ros/tmc_darknet/Makefile	/^OBJS = $(addprefix $(OBJDIR), $(OBJ))$/;"	m
@@ -404,6 +451,17 @@ RNN	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    RNN,$/;"	e	enu
 RNN_LAYER_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/rnn_layer.h	3;"	d
 ROUTE	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    ROUTE,$/;"	e	enum:__anon28
 ROUTE_LAYER_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/route_layer.h	2;"	d
+RTABMAP_G2O	rtabmap/corelib/include/rtabmap/core/Version.h	42;"	d
+RTABMAP_NONFREE	rtabmap/corelib/include/rtabmap/core/Version.h	40;"	d
+RTABMAP_OCTOMAP	rtabmap/corelib/include/rtabmap/core/Version.h	53;"	d
+RTABMAP_OPENCV3	rtabmap/corelib/include/rtabmap/core/Version.h	45;"	d
+RTABMAP_TORO	rtabmap/corelib/include/rtabmap/core/Version.h	41;"	d
+RTABMAP_VERSION	rtabmap/corelib/include/rtabmap/core/Version.h	32;"	d
+RTABMAP_VERSION_COMPARE	rtabmap/corelib/include/rtabmap/core/Version.h	38;"	d
+RTABMAP_VERSION_MAJOR	rtabmap/corelib/include/rtabmap/core/Version.h	34;"	d
+RTABMAP_VERSION_MINOR	rtabmap/corelib/include/rtabmap/core/Version.h	35;"	d
+RTABMAP_VERSION_PATCH	rtabmap/corelib/include/rtabmap/core/Version.h	36;"	d
+RTABMAP_VERTIGO	rtabmap/corelib/include/rtabmap/core/Version.h	44;"	d
 R_ANKLE	activity_detection/scripts/activityDetection_action.py	/^R_ANKLE = 10$/;"	v
 R_EAR	activity_detection/scripts/activityDetection_action.py	/^R_EAR = 16$/;"	v
 R_ELBOW	activity_detection/scripts/activityDetection_action.py	/^R_ELBOW = 3$/;"	v
@@ -493,6 +551,15 @@ SWAG_DATA	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    CLASSIFIC
 SetImageType_	tmc_darknet_ros/tmc_yolo2_ros/src/yolo2_node.cpp	/^void Yolo2Node::SetImageType_(const cv::Mat& cv_mat,$/;"	f	class:tmc_yolo2_ros::Yolo2Node
 SetUp	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^  virtual void SetUp() {$/;"	f	class:tmc_yolo2_ros::Yolo2NodeTest
 SortMaster3000	tmc_darknet_ros/tmc_darknet/src/compare.c	/^void SortMaster3000(char *filename, char *weightfile)$/;"	f
+Statistics	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Statistics ($/;"	t
+Statistics.STM_size	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Statistics ($/;"	F
+Statistics.database_mem_used	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	process_mem_used INTEGER,$/;"	F
+Statistics.dictionary_size	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	database_mem_used INTEGER,$/;"	F
+Statistics.insert_Statistics_timeEnter	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TRIGGER insert_Statistics_timeEnter AFTER INSERT ON Statistics$/;"	T
+Statistics.last_sign_added	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	STM_size INTEGER,$/;"	F
+Statistics.parameters	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	dictionary_size INTEGER,$/;"	F
+Statistics.process_mem_used	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	last_sign_added INTEGER,$/;"	F
+Statistics.time_enter	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	parameters TEXT,$/;"	F
 StubDetector	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node_stub.cpp	/^  StubDetector() {}$/;"	f	class:tmc_yolo2_ros::StubDetector
 StubDetector	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node_stub.cpp	/^class StubDetector : public Detector {$/;"	c	namespace:tmc_yolo2_ros	file:
 SyncId	villa_3d_object_extract/include/TrackingBoxDObject.h	/^    int SyncId = 1;$/;"	m	class:Tracking_Box_dobject
@@ -516,6 +583,7 @@ UTILS_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/utils.h	2;"	d
 VEL_CRITERION	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	41;"	d
 VEL_CRITERION	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	41;"	d
 VERSION_GTE_0_12_0	villa_rude_carnie_ros/src/rude_carnie/data.py	/^VERSION_GTE_0_12_0 = LooseVersion(tf.__version__) >= LooseVersion('0.12.0')$/;"	v
+VERSION_H_	rtabmap/corelib/include/rtabmap/core/Version.h	29;"	d
 VOXEL_SIZE	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	40;"	d
 VOXEL_SIZE	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	40;"	d
 VOXEL_SIZE	villa_3d_object_extract/src/BoundingBoxDObject.cpp	9;"	d	file:
@@ -525,6 +593,12 @@ VOXEL_SIZE	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	28;"
 VOXEL_SIZE	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	31;"	d	file:
 VPATH	tmc_darknet_ros/tmc_darknet/Makefile	/^VPATH=.\/src\/$/;"	m
 WRITING_DATA	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    CLASSIFICATION_DATA, DETECTION_DATA, CAPTCHA_DATA, REGION_DATA, IMAGE_DATA, COMPARE_DATA, WRITING_DATA, SWAG_DATA, TAG_DATA, OLD_CLASSIFICATION_DATA, STUDY_DATA, DET_DATA, SUPER_DATA$/;"	e	enum:__anon7
+Word	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Word ($/;"	t
+Word.descriptor	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	descriptor_size INTEGER NOT NULL,$/;"	F
+Word.descriptor_size	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	id INTEGER NOT NULL,$/;"	F
+Word.id	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TABLE Word ($/;"	F
+Word.insert_Word_timeEnter	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^CREATE TRIGGER insert_Word_timeEnter AFTER INSERT ON Word$/;"	T
+Word.time_enter	rtabmap/corelib/src/resources/DatabaseSchema.sql	/^	descriptor BLOB NOT NULL,$/;"	F
 X	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    matrix X;$/;"	m	struct:__anon6
 XNOR	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    XNOR,$/;"	e	enum:__anon28
 X_LEFT_POINT_THRESHOLD	activity_detection/scripts/activityDetection_action.py	/^X_LEFT_POINT_THRESHOLD = 0.65$/;"	v
@@ -566,7 +640,7 @@ __init__	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^    def __init__(self,
 __init__	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def __init__(self):$/;"	m	class:ImageCoder
 __init__	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def __init__(self, model_name, basename = 'frontal-face', tgtdir = '.'):$/;"	m	class:FaceDetector
 __init__	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def __init__(self, tl_x, tl_y, width, height):$/;"	m	class:Person
-__localization_callback	face_recognition/scripts/task_sppech.py	/^def __localization_callback(omni_base, detect_person, data):$/;"	f	file:
+__localization_callback	face_recognition/scripts/speak_test.py	/^def __localization_callback(omni_base, detect_person, data):$/;"	f	file:
 _activation_summary	villa_rude_carnie_ros/src/rude_carnie/model.py	/^def _activation_summary(x):$/;"	f
 _bytes_feature	villa_rude_carnie_ros/src/rude_carnie/preproc.py	/^def _bytes_feature(value):$/;"	f
 _color_image_cb	tmc_darknet_ros/tmc_yolo2_ros/src/tmc_yolo2_ros/yolo2_image_node.py	/^    def _color_image_cb(self, data):$/;"	m	class:Yolo2ImageNode
@@ -589,6 +663,7 @@ _result	face_recognition/scripts/face_recog_action.py	/^    _result = face_recog
 _result_cb	tmc_darknet_ros/tmc_yolo2_ros/src/tmc_yolo2_ros/yolo2_image_node.py	/^    def _result_cb(self, data):$/;"	m	class:Yolo2ImageNode
 abs_mean	tmc_darknet_ros/tmc_darknet/src/nightmare.c	/^float abs_mean(float *x, int n)$/;"	f
 absolute	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    int absolute;$/;"	m	struct:layer
+act	face_recognition/scripts/speak_test.py	/^def act(robot):$/;"	f
 act	face_recognition/scripts/task_sppech.py	/^def act(robot):$/;"	f
 activate	tmc_darknet_ros/tmc_darknet/src/activations.c	/^float activate(float x, ACTIVATION a)$/;"	f
 activate_array	tmc_darknet_ros/tmc_darknet/src/activations.c	/^void activate_array(float *x, const int n, const ACTIVATION a)$/;"	f
@@ -1594,6 +1669,7 @@ list_indices	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	std::vector
 list_insert	tmc_darknet_ros/tmc_darknet/src/list.c	/^void list_insert(list *l, void *val)$/;"	f
 list_pop	tmc_darknet_ros/tmc_darknet/src/list.c	/^void *list_pop(list *l){$/;"	f
 list_to_array	tmc_darknet_ros/tmc_darknet/src/list.c	/^void **list_to_array(list *l)$/;"	f
+listen	face_recognition/scripts/speak_test.py	/^listen = None$/;"	v
 listen	face_recognition/scripts/task_sppech.py	/^listen = None$/;"	v
 listener	face_recognition/scripts/face_action_server.py	/^	def listener(self,wait=0.0):$/;"	m	class:FaceDectector_Action
 listener	face_recognition/scripts/face_photo_action.py	/^	def listener(self,goal,wait=0.0):$/;"	m	class:FaceDectector_Action
@@ -1765,6 +1841,7 @@ moveBindings	face_recognition/scripts/face_recog_action.py	/^moveBindings = {$/;
 moveBindings	face_recognition/scripts/face_service.py	/^moveBindings = {$/;"	v
 moveBindings	face_recognition/scripts/test_ros	/^moveBindings = {$/;"	v
 move_go	tmc_darknet_ros/tmc_darknet/src/go.c	/^void move_go(float *b, int p, int r, int c)$/;"	f
+move_robot	face_recognition/scripts/speak_test.py	/^def move_robot(omni_base, azimuth):$/;"	f
 move_robot	face_recognition/scripts/task_sppech.py	/^def move_robot(omni_base, azimuth):$/;"	f
 moves	tmc_darknet_ros/tmc_darknet/src/go.c	/^} moves;$/;"	t	typeref:struct:__anon37	file:
 mse_array	tmc_darknet_ros/tmc_darknet/src/utils.c	/^float mse_array(float *a, int n)$/;"	f
@@ -2231,14 +2308,17 @@ sorta_shuffle	tmc_darknet_ros/tmc_darknet/src/utils.c	/^void sorta_shuffle(void 
 sortable_bbox	tmc_darknet_ros/tmc_darknet/src/box.c	/^} sortable_bbox;$/;"	t	typeref:struct:__anon33	file:
 sortable_bbox	tmc_darknet_ros/tmc_darknet/src/compare.c	/^} sortable_bbox;$/;"	t	typeref:struct:__anon36	file:
 spatial_mean	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * spatial_mean;$/;"	m	struct:layer
+speak	face_recognition/scripts/speak_test.py	/^def speak():$/;"	f
+speak_time	face_recognition/scripts/speak_test.py	/^speak_time = 0$/;"	v
 speak_time	face_recognition/scripts/task_sppech.py	/^speak_time = 0$/;"	v
 spec_end	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            spec_end;$/;"	m	struct:__anon15
 spec_start	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            spec_start;$/;"	m	struct:__anon15
+speech	face_recognition/scripts/speak_test.py	/^speech = None$/;"	v
 speech	face_recognition/scripts/task_sppech.py	/^speech = None$/;"	v
 speech_cb	face_recognition/scripts/speech_sub	/^def speech_cb(msg):$/;"	f
 speech_server	face_recognition/scripts/speech_sub	/^def speech_server():$/;"	f
-speech_time	face_recognition/scripts/task_sppech.py	/^speech_time = 0$/;"	v
-speech_transcript	face_recognition/scripts/task_sppech.py	/^speech_transcript = ''$/;"	v
+speech_time	face_recognition/scripts/speak_test.py	/^speech_time = 0$/;"	v
+speech_transcript	face_recognition/scripts/speak_test.py	/^speech_transcript = ''$/;"	v
 speed	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^void speed(char *cfgfile, int tics)$/;"	f
 split_data	tmc_darknet_ros/tmc_darknet/src/data.c	/^data *split_data(data d, int part, int total)$/;"	f
 split_str	tmc_darknet_ros/tmc_darknet/src/utils.c	/^list *split_str(char *s, char delim)$/;"	f
@@ -2671,6 +2751,7 @@ type	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    LAYER_TYPE ty
 type	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   stbi__uint32 type;$/;"	m	struct:__anon20
 type	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   stbi_uc size,type,channel;$/;"	m	struct:__anon23
 type	tmc_darknet_ros/tmc_darknet/src/parser.c	/^    char *type;$/;"	m	struct:__anon32	file:
+unanswered	face_recognition/scripts/speak_test.py	/^unanswered = False$/;"	v
 unanswered	face_recognition/scripts/task_sppech.py	/^unanswered = False$/;"	v
 update	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    void (*update)    (struct layer, int, float, float, float);$/;"	m	struct:layer
 update_connected_layer	tmc_darknet_ros/tmc_darknet/src/connected_layer.c	/^void update_connected_layer(connected_layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
@@ -2688,7 +2769,6 @@ update_local_layer_gpu	tmc_darknet_ros/tmc_darknet/src/local_layer.c	/^void upda
 update_network	tmc_darknet_ros/tmc_darknet/src/network.c	/^void update_network(network net)$/;"	f
 update_rnn_layer	tmc_darknet_ros/tmc_darknet/src/rnn_layer.c	/^void update_rnn_layer(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
 update_rnn_layer_gpu	tmc_darknet_ros/tmc_darknet/src/rnn_layer.c	/^void update_rnn_layer_gpu(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
-update_speech	face_recognition/scripts/task_sppech.py	/^def update_speech(s):$/;"	f
 used	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/option_list.h	/^    int used;$/;"	m	struct:__anon26
 v	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * v;$/;"	m	struct:layer
 v	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^      int h,v;$/;"	m	struct:__anon15::__anon16
