@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-ask 3 as specified in 5.3.3 of the Rulebook
+Task 3 as specified in 5.3.3 of the Rulebook
 """
 
 import rospy
@@ -31,28 +31,53 @@ speak_time = 0
 #     pub = rospy.Publisher('chatter', String, queue_size=10)
 #     rate = rospy.Rate(10) # 10hz
 #     pub.publish(word)
-
-def update_face(s):
+def speak():
     global speech
     global stop_speech
     global stop_mov
     global remember
-    sentence = " q "
-    print s.data
     stop_speech = True
-    sentence = "Hello  " + s.data
+    sentence = "Hello! "
     if sentence != remember or stop_mov == False:
         stop_mov = True
         speech.say(sentence)
         remember = sentence
     stop_speech = False
-    print "wow"
 
 
+
+        
 def move_robot(omni_base, azimuth):
 
     print("Begin moving robot")
-    # omni_base.go(0., 0., math.pi * azimuth / 180., 100., relative=True)
+    omni_base.go(0., 0., math.pi * azimuth / 180., 100., relative=True)
+
+
+def __localization_callback(omni_base, detect_person, data):
+    global speech_time
+    global stop_mov
+    global stop_speech
+    if len(data.src) <= 0:
+        return
+    # Get max power source
+    src = max(data.src, key=lambda x: x.power)
+    azimuth = src.azimuth
+    print("Detected source with power: " + str(src.power))
+    print("Time difference:", rospy.get_time() - speech_time)
+    wait_until = rospy.get_time() + 5
+    # while rospy.get_time() < wait_until:
+    #     if abs(rospy.get_time() - speech_time) < 5:
+    #         break
+    #     rospy.sleep(0.1)
+    # if abs(rospy.get_time() - speech_time) < 5 :
+    if stop_speech == False:
+        print("Allowing to move")
+        move_robot(omni_base,azimuth)
+        detect_person.turn_to_person()
+    else :
+        print(stop_speech)
+    # else :
+    #     print("You shall not move")
 
 
 def act(robot):
@@ -71,6 +96,8 @@ def act(robot):
     stop_mov = False
     stop_speech = False
     whole_body = robot.get('whole_body')
+    # omni_base = FastMove(robot.get('omni_base'))
+    detect_person = LocatePerson(omni_base)
 
     speech = tts.TextToSpeech()
     
@@ -78,18 +105,20 @@ def act(robot):
     stop_head = rospy.ServiceProxy("/viewpoint_controller/stop", Empty)
     stop_head()
     speech_time = rospy.get_time()
-    # rospy.Subscriber("/HarkSource",HarkSource,functools.partial(__localization_callback,omni_base,detect_person),queue_size=1)
+    rospy.Subscriber("/HarkSource",HarkSource,functools.partial(__localization_callback,omni_base,detect_person),queue_size=1)
     
 
     speech_time = rospy.get_time()
     # rospy.sleep(0.5) # natural sounding pause
-    # speech.say("Trying to run speech")
+    speech.say("Trying to run speech")
     # speech_time = rospy.get_time()
     # rospy.sleep(0.5)
-    # print('Subscribing to speech detection..')
-    # speech_detection = rospy.Subscriber('/villa/speech_transcripts', String, update_speech)
+    print('Subscribing to speech detection..')
+    speech_detection = rospy.Subscriber('/villa/speech_transcripts', String, update_speech)
     face_detection = rospy.Subscriber('/face_detected_name', String, update_face)
 
+
+    speak()
     rospy.spin()
 
 
@@ -97,4 +126,5 @@ print("Process starts")
 
 with Robot() as robot:
     act(robot)
+    # speak()
 

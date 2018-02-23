@@ -5691,7 +5691,7 @@ __init__	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^    def __init__(self,
 __init__	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def __init__(self):$/;"	m	class:ImageCoder
 __init__	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def __init__(self, model_name, basename = 'frontal-face', tgtdir = '.'):$/;"	m	class:FaceDetector
 __init__	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def __init__(self, tl_x, tl_y, width, height):$/;"	m	class:Person
-__localization_callback	face_recognition/scripts/task_sppech.py	/^def __localization_callback(omni_base, detect_person, data):$/;"	f	file:
+__localization_callback	face_recognition/scripts/speak_test.py	/^def __localization_callback(omni_base, detect_person, data):$/;"	f	file:
 _aAddHorizontalLine	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	QAction * _aAddHorizontalLine;$/;"	m	class:UPlot
 _aAddVerticalLine	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	QAction * _aAddVerticalLine;$/;"	m	class:UPlot
 _aAutoScreenCapture	rtabmap/guilib/include/rtabmap/utilite/UPlot.h	/^	QAction * _aAutoScreenCapture;$/;"	m	class:UPlot
@@ -6621,6 +6621,7 @@ acquire	rtabmap/utilite/include/rtabmap/utilite/USemaphore.h	/^	bool acquire(int
 acquire	rtabmap/utilite/include/rtabmap/utilite/USemaphore.h	/^	bool acquire(int n = 1, int ms = 0)$/;"	f	class:USemaphore
 acquireTry	rtabmap/utilite/include/rtabmap/utilite/USemaphore.h	/^	int acquireTry() const$/;"	f	class:USemaphore
 acquireTry	rtabmap/utilite/include/rtabmap/utilite/USemaphore.h	/^	int acquireTry(int n)$/;"	f	class:USemaphore
+act	face_recognition/scripts/speak_test.py	/^def act(robot):$/;"	f
 act	face_recognition/scripts/task_sppech.py	/^def act(robot):$/;"	f
 actionName	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static const char *actionName(u8 action){$/;"	f	file:
 activate	rtabmap_ros/src/costmap_2d/static_layer.cpp	/^void StaticLayer::activate()$/;"	f	class:rtabmap_ros::StaticLayer
@@ -12873,6 +12874,7 @@ list_indices	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	std::vector
 list_insert	tmc_darknet_ros/tmc_darknet/src/list.c	/^void list_insert(list *l, void *val)$/;"	f
 list_pop	tmc_darknet_ros/tmc_darknet/src/list.c	/^void *list_pop(list *l){$/;"	f
 list_to_array	tmc_darknet_ros/tmc_darknet/src/list.c	/^void **list_to_array(list *l)$/;"	f
+listen	face_recognition/scripts/speak_test.py	/^listen = None$/;"	v
 listen	face_recognition/scripts/task_sppech.py	/^listen = None$/;"	v
 listener	face_recognition/scripts/face_action_server.py	/^	def listener(self,wait=0.0):$/;"	m	class:FaceDectector_Action
 listener	face_recognition/scripts/face_photo_action.py	/^	def listener(self,goal,wait=0.0):$/;"	m	class:FaceDectector_Action
@@ -14065,6 +14067,7 @@ moveToRoot	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static int moveToRoot(BtCurso
 moveToTrash	rtabmap/corelib/src/Memory.cpp	/^void Memory::moveToTrash(Signature * s, bool keepLinkedToGraph, std::list<int> * deletedWords)$/;"	f	class:rtabmap::Memory
 moveUp	rtabmap/guilib/src/utilite/UPlot.cpp	/^void UPlotLegend::moveUp(UPlotLegendItem * item)$/;"	f	class:UPlotLegend
 move_go	tmc_darknet_ros/tmc_darknet/src/go.c	/^void move_go(float *b, int p, int r, int c)$/;"	f
+move_robot	face_recognition/scripts/speak_test.py	/^def move_robot(omni_base, azimuth):$/;"	f
 move_robot	face_recognition/scripts/task_sppech.py	/^def move_robot(omni_base, azimuth):$/;"	f
 moves	tmc_darknet_ros/tmc_darknet/src/go.c	/^} moves;$/;"	t	typeref:struct:__anon111	file:
 movetoTarget	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  i64 movetoTarget;     \/* Argument to the deferred sqlite3BtreeMoveto() *\/$/;"	m	struct:VdbeCursor	file:
@@ -18059,6 +18062,8 @@ spanSet	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  static void spanSet(ExprSpan *
 spanUnaryPostfix	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  static void spanUnaryPostfix($/;"	f	file:
 spanUnaryPrefix	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  static void spanUnaryPrefix($/;"	f	file:
 spatial_mean	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * spatial_mean;$/;"	m	struct:layer
+speak	face_recognition/scripts/speak_test.py	/^def speak():$/;"	f
+speak_time	face_recognition/scripts/speak_test.py	/^speak_time = 0$/;"	v
 speak_time	face_recognition/scripts/task_sppech.py	/^speak_time = 0$/;"	v
 spec_end	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            spec_end;$/;"	m	struct:__anon89
 spec_start	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            spec_start;$/;"	m	struct:__anon89
@@ -18066,8 +18071,11 @@ speckleRange_	rtabmap/corelib/include/rtabmap/core/StereoDense.h	/^	int speckleR
 speckleWindowSize_	rtabmap/corelib/include/rtabmap/core/StereoDense.h	/^	int speckleWindowSize_; \/\/100$/;"	m	class:rtabmap::StereoBM
 specular	rtabmap/app/android/jni/third-party/include/glm/detail/dummy.cpp	/^	glm::vec4 specular; \/\/ Scli$/;"	m	struct:light	file:
 specular	rtabmap/app/android/jni/third-party/include/glm/detail/dummy.cpp	/^	glm::vec4 specular; \/\/ Scm$/;"	m	struct:material	file:
+speech	face_recognition/scripts/speak_test.py	/^speech = None$/;"	v
 speech	face_recognition/scripts/task_sppech.py	/^speech = None$/;"	v
+speech_time	face_recognition/scripts/speak_test.py	/^speech_time = 0$/;"	v
 speech_time	face_recognition/scripts/task_sppech.py	/^speech_time = 0$/;"	v
+speech_transcript	face_recognition/scripts/speak_test.py	/^speech_transcript = ''$/;"	v
 speech_transcript	face_recognition/scripts/task_sppech.py	/^speech_transcript = ''$/;"	v
 speed	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^void speed(char *cfgfile, int tics)$/;"	f
 speed_level_	rtabmap/corelib/src/rtflann/util/lsh_table.h	/^    SpeedLevel speed_level_;$/;"	m	class:rtflann::lsh::LshTable
@@ -21305,6 +21313,7 @@ umat4x4	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/
 umat4x4	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/^	typedef lowp_umat4x4							umat4x4;$/;"	t	namespace:glm
 umat4x4	rtabmap/app/android/jni/third-party/include/glm/gtc/matrix_integer.hpp	/^	typedef mediump_umat4x4							umat4x4;$/;"	t	namespace:glm
 unLockFlag	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  unsigned char unLockFlag;         \/* 1 = unlock, 0 = lock *\/$/;"	m	struct:ByteRangeLockPB2	file:
+unanswered	face_recognition/scripts/speak_test.py	/^unanswered = False$/;"	v
 unanswered	face_recognition/scripts/task_sppech.py	/^unanswered = False$/;"	v
 uncompressData	rtabmap/corelib/src/Compression.cpp	/^cv::Mat uncompressData(const cv::Mat & bytes)$/;"	f	namespace:rtabmap
 uncompressData	rtabmap/corelib/src/Compression.cpp	/^cv::Mat uncompressData(const std::vector<unsigned char> & bytes)$/;"	f	namespace:rtabmap
@@ -21549,7 +21558,6 @@ update_local_layer_gpu	tmc_darknet_ros/tmc_darknet/src/local_layer.c	/^void upda
 update_network	tmc_darknet_ros/tmc_darknet/src/network.c	/^void update_network(network net)$/;"	f
 update_rnn_layer	tmc_darknet_ros/tmc_darknet/src/rnn_layer.c	/^void update_rnn_layer(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
 update_rnn_layer_gpu	tmc_darknet_ros/tmc_darknet/src/rnn_layer.c	/^void update_rnn_layer_gpu(layer l, int batch, float learning_rate, float momentum, float decay)$/;"	f
-update_speech	face_recognition/scripts/task_sppech.py	/^def update_speech(s):$/;"	f
 upperFunc	rtabmap/corelib/src/sqlite3/sqlite3.c	/^static void upperFunc(sqlite3_context *context, int argc, sqlite3_value **argv){$/;"	f	file:
 upright_	rtabmap/corelib/include/rtabmap/core/Features2d.h	/^	bool upright_;$/;"	m	class:rtabmap::SURF
 uri_boolean	rtabmap/corelib/src/sqlite3/sqlite3.c	/^  int (*uri_boolean)(const char*,const char*,int);$/;"	m	struct:sqlite3_api_routines	file:
