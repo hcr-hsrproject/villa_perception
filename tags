@@ -267,8 +267,6 @@ GREEN_COLOR	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	
 GRU	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    GRU,$/;"	e	enum:__anon28
 GRU_LAYER_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/gru_layer.h	3;"	d
 GenderClassifier	gender_identification/scripts/gender_classifier.py	/^class GenderClassifier:$/;"	c
-GetPartsName	openpose/pose_estimation/src/pose_estimation.cpp	/^std::string PoseEstimation::GetPartsName(int parts_id) {$/;"	f	class:pose_estimation::PoseEstimation
-GetPoseModel_	openpose/pose_estimation/src/pose_estimation.cpp	/^op::PoseModel PoseEstimation::GetPoseModel_(const std::string& model_name) {$/;"	f	class:pose_estimation::PoseEstimation
 HARDTAN	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/activations.h	/^    LOGISTIC, RELU, RELIE, LINEAR, RAMP, TANH, PLSE, LEAKY, ELU, LOGGY, STAIR, HARDTAN, LHTAN$/;"	e	enum:__anon27
 HUMAN_BOXES_NAMESPACE	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	43;"	d
 Head_vel	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<double> Head_vel;$/;"	m	class:Bounding_Box_dobject
@@ -276,20 +274,16 @@ Head_vel	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extract
 IM2COL_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/im2col.h	2;"	d
 IMAGE_DATA	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    CLASSIFICATION_DATA, DETECTION_DATA, CAPTCHA_DATA, REGION_DATA, IMAGE_DATA, COMPARE_DATA, WRITING_DATA, SWAG_DATA, TAG_DATA, OLD_CLASSIFICATION_DATA, STUDY_DATA, DET_DATA, SUPER_DATA$/;"	e	enum:__anon7
 IMAGE_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/image.h	2;"	d
-INCLUDE_POSE_ESTIMATION_POSE_ESTIMATION_H_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	3;"	d
-INCLUDE_POSE_ESTIMATION_POSE_ESTIMATION_NODE_H_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	3;"	d
 INCLUDE_STB_IMAGE_WRITE_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image_write.h	81;"	d
 ISRobotMoving	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^bool Bounding_Box_dobject::ISRobotMoving(double _x, double _y, double _t)$/;"	f	class:Bounding_Box_dobject
 ISRobotMoving	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^bool Bounding_Box_dobject::ISRobotMoving(double _x, double _y, double _t)$/;"	f	class:Bounding_Box_dobject
 ImageCallback	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::ImageCallback(const sensor_msgs::ImageConstPtr& msg) {$/;"	f	class:Bounding_Box_dobject
 ImageCallback	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::ImageCallback(const sensor_msgs::ImageConstPtr& msg) {$/;"	f	class:Bounding_Box_dobject_nicolas
 ImageCallback	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::ImageCallback(const sensor_msgs::ImageConstPtr& msg) {$/;"	f	class:Tracking_Box_dobject
-ImageCallback_	openpose/pose_estimation/src/pose_estimation_node.cpp	/^void PoseEstimationNode::ImageCallback_(const sensor_msgs::ImageConstPtr& msg) {$/;"	f	class:pose_estimation::PoseEstimationNode
 ImageCallback_	tmc_darknet_ros/tmc_yolo2_ros/src/yolo2_node.cpp	/^void Yolo2Node::ImageCallback_(const sensor_msgs::ImageConstPtr& msg) {$/;"	f	class:tmc_yolo2_ros::Yolo2Node
 ImageCoder	villa_rude_carnie_ros/src/rude_carnie/preproc.py	/^class ImageCoder(object):$/;"	c
 ImageCoder	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^class ImageCoder(object):$/;"	c
 ImageCoder	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^class ImageCoder(object):$/;"	c
-Init	openpose/pose_estimation/src/pose_estimation.cpp	/^void PoseEstimation::Init(int net_input_width,$/;"	f	class:pose_estimation::PoseEstimation
 Initialize	tmc_darknet_ros/tmc_yolo2_ros/src/detector.cpp	/^bool Detector::Initialize(const std::string& config_path,$/;"	f	class:tmc_yolo2_ros::Detector
 Initialize	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node_stub.cpp	/^  bool Initialize(const std::string& config_path,$/;"	f	class:tmc_yolo2_ros::StubDetector
 IsHeadMoving	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	bool IsHeadMoving;$/;"	m	class:Bounding_Box_dobject
@@ -389,14 +383,7 @@ People_coordinate_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yo
 People_pos_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  People_pos_pub;$/;"	m	class:Bounding_Box_dobject
 People_pos_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  People_pos_pub;$/;"	m	class:Bounding_Box_dobject
 Person	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^class Person:$/;"	c
-PoseEstimation	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  PoseEstimation() {}$/;"	f	class:pose_estimation::PoseEstimation
-PoseEstimation	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^class PoseEstimation {$/;"	c	namespace:pose_estimation
-PoseEstimationNode	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^class PoseEstimationNode {$/;"	c	namespace:pose_estimation
-PoseEstimationNode	openpose/pose_estimation/src/pose_estimation_node.cpp	/^PoseEstimationNode::PoseEstimationNode() :$/;"	f	class:pose_estimation::PoseEstimationNode
-Process	openpose/pose_estimation/src/pose_estimation.cpp	/^op::Array<float> PoseEstimation::Process(const cv::Mat& image) {$/;"	f	class:pose_estimation::PoseEstimation
-PublishEstimations_	openpose/pose_estimation/src/pose_estimation_node.cpp	/^void PoseEstimationNode::PublishEstimations_(const op::Array<float>& poses) {$/;"	f	class:pose_estimation::PoseEstimationNode
 PublishImage	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^  void PublishImage(uint8_t pub_num) {$/;"	f	class:tmc_yolo2_ros::Yolo2NodeTest
-PublishResultImage_	openpose/pose_estimation/src/pose_estimation_node.cpp	/^void PoseEstimationNode::PublishResultImage_(const cv::Mat& cv_image) {$/;"	f	class:pose_estimation::PoseEstimationNode
 RAMP	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/activations.h	/^    LOGISTIC, RELU, RELIE, LINEAR, RAMP, TANH, PLSE, LEAKY, ELU, LOGGY, STAIR, HARDTAN, LHTAN$/;"	e	enum:__anon27
 RANDOM	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    CONSTANT, STEP, EXP, POLY, STEPS, SIG, RANDOM$/;"	e	enum:__anon9
 REGION	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    REGION,$/;"	e	enum:__anon28
@@ -425,7 +412,6 @@ R_HIP	activity_detection/scripts/activityDetection_action.py	/^R_HIP = 8$/;"	v
 R_KNEE	activity_detection/scripts/activityDetection_action.py	/^R_KNEE = 9$/;"	v
 R_SHOULDER	activity_detection/scripts/activityDetection_action.py	/^R_SHOULDER =2$/;"	v
 R_WRIST	activity_detection/scripts/activityDetection_action.py	/^R_WRIST = 4$/;"	v
-RenderImage	openpose/pose_estimation/src/pose_estimation.cpp	/^cv::Mat PoseEstimation::RenderImage(const cv::Mat& image,$/;"	f	class:pose_estimation::PoseEstimation
 RunThread	tmc_darknet_ros/tmc_yolo2_ros/src/yolo2_node.cpp	/^void Yolo2Node::RunThread() {$/;"	f	class:tmc_yolo2_ros::Yolo2Node
 Run_	tmc_darknet_ros/tmc_yolo2_ros/src/yolo2_node.cpp	/^void Yolo2Node::Run_() {$/;"	f	class:tmc_yolo2_ros::Yolo2Node
 SECRET_NUM	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/utils.h	7;"	d
@@ -526,7 +512,6 @@ TrackingBox_Person_Desc	villa_3d_object_extract/src/TrackingBoxPersonDesc.cpp	/^
 Tracking_Box_dobject	villa_3d_object_extract/include/TrackingBoxDObject.h	/^class Tracking_Box_dobject{$/;"	c
 Tracking_Box_dobject	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^Tracking_Box_dobject::Tracking_Box_dobject(): cloud(new pcl::PointCloud<pcl::PointXYZRGB>){$/;"	f	class:Tracking_Box_dobject
 USET	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/rnn_layer.h	8;"	d
-USE_CAFFE	openpose/pose_estimation/src/pose_estimation.cpp	2;"	d	file:
 UTILS_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/utils.h	2;"	d
 VEL_CRITERION	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	41;"	d
 VEL_CRITERION	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	41;"	d
@@ -795,7 +780,6 @@ c	tmc_darknet_ros/tmc_darknet/src/parser.c	/^    int c;$/;"	m	struct:size_params
 calculate_liberties	tmc_darknet_ros/tmc_darknet/src/go.c	/^int *calculate_liberties(float *board)$/;"	f
 calculate_loss	tmc_darknet_ros/tmc_darknet/src/nightmare.c	/^void calculate_loss(float *output, float *delta, int n, float thresh)$/;"	f
 callback	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^  void callback(const DetectionsConstPtr& msg) {$/;"	f	class:tmc_yolo2_ros::Yolo2NodeTest
-cancel_handler	openpose/pose_estimation/scripts/install.sh	/^cancel_handler() {$/;"	f
 cancel_handler	tmc_darknet_ros/hsrb_darknet_tutorials/scripts/install_scripts/install_training_settings.sh	/^cancel_handler() {$/;"	f
 cap	tmc_darknet_ros/tmc_darknet/src/demo.c	/^static CvCapture * cap;$/;"	v	file:
 change_leaves	tmc_darknet_ros/tmc_darknet/src/tree.c	/^void change_leaves(tree *t, char *leaf_list)$/;"	f
@@ -965,7 +949,6 @@ cudnn_handle	tmc_darknet_ros/tmc_darknet/src/cuda.c	/^cudnnHandle_t cudnn_handle
 cur_x	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int cur_x, cur_y;$/;"	m	struct:__anon25
 cur_y	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int cur_x, cur_y;$/;"	m	struct:__anon25
 current_class	tmc_darknet_ros/tmc_darknet/src/compare.c	/^int current_class = 0;$/;"	v
-cv_ptr_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  cv_bridge::CvImagePtr cv_ptr_;$/;"	m	class:pose_estimation::PoseEstimationNode
 cweights	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    char  * cweights;$/;"	m	struct:layer
 d	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    data *d;$/;"	m	struct:load_args
 data	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^} data;$/;"	t	typeref:struct:__anon6
@@ -1183,8 +1166,6 @@ eps	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float eps;$/;"
 eps	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    float eps;$/;"	m	struct:network
 error	tmc_darknet_ros/tmc_darknet/src/utils.c	/^void error(const char *s)$/;"	f
 estimation_callback	activity_detection/scripts/activityDetection_action.py	/^    def estimation_callback(self,msg):$/;"	m	class:ActivityDetection_Action
-estimations_pub_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  ros::Publisher estimations_pub_;$/;"	m	class:pose_estimation::PoseEstimationNode
-estimator_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  PoseEstimation estimator_;$/;"	m	class:pose_estimation::PoseEstimationNode
 eval_cifar_csv	tmc_darknet_ros/tmc_darknet/src/cifar.c	/^void eval_cifar_csv()$/;"	f
 eval_image	villa_rude_carnie_ros/src/rude_carnie/data.py	/^def eval_image(image, height, width):$/;"	f
 eval_once	villa_rude_carnie_ros/src/rude_carnie/eval.py	/^def eval_once(saver, summary_writer, summary_op, logits, labels, num_eval, requested_step=None):$/;"	f
@@ -1492,7 +1473,6 @@ image_sub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Subscribe
 image_sub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Subscriber           image_sub;$/;"	m	class:Bounding_Box_dobject_nicolas
 image_sub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Subscriber           image_sub;$/;"	m	class:Tracking_Box_dobject
 image_sub_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  image_transport::Subscriber image_sub_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
-image_topic_name_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  std::string image_topic_name_;$/;"	m	class:pose_estimation::PoseEstimationNode
 image_w	tmc_darknet_ros/tmc_yolo2_ros/src/single_image.cpp	/^uint32_t image_w;$/;"	v
 image_w_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  uint32_t image_w_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
 images	tmc_darknet_ros/tmc_darknet/src/demo.c	/^static image images[FRAMES];$/;"	v	file:
@@ -1536,7 +1516,6 @@ input	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    float *inp
 input_gate_layer	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    struct layer *input_gate_layer;$/;"	m	struct:layer	typeref:struct:layer::layer
 input_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    float **input_gpu;$/;"	m	struct:network
 input_h_layer	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    struct layer *input_h_layer;$/;"	m	struct:layer	typeref:struct:layer::layer
-input_image_sub_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  image_transport::Subscriber input_image_sub_;$/;"	m	class:pose_estimation::PoseEstimationNode
 input_layer	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    struct layer *input_layer;$/;"	m	struct:layer	typeref:struct:layer::layer
 input_layers	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    int   * input_layers;$/;"	m	struct:layer
 input_r_layer	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    struct layer *input_r_layer;$/;"	m	struct:layer	typeref:struct:layer::layer
@@ -1555,7 +1534,6 @@ io_user_data	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   vo
 ipl_to_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^image ipl_to_image(IplImage* src)$/;"	f
 isMoving	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	bool isMoving;$/;"	m	class:Bounding_Box_dobject
 isMoving	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	bool isMoving;$/;"	m	class:Bounding_Box_dobject
-is_initialized_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  bool is_initialized_;$/;"	m	class:pose_estimation::PoseEstimationNode
 is_network	tmc_darknet_ros/tmc_darknet/src/parser.c	/^int is_network(section *s)$/;"	f
 is_set_image_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  bool is_set_image_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
 is_set_image_type_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  bool is_set_image_type_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
@@ -1564,20 +1542,9 @@ jitter	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float jitte
 joint	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    int joint;$/;"	m	struct:layer
 joint_states_callback	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::joint_states_callback(const sensor_msgs::JointState::ConstPtr& msg)$/;"	f	class:Bounding_Box_dobject
 joint_states_callback	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::joint_states_callback(const sensor_msgs::JointState::ConstPtr& msg)$/;"	f	class:Bounding_Box_dobject
-kAlphaValue	openpose/pose_estimation/src/pose_estimation.cpp	/^  static const float kAlphaValue = 0.5;$/;"	m	namespace:__anon39	file:
 kDefaultConfidenceThreshold	tmc_darknet_ros/tmc_yolo2_ros/src/yolo2_node.cpp	/^static const double kDefaultConfidenceThreshold = 0.3;$/;"	m	namespace:__anon1	file:
-kDefaultModelName	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const char* kDefaultModelName = "COCO";$/;"	m	namespace:__anon38	file:
-kDefaultModelPath	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const char* kDefaultModelPath = "~\/.ros\/openpose\/models";$/;"	m	namespace:__anon38	file:
 kDefaultNmsThreshold	tmc_darknet_ros/tmc_yolo2_ros/src/yolo2_node.cpp	/^static const double kDefaultNmsThreshold = 0.4;$/;"	m	namespace:__anon1	file:
 kHeight	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node_stub.cpp	/^static const int kHeight = 120;$/;"	m	namespace:__anon3	file:
-kImageTopicName	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const char* kImageTopicName = "image_raw";$/;"	m	namespace:__anon38	file:
-kNetInputHeight	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const int kNetInputHeight = 368;$/;"	m	namespace:__anon38	file:
-kNetInputWidth	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const int kNetInputWidth = 656;$/;"	m	namespace:__anon38	file:
-kNetOutputHeight	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const int kNetOutputHeight = 368;$/;"	m	namespace:__anon38	file:
-kNetOutputWidth	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const int kNetOutputWidth = 656;$/;"	m	namespace:__anon38	file:
-kNetScale	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const int kNetScale = 1;$/;"	m	namespace:__anon38	file:
-kNetScaleGap	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const float kNetScaleGap = 0.3;$/;"	m	namespace:__anon38	file:
-kNumGpuStart	openpose/pose_estimation/src/pose_estimation_node.cpp	/^  static const int kNumGpuStart = 0;$/;"	m	namespace:__anon38	file:
 kRate	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^const double kRate = 10.0;$/;"	m	namespace:__anon2	file:
 kWidth	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node_stub.cpp	/^static const int kWidth = 160;$/;"	m	namespace:__anon3	file:
 kappa	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float kappa;$/;"	m	struct:layer
@@ -1695,7 +1662,6 @@ m_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float *m_gpu
 mag_array	tmc_darknet_ros/tmc_darknet/src/utils.c	/^float mag_array(float *a, int n)$/;"	f
 main	face_recognition/test.py	/^def main():$/;"	f
 main	face_recognition/test_hc.py	/^def main():$/;"	f
-main	openpose/pose_estimation/src/pose_estimation_node.cpp	/^int main(int argc, char *argv[]) {$/;"	f
 main	ros-keyboard/src/main.cpp	/^int main(int argc, char** argv)$/;"	f
 main	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^int main(int argc, char **argv)$/;"	f
 main	tmc_darknet_ros/tmc_yolo2_ros/scripts/yolo2_image_node	/^def main():$/;"	f
@@ -1793,8 +1759,6 @@ mean_z	villa_3d_object_extract/src/deprecated/object_bounding_boxes.cpp	/^	float
 mean_z	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^	float mean_z;$/;"	m	class:Cluster3D_BoundingBox	file:
 min	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    int min, max, size;$/;"	m	struct:load_args
 min_crop	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    int min_crop;$/;"	m	struct:network
-model_name_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  std::string model_name_;$/;"	m	class:pose_estimation::PoseEstimationNode
-model_path_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  std::string model_path_;$/;"	m	class:pose_estimation::PoseEstimationNode
 momentum	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    float momentum;$/;"	m	struct:network
 moveBindings	face_recognition/scripts/face_photo_action.py	/^moveBindings = {$/;"	v
 moveBindings	face_recognition/scripts/face_recog_action.py	/^moveBindings = {$/;"	v
@@ -1820,8 +1784,6 @@ net	tmc_darknet_ros/tmc_darknet/src/parser.c	/^    network net;$/;"	m	struct:siz
 net_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/detector.hpp	/^  network net_;$/;"	m	class:tmc_yolo2_ros::Detector
 net_h	tmc_darknet_ros/tmc_yolo2_ros/src/single_image.cpp	/^uint32_t net_h;$/;"	v
 net_h_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  uint32_t net_h_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
-net_input_height_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  int net_input_height_;$/;"	m	class:pose_estimation::PoseEstimation
-net_input_width_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  int net_input_width_;$/;"	m	class:pose_estimation::PoseEstimation
 net_w	tmc_darknet_ros/tmc_yolo2_ros/src/single_image.cpp	/^uint32_t net_w;$/;"	v
 net_w_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  uint32_t net_w_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
 network	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^typedef struct network{$/;"	s
@@ -1867,7 +1829,6 @@ norms_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * 
 num_bits	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int num_bits;$/;"	m	struct:__anon19
 num_boxes	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    int *num_boxes;$/;"	m	struct:__anon6
 num_boxes	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    int num_boxes;$/;"	m	struct:load_args
-num_scales_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  int num_scales_;$/;"	m	class:pose_estimation::PoseEstimation
 num_steps	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    int num_steps;$/;"	m	struct:network
 number_of_detected_dobjects_pub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Publisher 			  number_of_detected_dobjects_pub; \/\/give number of detected dobjects$/;"	m	class:Bounding_Box_dobject
 number_of_detected_dobjects_pub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Publisher 			  number_of_detected_dobjects_pub; \/\/give number of detected dobjects$/;"	m	class:Bounding_Box_dobject_nicolas
@@ -1912,9 +1873,7 @@ outpath	tmc_darknet_ros/hsrb_darknet_tutorials/scripts/create_darknet_data	/^   
 output	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * output;$/;"	m	struct:layer
 output	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    float *output;$/;"	m	struct:network
 output_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * output_gpu;$/;"	m	struct:layer
-output_height_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  int output_height_;$/;"	m	class:pose_estimation::PoseEstimation
 output_layer	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    struct layer *output_layer;$/;"	m	struct:layer	typeref:struct:layer::layer
-output_width_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  int output_width_;$/;"	m	class:pose_estimation::PoseEstimation
 outputs	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    int outputs;$/;"	m	struct:layer
 outputs	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    int outputs;$/;"	m	struct:network
 overlap	tmc_darknet_ros/tmc_darknet/src/box.c	/^float overlap(float x1, float w1, float x2, float w2)$/;"	f
@@ -1953,7 +1912,6 @@ parse_route	tmc_darknet_ros/tmc_darknet/src/parser.c	/^route_layer parse_route(l
 parse_shortcut	tmc_darknet_ros/tmc_darknet/src/parser.c	/^layer parse_shortcut(list *options, size_params params, network net)$/;"	f
 parse_softmax	tmc_darknet_ros/tmc_darknet/src/parser.c	/^softmax_layer parse_softmax(list *options, size_params params)$/;"	f
 partial	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^void partial(char *cfgfile, char *weightfile, char *outfile, int max)$/;"	f
-parts_map_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  std::map<unsigned int, std::string> parts_map_;$/;"	m	class:pose_estimation::PoseEstimation
 path	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    char *path;$/;"	m	struct:load_args
 paths	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    char **paths;$/;"	m	struct:load_args
 people	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<people_msgs::PositionMeasurement> people;$/;"	m	class:Bounding_Box_dobject
@@ -1968,12 +1926,6 @@ png_to_jpeg	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^    def png_to_jpeg
 png_to_jpeg	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def png_to_jpeg(self, image_data):$/;"	m	class:ImageCoder
 policy	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    learning_rate_policy policy;$/;"	m	struct:network
 pop_column	tmc_darknet_ros/tmc_darknet/src/matrix.c	/^float *pop_column(matrix *m, int c)$/;"	f
-pose_estimation	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^namespace pose_estimation {$/;"	n
-pose_estimation	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^namespace pose_estimation {$/;"	n
-pose_estimation	openpose/pose_estimation/src/pose_estimation.cpp	/^namespace pose_estimation {$/;"	n	file:
-pose_estimation	openpose/pose_estimation/src/pose_estimation_node.cpp	/^namespace pose_estimation {$/;"	n	file:
-pose_extractor_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  std::shared_ptr<op::PoseExtractor> pose_extractor_;$/;"	m	class:pose_estimation::PoseEstimation
-pose_renderer_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  std::shared_ptr<op::PoseRenderer> pose_renderer_;$/;"	m	class:pose_estimation::PoseEstimation
 pow_cpu	tmc_darknet_ros/tmc_darknet/src/blas.c	/^void pow_cpu(int N, float ALPHA, float *X, int INCX, float *Y, int INCY)$/;"	f
 power	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    float power;$/;"	m	struct:network
 predict_classifier	tmc_darknet_ros/tmc_darknet/src/classifier.c	/^void predict_classifier(char *datacfg, char *cfgfile, char *weightfile, char *filename, int top)$/;"	f
@@ -2045,7 +1997,6 @@ publish_human_boxes	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_
 publish_human_boxes_delayed	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_human_boxes_delayed()$/;"	f	class:Bounding_Box_dobject
 publish_human_boxes_delayed	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_human_boxes_delayed()$/;"	f	class:Bounding_Box_dobject
 publish_objects_points	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::publish_objects_points(){$/;"	f	class:Bounding_Box_dobject_nicolas
-publish_result_image_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  bool publish_result_image_;$/;"	m	class:pose_estimation::PoseEstimationNode
 publish_tracked	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::publish_tracked()$/;"	f	class:Tracking_Box_dobject
 pull_batchnorm_layer	tmc_darknet_ros/tmc_darknet/src/batchnorm_layer.c	/^void pull_batchnorm_layer(layer l)$/;"	f
 pull_connected_layer	tmc_darknet_ros/tmc_darknet/src/connected_layer.c	/^void pull_connected_layer(connected_layer l)$/;"	f
@@ -2155,7 +2106,6 @@ restart_interval	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^ 
 result	activity_detection/scripts/activityDetection_client.py	/^        result = activity_detection_client()$/;"	v
 result	face_recognition/scripts/client_test.py	/^		result = face_action_client()$/;"	v
 result	face_recognition/scripts/face_action_client.py	/^		result = face_action_client()$/;"	v
-result_image_pub_	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  image_transport::Publisher result_image_pub_;$/;"	m	class:pose_estimation::PoseEstimationNode
 reverse	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    int reverse;$/;"	m	struct:layer
 rgb_to_hsv	tmc_darknet_ros/tmc_darknet/src/image.c	/^void rgb_to_hsv(image im)$/;"	f
 rgbgr_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^void rgbgr_image(image im)$/;"	f
@@ -2222,7 +2172,6 @@ scale	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    float scal
 scale_array	tmc_darknet_ros/tmc_darknet/src/utils.c	/^void scale_array(float *a, int n, float s)$/;"	f
 scale_bias	tmc_darknet_ros/tmc_darknet/src/convolutional_layer.c	/^void scale_bias(float *output, float *scales, int batch, int n, int size)$/;"	f
 scale_data_rows	tmc_darknet_ros/tmc_darknet/src/data.c	/^void scale_data_rows(data d, float s)$/;"	f
-scale_gap_	openpose/pose_estimation/include/pose_estimation/pose_estimation.h	/^  float scale_gap_;$/;"	m	class:pose_estimation::PoseEstimation
 scale_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^void scale_image(image m, float s)$/;"	f
 scale_image_channel	tmc_darknet_ros/tmc_darknet/src/image.c	/^void scale_image_channel(image im, int c, float v)$/;"	f
 scale_matrix	tmc_darknet_ros/tmc_darknet/src/matrix.c	/^void scale_matrix(matrix m, float scale)$/;"	f
@@ -2286,6 +2235,8 @@ speak_time	face_recognition/scripts/task_sppech.py	/^speak_time = 0$/;"	v
 spec_end	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            spec_end;$/;"	m	struct:__anon15
 spec_start	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            spec_start;$/;"	m	struct:__anon15
 speech	face_recognition/scripts/task_sppech.py	/^speech = None$/;"	v
+speech_cb	face_recognition/scripts/speech_sub	/^def speech_cb(msg):$/;"	f
+speech_server	face_recognition/scripts/speech_sub	/^def speech_server():$/;"	f
 speech_time	face_recognition/scripts/task_sppech.py	/^speech_time = 0$/;"	v
 speech_transcript	face_recognition/scripts/task_sppech.py	/^speech_transcript = ''$/;"	v
 speed	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^void speed(char *cfgfile, int tics)$/;"	f
@@ -2945,7 +2896,6 @@ zout_start	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   char
 ~Detector	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/detector.hpp	/^  virtual ~Detector() {$/;"	f	class:tmc_yolo2_ros::Detector
 ~Keyboard	ros-keyboard/src/keyboard.cpp	/^keyboard::Keyboard::~Keyboard(void)$/;"	f	class:keyboard::Keyboard
 ~Mean3DTrackingBox	villa_3d_object_extract/src/Mean3DTrackingBox.cpp	/^Mean3DTrackingBox::~Mean3DTrackingBox(){}$/;"	f	class:Mean3DTrackingBox
-~PoseEstimationNode	openpose/pose_estimation/include/pose_estimation/pose_estimation_node.h	/^  ~PoseEstimationNode() {}$/;"	f	class:pose_estimation::PoseEstimationNode
 ~TrackingBox_Person_Desc	villa_3d_object_extract/src/TrackingBoxPersonDesc.cpp	/^TrackingBox_Person_Desc::~TrackingBox_Person_Desc(){}$/;"	f	class:TrackingBox_Person_Desc
 ~Tracking_Box_dobject	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^Tracking_Box_dobject::~Tracking_Box_dobject(){}$/;"	f	class:Tracking_Box_dobject
 ~Yolo2Node	tmc_darknet_ros/tmc_yolo2_ros/src/yolo2_node.cpp	/^Yolo2Node::~Yolo2Node() {$/;"	f	class:tmc_yolo2_ros::Yolo2Node
