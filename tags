@@ -2318,7 +2318,9 @@ speech	face_recognition/scripts/task_sppech.py	/^speech = None$/;"	v
 speech_cb	face_recognition/scripts/speech_sub	/^def speech_cb(msg):$/;"	f
 speech_server	face_recognition/scripts/speech_sub	/^def speech_server():$/;"	f
 speech_time	face_recognition/scripts/speak_test.py	/^speech_time = 0$/;"	v
+speech_time	face_recognition/scripts/task_sppech.py	/^speech_time = 0$/;"	v
 speech_transcript	face_recognition/scripts/speak_test.py	/^speech_transcript = ''$/;"	v
+speech_transcript	face_recognition/scripts/task_sppech.py	/^speech_transcript = ''$/;"	v
 speed	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^void speed(char *cfgfile, int tics)$/;"	f
 split_data	tmc_darknet_ros/tmc_darknet/src/data.c	/^data *split_data(data d, int part, int total)$/;"	f
 split_str	tmc_darknet_ros/tmc_darknet/src/utils.c	/^list *split_str(char *s, char delim)$/;"	f
