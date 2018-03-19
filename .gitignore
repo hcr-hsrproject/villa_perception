@@ -13,6 +13,7 @@ yolo9000.cfg
 build/
 bin/
 lib/
+tags
 msg_gen/
 srv_gen/
 msg/*Action.msg
