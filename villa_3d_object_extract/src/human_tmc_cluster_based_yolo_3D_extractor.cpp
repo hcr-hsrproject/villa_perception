@@ -1089,8 +1089,8 @@ int main(int argc, char **argv)
 		
 			bbh_obj.publish_human_boxes_delayed();
      	}
-	 // bbh_obj.publish_dobject_3D_boxes();
-	 // bbh_obj.publish_dobject_points();
+      bbh_obj.publish_dobject_3D_boxes();
+      bbh_obj.publish_dobject_points();
      // bbh_obj.Publish_human_boxes();
      ros::spinOnce();
      loop_rate.sleep();  
