@@ -11,7 +11,8 @@ import rospy
 
 def speech_cb(msg):
     rospy.loginfo("Waiting for speech msgs...")
-    Sentence = "Hello" +msg.data
+    # Sentence = "Hello" +msg.data
+    Sentence =msg.data
     speech = tts.TextToSpeech()
     # speech.say(msg.data, wait=True)
     speech.say(Sentence, wait=True)

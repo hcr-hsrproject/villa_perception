@@ -241,7 +241,7 @@ FaceDectectors	face_recognition/scripts/face_recog_service.py	/^class FaceDectec
 FaceDectectors	face_recognition/scripts/face_recog_srv_client.py	/^class FaceDectectors(object):$/;"	c
 FaceDectectors	face_recognition/scripts/face_service.py	/^class FaceDectectors(object):$/;"	c
 FaceDectectors	face_recognition/scripts/test_ros	/^class FaceDectectors(object):$/;"	c
-FaceDectectors_photo	face_recognition/scripts/take_photo_server.py	/^class FaceDectectors_photo(object):$/;"	c
+FaceDectectors_photo	face_recognition/scripts/take_face_photo_server.py	/^class FaceDectectors_photo(object):$/;"	c
 FaceDetector	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^class FaceDetector(object):$/;"	c
 FaceDetector	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^class FaceDetector(object):$/;"	c
 Face_manager	face_recognition/scripts/face_action_server.py	/^	Face_manager = FaceDectector_Action('face_recog_action')$/;"	v	class:FaceDectector_Action
@@ -250,7 +250,7 @@ Face_manager	face_recognition/scripts/face_recog_action.py	/^	Face_manager = Fac
 Face_manager	face_recognition/scripts/face_recog_service.py	/^	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)$/;"	v	class:FaceDectectors
 Face_manager	face_recognition/scripts/face_recog_srv_client.py	/^	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)$/;"	v	class:FaceDectectors
 Face_manager	face_recognition/scripts/face_service.py	/^	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)$/;"	v	class:FaceDectectors
-Face_manager	face_recognition/scripts/take_photo_server.py	/^    Face_manager = FaceDectectors_photo()$/;"	v	class:FaceDectectors_photo
+Face_manager	face_recognition/scripts/take_face_photo_server.py	/^    Face_manager = FaceDectectors_photo()$/;"	v	class:FaceDectectors_photo
 Face_manager	face_recognition/scripts/test_ros	/^	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)$/;"	v	class:FaceDectectors
 FindObjectAction	face_recognition/scripts/example_action.py	/^class FindObjectAction:$/;"	c
 GEMM_H	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/gemm.h	2;"	d
@@ -291,7 +291,8 @@ IsHeadMoving	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_ext
 Isrunnging	face_recognition/scripts/face_recog_service.py	/^	def Isrunnging(self,req):$/;"	m	class:FaceDectectors
 Isrunnging	face_recognition/scripts/face_recog_srv_client.py	/^	def Isrunnging(self,req):$/;"	m	class:FaceDectectors
 Isrunnging	face_recognition/scripts/face_service.py	/^	def Isrunnging(self,req):$/;"	m	class:FaceDectectors
-Isrunnging	face_recognition/scripts/take_photo_server.py	/^    def Isrunnging(self, req):$/;"	m	class:FaceDectectors_photo
+Isrunnging	face_recognition/scripts/take_face_photo_server.py	/^    def Isrunnging(self, req):$/;"	m	class:FaceDectectors_photo
+Isrunnging	face_recognition/scripts/take_photo_server.py	/^    def Isrunnging(self, req):$/;"	m	class:photo_manager
 Joint_states_sub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber 		   Joint_states_sub;$/;"	m	class:Bounding_Box_dobject
 Joint_states_sub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Subscriber 		   Joint_states_sub;$/;"	m	class:Bounding_Box_dobject
 KINECT_HEIGHT	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	47;"	d
@@ -383,6 +384,7 @@ People_coordinate_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yo
 People_pos_pub	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  People_pos_pub;$/;"	m	class:Bounding_Box_dobject
 People_pos_pub	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	ros::Publisher 			  People_pos_pub;$/;"	m	class:Bounding_Box_dobject
 Person	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^class Person:$/;"	c
+Photo_saver	face_recognition/scripts/take_photo_server.py	/^    Photo_saver = photo_manager()$/;"	v
 PublishImage	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^  void PublishImage(uint8_t pub_num) {$/;"	f	class:tmc_yolo2_ros::Yolo2NodeTest
 RAMP	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/activations.h	/^    LOGISTIC, RELU, RELIE, LINEAR, RAMP, TANH, PLSE, LEAKY, ELU, LOGGY, STAIR, HARDTAN, LHTAN$/;"	e	enum:__anon9
 RANDOM	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    CONSTANT, STEP, EXP, POLY, STEPS, SIG, RANDOM$/;"	e	enum:__anon14
@@ -554,7 +556,8 @@ __init__	face_recognition/scripts/face_recog_manager.py	/^	def __init__(self, wa
 __init__	face_recognition/scripts/face_recog_service.py	/^	def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
 __init__	face_recognition/scripts/face_recog_srv_client.py	/^	def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
 __init__	face_recognition/scripts/face_service.py	/^	def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
-__init__	face_recognition/scripts/take_photo_server.py	/^    def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors_photo
+__init__	face_recognition/scripts/take_face_photo_server.py	/^    def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors_photo
+__init__	face_recognition/scripts/take_photo_server.py	/^    def __init__(self, wait=0.0):$/;"	m	class:photo_manager
 __init__	face_recognition/scripts/test_ros	/^	def __init__(self, wait=0.0):$/;"	m	class:FaceDectectors
 __init__	gender_identification/scripts/gender_classifier.py	/^    def __init__(self):$/;"	m	class:GenderClassifier
 __init__	tmc_darknet_ros/tmc_yolo2_ros/src/tmc_yolo2_ros/yolo2_image_node.py	/^    def __init__(self):$/;"	m	class:Yolo2ImageNode
@@ -928,7 +931,7 @@ crop_face	face_recognition/scripts/face_recog_service.py	/^	def crop_face(self,i
 crop_face	face_recognition/scripts/face_recog_srv_client.py	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectectors
 crop_face	face_recognition/scripts/face_service.py	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectectors
 crop_face	face_recognition/scripts/hc_test.py	/^def crop_face(image_data):$/;"	f
-crop_face	face_recognition/scripts/take_photo_server.py	/^    def crop_face(self, image_data):$/;"	m	class:FaceDectectors_photo
+crop_face	face_recognition/scripts/take_face_photo_server.py	/^    def crop_face(self, image_data):$/;"	m	class:FaceDectectors_photo
 crop_face	face_recognition/scripts/test_ros	/^	def crop_face(self,image_data):$/;"	m	class:FaceDectectors
 crop_face	gender_identification/scripts/gender_classifier.py	/^    def crop_face(self, image_data):$/;"	m	class:GenderClassifier
 crop_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^image crop_image(image im, int dx, int dy, int w, int h)$/;"	f
@@ -1459,7 +1462,8 @@ image_callback	face_recognition/scripts/face_recog_manager.py	/^	def image_callb
 image_callback	face_recognition/scripts/face_recog_service.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectectors
 image_callback	face_recognition/scripts/face_recog_srv_client.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectectors
 image_callback	face_recognition/scripts/face_service.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectectors
-image_callback	face_recognition/scripts/take_photo_server.py	/^    def image_callback(self, msg):$/;"	m	class:FaceDectectors_photo
+image_callback	face_recognition/scripts/take_face_photo_server.py	/^    def image_callback(self, msg):$/;"	m	class:FaceDectectors_photo
+image_callback	face_recognition/scripts/take_photo_server.py	/^    def image_callback(self, msg):$/;"	m	class:photo_manager
 image_callback	face_recognition/scripts/test_ros	/^	def image_callback(self,msg):$/;"	m	class:FaceDectectors
 image_callback	gender_identification/scripts/gender_identification_server	/^def image_callback(req):$/;"	f
 image_callback	gender_identification/scripts/gender_publisher	/^def image_callback(data):$/;"	f
@@ -1604,7 +1608,8 @@ listener	face_recognition/scripts/face_recog_manager.py	/^	def listener(self,wai
 listener	face_recognition/scripts/face_recog_service.py	/^	def listener(self):$/;"	m	class:FaceDectectors
 listener	face_recognition/scripts/face_recog_srv_client.py	/^	def listener(self):$/;"	m	class:FaceDectectors
 listener	face_recognition/scripts/face_service.py	/^	def listener(self):$/;"	m	class:FaceDectectors
-listener	face_recognition/scripts/take_photo_server.py	/^    def listener(self):$/;"	m	class:FaceDectectors_photo
+listener	face_recognition/scripts/take_face_photo_server.py	/^    def listener(self):$/;"	m	class:FaceDectectors_photo
+listener	face_recognition/scripts/take_photo_server.py	/^    def listener(self):$/;"	m	class:photo_manager
 listener	face_recognition/scripts/test_ros	/^	def listener(self,wait=0.0):$/;"	m	class:FaceDectectors
 listener	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::TransformListener 	  listener;$/;"	m	class:Bounding_Box_dobject
 listener	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::TransformListener 	  listener;$/;"	m	class:Bounding_Box_dobject
@@ -1920,6 +1925,7 @@ paths	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    char **paths;
 people	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<people_msgs::PositionMeasurement> people;$/;"	m	class:Bounding_Box_dobject
 people	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	std::vector<people_msgs::PositionMeasurement> people;$/;"	m	class:Bounding_Box_dobject
 personPose	activity_detection/scripts/activityDetection_action.py	/^    def personPose(self, pose, leftLeg, rightLeg):$/;"	m	class:ActivityDetection_Action
+photo_manager	face_recognition/scripts/take_photo_server.py	/^class photo_manager(object):$/;"	c
 pil_image	face_recognition/scripts/from PIL import Image.py	/^    pil_image = image.fromarray(face_image)$/;"	v
 plse_activate	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/activations.h	/^static inline float plse_activate(float x)$/;"	f
 plse_gradient	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/activations.h	/^static inline float plse_gradient(float x){return (x < 0 || x > 1) ? .01 : .125;}$/;"	f

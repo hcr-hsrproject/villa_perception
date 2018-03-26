@@ -4,7 +4,8 @@ cmake_minimum_required(VERSION 2.8.3)
 project(people_msgs)
 # Load catkin and all dependencies required for this package
 # TODO: remove all from COMPONENTS that are not catkin packages.
-find_package(catkin REQUIRED COMPONENTS message_generation geometry_msgs std_msgs)
+find_package(catkin REQUIRED COMPONENTS message_generation geometry_msgs
+    std_msgs sensor_msgs)
 
 # include_directories(include ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS})
 # CATKIN_MIGRATION: removed during catkin migration
@@ -30,7 +31,10 @@ add_message_files(
    DIRECTORY msg
    FILES
    People.msg
+   People_v2.msg
+   Skeleton.msg
    Person.msg
+   Person_v2.msg
    PersonStamped.msg
    PositionMeasurementArray.msg
    PositionMeasurement.msg
@@ -54,11 +58,11 @@ add_message_files(
 #target_link_libraries(example ${PROJECT_NAME})
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
-   DEPENDENCIES   geometry_msgs std_msgs
+   DEPENDENCIES   geometry_msgs std_msgs sensor_msgs
 )
 
 # catkin_package parameters: http://ros.org/doc/groovy/api/catkin/html/dev_guide/generated_cmake_api.html#catkin-package
 # TODO: fill in what other packages will need to use this package
 catkin_package(
-    CATKIN_DEPENDS message_runtime geometry_msgs std_msgs
+    CATKIN_DEPENDS message_runtime geometry_msgs std_msgs sensor_msgs
 )
