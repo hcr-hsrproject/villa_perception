@@ -244,6 +244,8 @@ FaceDectectors	face_recognition/scripts/test_ros	/^class FaceDectectors(object):
 FaceDectectors_photo	face_recognition/scripts/take_face_photo_server.py	/^class FaceDectectors_photo(object):$/;"	c
 FaceDetector	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^class FaceDetector(object):$/;"	c
 FaceDetector	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^class FaceDetector(object):$/;"	c
+FaceTracker	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^class FaceTracker {$/;"	c
+FaceTracker	marty_face_tracker/src/face_tracking.cpp	/^FaceTracker::FaceTracker(ros::NodeHandle &nh) : it_(nh) {$/;"	f	class:FaceTracker
 Face_manager	face_recognition/scripts/face_action_server.py	/^	Face_manager = FaceDectector_Action('face_recog_action')$/;"	v	class:FaceDectector_Action
 Face_manager	face_recognition/scripts/face_photo_action.py	/^	Face_manager = FaceDectector_Action(rospy.get_name())$/;"	v	class:FaceDectector_Action
 Face_manager	face_recognition/scripts/face_recog_action.py	/^	Face_manager = FaceDectector_Action(rospy.get_name())$/;"	v	class:FaceDectector_Action
@@ -783,7 +785,9 @@ c	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    int h, w, c;$/
 c	tmc_darknet_ros/tmc_darknet/src/parser.c	/^    int c;$/;"	m	struct:size_params	file:
 calculate_liberties	tmc_darknet_ros/tmc_darknet/src/go.c	/^int *calculate_liberties(float *board)$/;"	f
 calculate_loss	tmc_darknet_ros/tmc_darknet/src/nightmare.c	/^void calculate_loss(float *output, float *delta, int n, float thresh)$/;"	f
+callback	marty_face_tracker/scripts/track_movement_center.py	/^def callback(data):$/;"	f
 callback	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^  void callback(const DetectionsConstPtr& msg) {$/;"	f	class:tmc_yolo2_ros::Yolo2NodeTest
+camera_detected	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  bool video_output, camera_detected;$/;"	m	class:FaceTracker
 cancel_handler	tmc_darknet_ros/hsrb_darknet_tutorials/scripts/install_scripts/install_training_settings.sh	/^cancel_handler() {$/;"	f
 cap	tmc_darknet_ros/tmc_darknet/src/demo.c	/^static CvCapture * cap;$/;"	v	file:
 change_leaves	tmc_darknet_ros/tmc_darknet/src/tree.c	/^void change_leaves(tree *t, char *leaf_list)$/;"	f
@@ -953,6 +957,7 @@ cudnn_handle	tmc_darknet_ros/tmc_darknet/src/cuda.c	/^cudnnHandle_t cudnn_handle
 cur_x	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int cur_x, cur_y;$/;"	m	struct:__anon34
 cur_y	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int cur_x, cur_y;$/;"	m	struct:__anon34
 current_class	tmc_darknet_ros/tmc_darknet/src/compare.c	/^int current_class = 0;$/;"	v
+current_position	marty_face_tracker/scripts/track_movement_center.py	/^current_position = 0$/;"	v
 cweights	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    char  * cweights;$/;"	m	struct:layer
 d	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    data *d;$/;"	m	struct:load_args
 data	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^} data;$/;"	t	typeref:struct:__anon16
@@ -1050,6 +1055,9 @@ dequant	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   stbi_uc
 derivative	tmc_darknet_ros/tmc_darknet/src/box.c	/^dbox derivative(box a, box b)$/;"	f
 det	tmc_darknet_ros/tmc_darknet/src/demo.c	/^static image det  ;$/;"	v	file:
 det_s	tmc_darknet_ros/tmc_darknet/src/demo.c	/^static image det_s;$/;"	v	file:
+detectEyes	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::detectEyes(std::vector<cv::Rect> &eyes_vector, cv::Mat roi) {$/;"	f	class:FaceTracker
+detectFaces	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::detectFaces(std::vector<cv::Rect> &faces_vector,$/;"	f	class:FaceTracker
+detectSmile	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::detectSmile(std::vector<cv::Rect> &smiles_vector,$/;"	f	class:FaceTracker
 detect_in_thread	tmc_darknet_ros/tmc_darknet/src/demo.c	/^void *detect_in_thread(void *ptr)$/;"	f
 detectedObjects_sub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject
 detectedObjects_sub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Subscriber			  detectedObjects_sub;$/;"	m	class:Bounding_Box_dobject_nicolas
@@ -1062,6 +1070,7 @@ detected_obj_callback	villa_3d_object_extract/src/deprecated/object_bounding_box
 detected_people	gender_identification/scripts/gender_identification_server	/^detected_people = []$/;"	v
 detected_people	gender_identification/scripts/gender_publisher	/^detected_people = []$/;"	v
 detection_layer	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/detection_layer.h	/^typedef layer detection_layer;$/;"	t
+detection_parameters	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  float detection_parameters[3][4];$/;"	m	class:FaceTracker
 detection_pub_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  ros::Publisher detection_pub_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
 detections_callback	gender_identification/scripts/gender_publisher	/^def detections_callback(data):$/;"	f
 detections_msg_count_	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^  int detections_msg_count_;$/;"	m	class:tmc_yolo2_ros::Yolo2NodeTest	file:
@@ -1209,12 +1218,31 @@ extract_human_boxes	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_
 extract_human_boxes	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::extract_human_boxes(){$/;"	f	class:Bounding_Box_dobject
 extract_means_dobject_boxes	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::extract_means_dobject_boxes(){$/;"	f	class:Tracking_Box_dobject
 extract_voxel	tmc_darknet_ros/tmc_darknet/src/voxel.c	/^void extract_voxel(char *lfile, char *rfile, char *prefix)$/;"	f
+eye_cascade	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_cascade, eye_cascade, smile_cascade;$/;"	m	class:FaceTracker
+eye_classifier	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv::CascadeClassifier face_classifier, eye_classifier, smile_classifier;$/;"	m	class:FaceTracker
+eye_image	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv_bridge::CvImagePtr face_image, eye_image, smile_image, face_region;$/;"	m	class:FaceTracker
+eye_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::Publisher face_pub_, eye_pub_, smile_pub_;$/;"	m	class:FaceTracker
+eye_pub_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_pub_name, eye_pub_name, smile_pub_name;$/;"	m	class:FaceTracker
+eyes	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::vector<cv::Rect> faces, eyes, smiles;$/;"	m	class:FaceTracker
+eyes_centroid	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  marty_msgs::CentroidMsg faces_centroid, smiles_centroid, eyes_centroid;$/;"	m	class:FaceTracker
+eyes_centroid_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string faces_centroid_name, smiles_centroid_name, eyes_centroid_name;$/;"	m	class:FaceTracker
+eyes_centroid_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  ros::Publisher faces_centroid_pub_, smiles_centroid_pub_, eyes_centroid_pub_;$/;"	m	class:FaceTracker
 face_action_client	face_recognition/scripts/client_test.py	/^def face_action_client():$/;"	f
 face_action_client	face_recognition/scripts/face_action_client.py	/^def face_action_client():$/;"	f
+face_cascade	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_cascade, eye_cascade, smile_cascade;$/;"	m	class:FaceTracker
+face_classifier	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv::CascadeClassifier face_classifier, eye_classifier, smile_classifier;$/;"	m	class:FaceTracker
 face_detection_model	villa_rude_carnie_ros/src/rude_carnie/detect.py	/^def face_detection_model(model_path):$/;"	f
 face_image	face_recognition/scripts/from PIL import Image.py	/^    face_image = image[top:bottom, left:right]$/;"	v
+face_image	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv_bridge::CvImagePtr face_image, eye_image, smile_image, face_region;$/;"	m	class:FaceTracker
 face_locations	face_recognition/scripts/from PIL import Image.py	/^face_locations = face_recognition.face_locations(image)$/;"	v
 face_pub	gender_identification/scripts/gender_publisher	/^    face_pub = rospy.Publisher('\/villa\/face', Image, queue_size=1)$/;"	v
+face_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::Publisher face_pub_, eye_pub_, smile_pub_;$/;"	m	class:FaceTracker
+face_pub_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_pub_name, eye_pub_name, smile_pub_name;$/;"	m	class:FaceTracker
+face_region	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv_bridge::CvImagePtr face_image, eye_image, smile_image, face_region;$/;"	m	class:FaceTracker
+faces	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::vector<cv::Rect> faces, eyes, smiles;$/;"	m	class:FaceTracker
+faces_centroid	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  marty_msgs::CentroidMsg faces_centroid, smiles_centroid, eyes_centroid;$/;"	m	class:FaceTracker
+faces_centroid_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string faces_centroid_name, smiles_centroid_name, eyes_centroid_name;$/;"	m	class:FaceTracker
+faces_centroid_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  ros::Publisher faces_centroid_pub_, smiles_centroid_pub_, eyes_centroid_pub_;$/;"	m	class:FaceTracker
 fast	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   stbi__uint16 fast[1 << STBI__ZFAST_BITS];$/;"	m	struct:__anon27
 fast	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   stbi_uc  fast[1 << FAST_BITS];$/;"	m	struct:__anon23
 fast_ac	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   stbi__int16 fast_ac[4][1 << FAST_BITS];$/;"	m	struct:__anon24
@@ -1394,6 +1422,7 @@ gpu_index	tmc_darknet_ros/tmc_darknet/src/cuda.c	/^int gpu_index = 0;$/;"	v
 gradient	tmc_darknet_ros/tmc_darknet/src/activations.c	/^float gradient(float x, ACTIVATION a)$/;"	f
 gradient_array	tmc_darknet_ros/tmc_darknet/src/activations.c	/^void gradient_array(const float *x, const int n, const ACTIVATION a, float *delta)$/;"	f
 grayscale_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^image grayscale_image(image im)$/;"	f
+grey_image	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv::Mat grey_image;$/;"	m	class:FaceTracker
 group	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/tree.h	/^    int *group;$/;"	m	struct:__anon15
 group_offset	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/tree.h	/^    int *group_offset;$/;"	m	struct:__anon15
 group_size	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/tree.h	/^    int *group_size;$/;"	m	struct:__anon15
@@ -1455,6 +1484,7 @@ im2col_get_pixel	tmc_darknet_ros/tmc_darknet/src/im2col.c	/^float im2col_get_pix
 image	face_recognition/scripts/from PIL import Image.py	/^image = face_recognition.load_image_file("ut_student2.jpg")$/;"	v
 image	face_recognition/scripts/hc_test.py	/^image = face_recognition.load_image_file("ut_student2.jpg")$/;"	v
 image	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/image.h	/^} image;$/;"	t	typeref:struct:__anon7
+imageCb	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::imageCb(const sensor_msgs::ImageConstPtr &msg) {$/;"	f	class:FaceTracker
 image_callback	face_recognition/scripts/face_action_server.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectector_Action
 image_callback	face_recognition/scripts/face_photo_action.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectector_Action
 image_callback	face_recognition/scripts/face_recog_action.py	/^	def image_callback(self,msg):$/;"	m	class:FaceDectector_Action
@@ -1477,6 +1507,7 @@ image_sub	gender_identification/scripts/gender_publisher	/^    image_sub = rospy
 image_sub	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	ros::Subscriber           image_sub;$/;"	m	class:Bounding_Box_dobject
 image_sub	villa_3d_object_extract/include/BoundingBoxDObject_nicolas.h	/^	ros::Subscriber           image_sub;$/;"	m	class:Bounding_Box_dobject_nicolas
 image_sub	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	ros::Subscriber           image_sub;$/;"	m	class:Tracking_Box_dobject
+image_sub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::Subscriber image_sub_;$/;"	m	class:FaceTracker
 image_sub_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  image_transport::Subscriber image_sub_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
 image_w	tmc_darknet_ros/tmc_yolo2_ros/src/single_image.cpp	/^uint32_t image_w;$/;"	v
 image_w_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  uint32_t image_w_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
@@ -1542,6 +1573,7 @@ isMoving	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extract
 is_network	tmc_darknet_ros/tmc_darknet/src/parser.c	/^int is_network(section *s)$/;"	f
 is_set_image_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  bool is_set_image_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
 is_set_image_type_	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/yolo2_node.hpp	/^  bool is_set_image_type_;$/;"	m	class:tmc_yolo2_ros::Yolo2Node
+it_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::ImageTransport it_;$/;"	m	class:FaceTracker
 jitter	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    float jitter;$/;"	m	struct:load_args
 jitter	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float jitter;$/;"	m	struct:layer
 joint	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    int joint;$/;"	m	struct:layer
@@ -1611,8 +1643,11 @@ listener	face_recognition/scripts/face_service.py	/^	def listener(self):$/;"	m	c
 listener	face_recognition/scripts/take_face_photo_server.py	/^    def listener(self):$/;"	m	class:FaceDectectors_photo
 listener	face_recognition/scripts/take_photo_server.py	/^    def listener(self):$/;"	m	class:photo_manager
 listener	face_recognition/scripts/test_ros	/^	def listener(self,wait=0.0):$/;"	m	class:FaceDectectors
+listener	marty_face_tracker/scripts/track_movement_center.py	/^def listener():$/;"	f
 listener	villa_3d_object_extract/include/chair_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::TransformListener 	  listener;$/;"	m	class:Bounding_Box_dobject
 listener	villa_3d_object_extract/include/human_tmc_cluster_based_yolo_3D_extractor.h	/^	tf::TransformListener 	  listener;$/;"	m	class:Bounding_Box_dobject
+loadClassifiers	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::loadClassifiers() {$/;"	f	class:FaceTracker
+loadParams	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::loadParams() {$/;"	f	class:FaceTracker
 load_all_cifar10	tmc_darknet_ros/tmc_darknet/src/data.c	/^data load_all_cifar10()$/;"	f
 load_alphabet	tmc_darknet_ros/tmc_darknet/src/image.c	/^image **load_alphabet()$/;"	f
 load_args	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^typedef struct load_args{$/;"	s
@@ -1669,6 +1704,7 @@ m_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float *m_gpu
 mag_array	tmc_darknet_ros/tmc_darknet/src/utils.c	/^float mag_array(float *a, int n)$/;"	f
 main	face_recognition/test.py	/^def main():$/;"	f
 main	face_recognition/test_hc.py	/^def main():$/;"	f
+main	marty_face_tracker/src/face_tracking.cpp	/^int main(int argc, char **argv) {$/;"	f
 main	ros-keyboard/src/main.cpp	/^int main(int argc, char** argv)$/;"	f
 main	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^int main(int argc, char **argv)$/;"	f
 main	tmc_darknet_ros/tmc_yolo2_ros/scripts/yolo2_image_node	/^def main():$/;"	f
@@ -1806,6 +1842,7 @@ network_state	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^typede
 network_state	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^} network_state;$/;"	t	typeref:struct:network_state
 next	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/list.h	/^    struct node *next;$/;"	m	struct:node	typeref:struct:node::node
 nh	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/data.h	/^    int nh;$/;"	m	struct:load_args
+nh_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  ros::NodeHandle nh_;$/;"	m	class:FaceTracker
 nh_	tmc_darknet_ros/tmc_yolo2_ros/test/yolo2_node-test.cpp	/^  ros::NodeHandle nh_;$/;"	m	class:tmc_yolo2_ros::Yolo2NodeTest	file:
 nind	tmc_darknet_ros/tmc_darknet/src/go.c	/^static const int nind = 5;$/;"	v	file:
 nms_comparator	tmc_darknet_ros/tmc_darknet/src/box.c	/^int nms_comparator(const void *pa, const void *pb)$/;"	f
@@ -1971,6 +2008,8 @@ process_message	activity_detection/scripts/activityDetection_action.py	/^    def
 process_person	activity_detection/scripts/activityDetection_action.py	/^    def process_person(self, person):$/;"	m	class:ActivityDetection_Action
 progressive	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            progressive;$/;"	m	struct:__anon24
 propagate_liberty	tmc_darknet_ros/tmc_darknet/src/go.c	/^void propagate_liberty(float *board, int *lib, int *visited, int row, int col, int side)$/;"	f
+pub	marty_face_tracker/scripts/track_movement_center.py	/^pub = rospy.Publisher('\/marty\/servo_array', ServoMsgArray, queue_size=10)$/;"	v
+publishData	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::publishData(bool image) {$/;"	f	class:FaceTracker
 publish_clusters	villa_3d_object_extract/src/BoundingBoxDObject.cpp	/^void Bounding_Box_dobject::publish_clusters(){$/;"	f	class:Bounding_Box_dobject
 publish_clusters	villa_3d_object_extract/src/BoundingBoxDObject_nicolas.cpp	/^void Bounding_Box_dobject_nicolas::publish_clusters(){$/;"	f	class:Bounding_Box_dobject_nicolas
 publish_clusters	villa_3d_object_extract/src/chair_tmc_cluster_based_yolo_3D_extractor.cpp	/^void Bounding_Box_dobject::publish_clusters(){$/;"	f	class:Bounding_Box_dobject
@@ -2089,6 +2128,7 @@ resample_row_hv_2_kernel	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_ima
 rescale_net	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^void rescale_net(char *cfgfile, char *weightfile, char *outfile)$/;"	f
 rescale_weights	tmc_darknet_ros/tmc_darknet/src/convolutional_layer.c	/^void rescale_weights(convolutional_layer l, float scale, float trans)$/;"	f
 rescore	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    int rescore;$/;"	m	struct:layer
+resetCentroidMsg	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::resetCentroidMsg(marty_msgs::CentroidMsg &msg, int size) {$/;"	f	class:FaceTracker
 reset_momentum	tmc_darknet_ros/tmc_darknet/src/network.c	/^void reset_momentum(network net)$/;"	f
 reset_normalize_net	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^void reset_normalize_net(char *cfgfile, char *weightfile, char *outfile)$/;"	f
 reset_rnn_state	tmc_darknet_ros/tmc_darknet/src/rnn.c	/^void reset_rnn_state(network net, int b)$/;"	f
@@ -2126,6 +2166,7 @@ rolling_mean	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float
 rolling_mean_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * rolling_mean_gpu;$/;"	m	struct:layer
 rolling_variance	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * rolling_variance;$/;"	m	struct:layer
 rolling_variance_gpu	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/layer.h	/^    float * rolling_variance_gpu;$/;"	m	struct:layer
+rosSetup	marty_face_tracker/src/face_tracking.cpp	/^void FaceTracker::rosSetup() {$/;"	f	class:FaceTracker
 rotate_crop_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^image rotate_crop_image(image im, float rad, float s, int w, int h, float dx, float dy, float aspect)$/;"	f
 rotate_image	tmc_darknet_ros/tmc_darknet/src/image.c	/^image rotate_image(image im, float rad)$/;"	f
 rotate_image_cw	tmc_darknet_ros/tmc_darknet/src/image.c	/^void rotate_image_cw(image im, int times)$/;"	f
@@ -2228,6 +2269,15 @@ sizeL	villa_3d_object_extract/include/BoundingBoxDObject.h	/^	int sizeL;$/;"	m	c
 size_params	tmc_darknet_ros/tmc_darknet/src/parser.c	/^typedef struct size_params{$/;"	s	file:
 size_params	tmc_darknet_ros/tmc_darknet/src/parser.c	/^} size_params;$/;"	t	typeref:struct:size_params	file:
 skip	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   void     (*skip)  (void *user,int n);                 \/\/ skip the next 'n' bytes, or 'unget' the last -n bytes if negative$/;"	m	struct:__anon20
+smile_cascade	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_cascade, eye_cascade, smile_cascade;$/;"	m	class:FaceTracker
+smile_classifier	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv::CascadeClassifier face_classifier, eye_classifier, smile_classifier;$/;"	m	class:FaceTracker
+smile_image	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  cv_bridge::CvImagePtr face_image, eye_image, smile_image, face_region;$/;"	m	class:FaceTracker
+smile_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  image_transport::Publisher face_pub_, eye_pub_, smile_pub_;$/;"	m	class:FaceTracker
+smile_pub_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string face_pub_name, eye_pub_name, smile_pub_name;$/;"	m	class:FaceTracker
+smiles	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::vector<cv::Rect> faces, eyes, smiles;$/;"	m	class:FaceTracker
+smiles_centroid	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  marty_msgs::CentroidMsg faces_centroid, smiles_centroid, eyes_centroid;$/;"	m	class:FaceTracker
+smiles_centroid_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string faces_centroid_name, smiles_centroid_name, eyes_centroid_name;$/;"	m	class:FaceTracker
+smiles_centroid_pub_	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  ros::Publisher faces_centroid_pub_, smiles_centroid_pub_, eyes_centroid_pub_;$/;"	m	class:FaceTracker
 smooth	tmc_darknet_ros/tmc_darknet/src/nightmare.c	/^void smooth(image recon, image update, float lambda, int num)$/;"	f
 smooth_data	tmc_darknet_ros/tmc_darknet/src/data.c	/^void smooth_data(data d)$/;"	f
 smooth_l1_cpu	tmc_darknet_ros/tmc_darknet/src/blas.c	/^void smooth_l1_cpu(int n, float *pred, float *truth, float *delta, float *error)$/;"	f
@@ -2566,6 +2616,7 @@ strip_char	tmc_darknet_ros/tmc_darknet/src/utils.c	/^void strip_char(char *s, ch
 sub_image	villa_rude_carnie_ros/src/rude_carnie/detect.py	/^    def sub_image(self, name, img, x, y, w, h):$/;"	m	class:ObjectDetectorCascadeOpenCV
 sub_image	villa_rude_carnie_ros/src/rude_carnie/utils.py	/^    def sub_image(self, name, img, x, y, w, h):$/;"	m	class:FaceDetector
 sub_image	villa_rude_carnie_ros/src/rude_carnie/utils_ros.py	/^    def sub_image(self, name, img, x, y, w, h):$/;"	m	class:FaceDetector
+sub_name	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  std::string sub_name;$/;"	m	class:FaceTracker
 subdivisions	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    int subdivisions;$/;"	m	struct:network
 succ_high	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            succ_high;$/;"	m	struct:__anon24
 succ_low	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   int            succ_low;$/;"	m	struct:__anon24
@@ -2640,6 +2691,7 @@ top_k	tmc_darknet_ros/tmc_darknet/src/utils.c	/^void top_k(float *a, int n, int 
 top_predictions	tmc_darknet_ros/tmc_darknet/src/network.c	/^void top_predictions(network net, int k, int *index)$/;"	f
 total_compares	tmc_darknet_ros/tmc_darknet/src/compare.c	/^int total_compares = 0;$/;"	v
 tq	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^      int tq;$/;"	m	struct:__anon24::__anon25
+tracker	marty_face_tracker/scripts/track_movement_center.py	/^def tracker(data):$/;"	f
 tracker	villa_3d_object_extract/src/TrackingBoxDObject.cpp	/^void Tracking_Box_dobject::tracker(){$/;"	f	class:Tracking_Box_dobject
 tracking_box_points	villa_3d_object_extract/include/TrackingBoxDObject.h	/^	std::vector< pcl::PointCloud<pcl::PointXYZRGB> > tracking_box_points;$/;"	m	class:Tracking_Box_dobject
 train	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/network.h	/^    int train;$/;"	m	struct:network_state
@@ -2742,6 +2794,7 @@ vector_of_candidate_ids	villa_3d_object_extract/include/TrackingBoxDObject.h	/^ 
 vector_of_candidate_means	villa_3d_object_extract/include/TrackingBoxDObject.h	/^    std::vector<Mean3DTrackingBox> vector_of_candidate_means; $/;"	m	class:Tracking_Box_dobject
 vector_of_known_ids	villa_3d_object_extract/include/TrackingBoxDObject.h	/^    std::vector<tmc_yolo2_ros::Detection> vector_of_known_ids; $/;"	m	class:Tracking_Box_dobject
 vector_of_known_means	villa_3d_object_extract/include/TrackingBoxDObject.h	/^    std::vector<Mean3DTrackingBox> vector_of_known_means; $/;"	m	class:Tracking_Box_dobject
+video_output	marty_face_tracker/include/marty_face_tracker/face_tracking.hpp	/^  bool video_output, camera_detected;$/;"	m	class:FaceTracker
 visualize	tmc_darknet_ros/tmc_darknet/src/darknet.c	/^void visualize(char *cfgfile, char *weightfile)$/;"	f
 visualize_convolutional_layer	tmc_darknet_ros/tmc_darknet/src/convolutional_layer.c	/^image *visualize_convolutional_layer(convolutional_layer l, char *window, image *prev_weights)$/;"	f
 visualize_network	tmc_darknet_ros/tmc_darknet/src/network.c	/^void visualize_network(network net)$/;"	f
@@ -2908,6 +2961,7 @@ zout_start	tmc_darknet_ros/tmc_darknet/include/tmc_darknet/stb_image.h	/^   char
 ~Cluster3D_BoundingBox	villa_3d_object_extract/src/human_tmc_cluster_based_yolo_3D_extractor.cpp	/^Cluster3D_BoundingBox::~Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
 ~Cluster3D_BoundingBox	villa_3d_object_extract/src/tmc_cluster_based_yolo_3D_extractor.cpp	/^Cluster3D_BoundingBox::~Cluster3D_BoundingBox(){}$/;"	f	class:Cluster3D_BoundingBox
 ~Detector	tmc_darknet_ros/tmc_yolo2_ros/include/tmc_yolo2_ros/detector.hpp	/^  virtual ~Detector() {$/;"	f	class:tmc_yolo2_ros::Detector
+~FaceTracker	marty_face_tracker/src/face_tracking.cpp	/^FaceTracker::~FaceTracker() {}$/;"	f	class:FaceTracker
 ~Keyboard	ros-keyboard/src/keyboard.cpp	/^keyboard::Keyboard::~Keyboard(void)$/;"	f	class:keyboard::Keyboard
 ~Mean3DTrackingBox	villa_3d_object_extract/src/Mean3DTrackingBox.cpp	/^Mean3DTrackingBox::~Mean3DTrackingBox(){}$/;"	f	class:Mean3DTrackingBox
 ~TrackingBox_Person_Desc	villa_3d_object_extract/src/TrackingBoxPersonDesc.cpp	/^TrackingBox_Person_Desc::~TrackingBox_Person_Desc(){}$/;"	f	class:TrackingBox_Person_Desc
