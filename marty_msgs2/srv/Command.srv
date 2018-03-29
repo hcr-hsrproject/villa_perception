@@ -1,0 +1,40 @@
+# First value data[0] is CMD, rest is cmd data
+int32 CMD_HELLO = 0
+int32 CMD_MOVEJOINT = 1
+int32 CMD_LEAN = 2
+int32 CMD_WALK = 3
+int32 CMD_EYES = 4
+int32 CMD_KICK = 5
+int32 CMD_LIFTLEG = 6
+int32 CMD_LOWERLEG = 7
+int32 CMD_CELEBRATE = 8
+int32 CMD_DANCE = 9
+int32 CMD_ROLLERSKATE = 10
+int32 CMD_ARMS = 11
+int32 CMD_DEMO = 12
+int32 CMD_GET = 13
+int32 CMD_SIDESTEP = 14
+int32 CMD_STRAIGHT = 15
+int32 CMD_SOUND = 16
+int32 CMD_STOP = 17
+# Direction enum
+int32 CMD_LEFT = 0
+int32 CMD_RIGHT = 1
+int32 CMD_FORW = 2
+int32 CMD_BACK = 3
+# Joint enum
+int32 J_HIP = 0
+int32 J_TWIST = 1
+int32 J_KNEE = 2
+int32 J_LEG = 3
+int32 J_ARM = 4
+int32 J_EYES = 5
+# Sensors enum
+int32 GET_GPIO = 0
+int32 GET_ACCEL = 1
+int32 GET_BATT = 2
+int32 GET_CURR = 3
+int32 GET_BALL = 4
+int32[] data
+---
+bool success
