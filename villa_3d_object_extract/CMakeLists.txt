@@ -5,6 +5,8 @@ project(villa_3d_object_extract)
 find_package(catkin REQUIRED COMPONENTS
   pcl_ros
   pcl_conversions
+  grabcut
+  grabcut_msgs
   roscpp
   rospy
   sensor_msgs
@@ -62,7 +64,7 @@ set(STD_SRCS
 )
 
 set(STD_SRCS_GRABCUT
-    src/BoundingBoxDObject_nicolas.cpp src/BoundingBoxPersonDesc.cpp src/Cluster3DBoundingBox.cpp
+    src/BoundingBoxDObject_nicolas.cpp src/BoundingBoxPersonDesc.cpp src/Cluster3DBoundingBox.cpp src/features_classifier.cpp src/features.cpp
 )
 
 #add_executable(tmc_yolo_3D_extractor_kinect1 ${STD_SRCS} src/tmc_yolo_3D_extractor_kinect1.cpp)
@@ -82,11 +84,15 @@ set(STD_SRCS_GRABCUT
 #target_link_libraries(tmc_cluster_based_yolo_3D_extractor ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
 
-add_executable(human_tmc_cluster_based_yolo_3D_extractor src/human_tmc_cluster_based_yolo_3D_extractor.cpp)
-target_link_libraries(human_tmc_cluster_based_yolo_3D_extractor ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#add_executable(human_tmc_cluster_based_yolo_3D_extractor src/human_tmc_cluster_based_yolo_3D_extractor.cpp)
+#target_link_libraries(human_tmc_cluster_based_yolo_3D_extractor ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
-add_executable(chair_tmc_cluster_based_yolo_3D_extractor src/chair_tmc_cluster_based_yolo_3D_extractor.cpp)
-target_link_libraries(chair_tmc_cluster_based_yolo_3D_extractor ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+#add_executable(chair_tmc_cluster_based_yolo_3D_extractor src/chair_tmc_cluster_based_yolo_3D_extractor.cpp)
+#target_link_libraries(chair_tmc_cluster_based_yolo_3D_extractor ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
 #add_executable(tracking src/Tracking.cpp src/TrackingBoxDObject.cpp src/TrackingBoxPersonDesc.cpp src/Cluster3DBoundingBox.cpp src/Mean3DTrackingBox)
 #target_link_libraries(tracking ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+
+
+add_executable(features ${STD_SRCS_GRABCUT} src/features.cpp)
+target_link_libraries(features ${catkin_LIBRARIES} ${PCL_LIBRARIES})
