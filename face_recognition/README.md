@@ -59,6 +59,8 @@ $ rosrun face_recognition_ros test_ros
 - take_face_photo_server.py
 - take_photo_server.py
 
+# Author
+Minkyu Kim (steveminq@utexas.edu)
 
 ## Reference
   
