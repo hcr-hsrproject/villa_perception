@@ -93,7 +93,7 @@ class FaceDectector_Action(object):
 	def crop_face(self,image_data):
 		image_batch = image_data
 		files = []
-		face_detect = face_detection_model('/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml')
+		face_detect = face_detection_model('/opt/ros/kinetic/share/OpenCV-3.3.1/haarcascades/haarcascade_frontalface_default.xml')
 		face_files = face_detect.run(image_data)
 		#print(face_files)
 		return face_files
@@ -120,7 +120,7 @@ class FaceDectector_Action(object):
                                         self.count=self.count+1
                                         self.num_faces= self.num_faces+1
                                         self.Isrecognized =True
-                                        if(self.count>5):
+                                        if(self.count>3):
                                             self.string_pub.publish(self.detected_msg)
                                             self.count=0
                                         # self.tts.say('matched')
@@ -138,23 +138,8 @@ class FaceDectector_Action(object):
 		if self.takepicture:
 			cv2.imwrite('new_image.jpeg', self.cv2_img)
 			print('save picture')
-			# self.detected_msg.data="Take a photo"
-			# self.string_pub.publish(self.detected_msg)
 			self.takepicture=False
-		# else:
-			# Save your OpenCV2 image as a jpeg 
-			# cv2.imwrite('minkyu_image.jpeg', cv2_img)
-	# for img_name in unknown_imgs:
-	# 	img = face_recognition.load_image_file(unknown_folder+'/'+img_name)
-	# 	unknown_encoding = face_recognition.face_encodings(img)[0]
-	# 	distances = face_recognition.face_distance(known_encodings, unknown_encoding)
-	# 	if(min(distances)<threshold):
-	# 		match_idx = np.argmin(distances)
-	# 		print(img_name+': '+known_img_names[match_idx])
-	# 	else:
-	# 		print(img_name+': unknown')
 
-	# rospy.spin()
 if __name__ == '__main__':
 
 	# print("Pre Initialize node")

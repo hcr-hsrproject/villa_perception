@@ -39,7 +39,7 @@ class FaceDectectors(object):
 		print self.path
 		self.takepicture = False
 		self.threshold = 0.6
-		self.known_folder = "/home/mk/robocup_home_ws/src/villa_perception/face_recognition//scripts/known_faces"
+		self.known_folder = "/home/mk/hsr/attention_ws/src/villa_perception/face_recognition/scripts/known_faces"
 		self.known_imgs = [f for f in listdir(self.known_folder) if isfile(join(self.known_folder, f))]
 		print self.known_imgs
 		self.known_img_names = []
@@ -68,14 +68,14 @@ class FaceDectectors(object):
 	def key_callback(self,msg):		#"p"
 		self.code=msg.code
 		if self.code==112:
-		   self.takepicture = True
-		   print('take picture')
+                   self.takepicture = True
+                   print('take picture')
 		print msg.code
 
 	def crop_face(self,image_data):
 		image_batch = image_data
 		files = []
-		face_detect = face_detection_model('/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml')
+		face_detect = face_detection_model('/opt/ros/kinetic/share/OpenCV-3.3.1/haarcascades/haarcascade_frontalface_default.xml')
 		face_files = face_detect.run(image_data)
 		#print(face_files)
 		return face_files
@@ -92,25 +92,25 @@ class FaceDectectors(object):
 			cv2_img   = self.bridge.imgmsg_to_cv2(msg,"bgr8")
 			facelists =self.crop_face(cv2_img)
 			
-			for face in facelists:
-				unknown_encoding = face_recognition.face_encodings(face)[0]
-				distances = face_recognition.face_distance(self.known_encodings, unknown_encoding)
-				if(min(distances)<self.threshold):
-					match_idx = np.argmin(distances)
-					print('matched: '+self.known_img_names[match_idx])
-					self.detected_msg.data =self.known_img_names[match_idx]
-					self.count=self.count+1
-					self.Isrecognized =True
-					if(self.count>10):
-						self.detected_name=self.detected_msg.data
-						self.string_pub.publish(self.detected_msg)
-						self.count=0
-					self.unknowncount=0
-					# self.tts.say('matched')
-					
-				else:
-					self.Isrecognized =False
-					self.count=0
+                        if(len(facelists)>0):
+                            for face in facelists:
+                                unknown_encoding = face_recognition.face_encodings(face)[0]
+                                distances = face_recognition.face_distance(self.known_encodings, unknown_encoding)
+                                if(min(distances)<self.threshold):
+                                    match_idx = np.argmin(distances)
+                                    print('matched: '+self.known_img_names[match_idx])
+                                    self.detected_msg.data =self.known_img_names[match_idx]
+                                    self.count=self.count+1
+                                    self.Isrecognized =True
+                                    if(self.count>2):
+                                        self.detected_name=self.detected_msg.data
+                                        self.string_pub.publish(self.detected_msg)
+                                        self.count=0
+                                        self.unknowncount=0
+
+                                else:
+                                    self.Isrecognized =False
+                                    self.count=0
 
 		except CvBridgeError, e:
 			print(e)
@@ -138,10 +138,9 @@ class FaceDectectors(object):
 
 	# rospy.spin()
 if __name__ == '__main__':
-	 print("Pre Initialize node")
-	rospy.init_node('face_recognition_service')
-	print("Initialize node")
-	Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)
-	Face_manager.listener()
-	# s=rospy.Service('face_recognition_srv',face_recognition_srv,Face_manager.listener)
-	print("Service created")	
+        print("Pre Initialize node")
+        rospy.init_node('face_recognition_service')
+        print("Initialize node")
+        Face_manager = FaceDectectors(sys.argv[1] if len(sys.argv) > 1 else 0.0)
+        Face_manager.listener()
+        print("Service created")	

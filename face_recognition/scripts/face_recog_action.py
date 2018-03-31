@@ -47,7 +47,7 @@ class FaceDectector_Action(object):
 		print self.path
 		self.takepicture = False
 		self.threshold = 0.6
-		self.known_folder = "/home/mk/robocup_home_ws/src/villa_perception/face_recognition/scripts/known_faces"
+		self.known_folder = "/home/mk/hsr/attention_ws/src/villa_perception/face_recognition/scripts/known_faces"
 		self.known_imgs = [f for f in listdir(self.known_folder) if isfile(join(self.known_folder, f))]
 		print self.known_imgs
 		self.known_img_names = []
@@ -89,9 +89,8 @@ class FaceDectector_Action(object):
 	def crop_face(self,image_data):
 		image_batch = image_data
 		files = []
-		face_detect = face_detection_model('/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml')
+		face_detect = face_detection_model('/opt/ros/kinetic/share/OpenCV-3.3.1/haarcascades/haarcascade_frontalface_default.xml')
 		face_files = face_detect.run(image_data)
-		#print(face_files)
 		return face_files
 		
 	def image_callback(self,msg):
@@ -103,27 +102,28 @@ class FaceDectector_Action(object):
 			facelists =self.crop_face(self.cv2_img)
 			self.num_faces=0
 			
-			for face in facelists:
-				unknown_encoding = face_recognition.face_encodings(face)[0]
-				distances = face_recognition.face_distance(self.known_encodings, unknown_encoding)
-				if(min(distances)<self.threshold):
-					match_idx = np.argmin(distances)
-					print('matched: '+self.known_img_names[match_idx])
-					self.detected_msg.data =self.known_img_names[match_idx]
-					self.count=self.count+1
-					self.num_faces= self.num_faces+1
-					self.Isrecognized =True
-					if(self.count>5):
-						self.string_pub.publish(self.detected_msg)
-						self.count=0
-					# self.tts.say('matched')
-					
-				else:
-					print('unknown')
-					self.detected_msg.data ='unknown'
-					self.Isrecognized =False
-					self.count=0
-					self.num_faces=0
+                        if(len(facelists)>0):
+                            for face in facelists:
+                                unknown_encoding = face_recognition.face_encodings(face)[0]
+                                distances = face_recognition.face_distance(self.known_encodings, unknown_encoding)
+                                if(min(distances)<self.threshold):
+                                    match_idx = np.argmin(distances)
+                                    print('matched: '+self.known_img_names[match_idx])
+                                    self.detected_msg.data =self.known_img_names[match_idx]
+                                    self.count=self.count+1
+                                    self.num_faces= self.num_faces+1
+                                    self.Isrecognized =True
+                                    if(self.count>2):
+                                       self.string_pub.publish(self.detected_msg)
+                                       self.count=0
+                                        # self.tts.say('matched')
+
+                                else:
+                                    print('unknown')
+                                    self.detected_msg.data ='unknown'
+                                    self.Isrecognized =False
+                                    self.count=0
+                                    self.num_faces=0
 
 		except CvBridgeError, e:
 			print(e)

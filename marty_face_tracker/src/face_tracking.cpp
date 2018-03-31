@@ -122,7 +122,8 @@ void FaceTracker::loadParams() {
  */
 
 void FaceTracker::rosSetup() {
-  sub_name = "/camera/rgb/image_rect_color";
+  //sub_name = "/camera/rgb/image_rect_color";
+  sub_name = "hsrb/head_rgbd_sensor/rgb/image_rect_color";
   face_pub_name = "/marty/face_tracking/image/faces";
   eye_pub_name = "/marty/face_tracking/image/eyes";
   smile_pub_name = "/marty/face_tracking/image/smiles";

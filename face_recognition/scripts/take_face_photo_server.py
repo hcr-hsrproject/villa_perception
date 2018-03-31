@@ -23,7 +23,7 @@ class FaceDectectors_photo(object):
     def __init__(self, wait=0.0):
         image_topic = "/hsrb/head_rgbd_sensor/rgb/image_rect_color"
         rospy.Subscriber(image_topic, Image, self.image_callback)
-        s = rospy.Service('/take_photo_srv', take_photo, self.Isrunnging)
+        s = rospy.Service('/take_head_photo_srv', take_photo, self.Isrunnging)
         self.bridge = CvBridge()
         self.num_photo = 0
         self.takepicture = False
@@ -63,9 +63,8 @@ class FaceDectectors_photo(object):
 
 
 if __name__ == '__main__':
-    rospy.init_node('take_photo_service')
+    rospy.init_node('take_head_photo_service')
     print("Initialize node")
     Face_manager = FaceDectectors_photo()
-    # s=rospy.Service('face_recognition_srv',face_recognition_srv,Face_manager.listener)
     print("Take photo service created")
     Face_manager.listener()
