@@ -57,7 +57,7 @@ def get_foreground_pixels(img, rect):
     r.extend(len(background_coords[0]))
     g.extend(len(background_coords[0]))
     b.extend(len(background_coords[0]))
-    for i in range(len(background_coords))
+    for i in range(len(background_coords)):
         r.extend((img_rgb[i])[0])
         g.extend((img_rgb[i])[1])
         b.extend((img_rgb[i])[2])

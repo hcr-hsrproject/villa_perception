@@ -68,7 +68,7 @@ Features_check::~Features_check(){}
 void Features_check::ImageCallback(const sensor_msgs::ImageConstPtr& msg) {
 	srv.request.img_input = (*msg);
 	received_image = true;
-	std::cout<< "trying to get picture "<<std::endl;
+	std::cout<< "getting picture "<<std::endl;
 	if (boxes.size() > 0 && client.call(srv)){
 		list_indices = srv.response.indices_output;
         r = srv.response.r_list;
@@ -171,7 +171,7 @@ void Features_check::rgb_read(const sensor_msgs::ImageConstPtr& msg){
 			red = red / list_indices[ADD];
 			green = green / list_indices[ADD];
 			blue = blue / list_indices[ADD];
-			
+			ROS_INFO(" R G B :  %.3f   ,    %.3f   ,    %.3f  ", red,green,blue);
 			if (ref_r - red < 5 && ref_g- green < 5 && ref_b - blue < 5 )
 			{
 				detect = true;
