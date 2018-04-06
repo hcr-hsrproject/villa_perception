@@ -2,6 +2,7 @@
 #include <Cluster3DBoundingBoxDistanceCompare.h>
 #include <cv_bridge/cv_bridge.h>
 #include <ros/package.h>
+#include "villa_3d_object_extract/srv_picture_to_indices.h"
 
 #define CAMERA_PIXEL_WIDTH 640
 #define CAMERA_PIXEL_HEIGHT 480
@@ -68,17 +69,19 @@ Features_check::~Features_check(){}
 void Features_check::ImageCallback(const sensor_msgs::ImageConstPtr& msg) {
 	srv.request.img_input = (*msg);
 	received_image = true;
-	std::cout<< "getting picture "<<std::endl;
+    ROS_INFO("Getting the picture");
+    std::cout << boxes.size()<<std::endl;
 	if (boxes.size() > 0 && client.call(srv)){
 		list_indices = srv.response.indices_output;
         r = srv.response.r_list;
         g = srv.response.g_list;
         b = srv.response.b_list;
 
-	std::cout << "read rgb data from picture"<<std::endl;
+    	ROS_INFO("read rgb data from picture");
 		rgb_read(msg); 	// Extract and check pixels from each box.
 	// std::cout << "received_image bool to:" << received_image << std::endl;	
 	}
+    else {ROS_INFO("could not call grabcut service");}
 }
 
 void Features_check::yolo_detected_obj_callback(const tmc_yolo2_ros::DetectionsConstPtr &msg){
@@ -141,9 +144,9 @@ void Features_check::yolo_detected_obj_callback(const tmc_yolo2_ros::DetectionsC
     }*/
     }
 
-std::cout<< srv.request.rect_input.size()<<std::endl;
-std::cout<<" get rect from yolo -> completed "<<std::endl;
-}
+/*std::cout<< srv.request.rect_input.size()<<std::endl;
+/*std::cout<<" get rect from yolo -> completed "<<std::endl;
+*/}
 
 void Features_check::rgb_read(const sensor_msgs::ImageConstPtr& msg){
 

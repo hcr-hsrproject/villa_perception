@@ -56,7 +56,7 @@ int main(int argc, char **argv)
   	// Create Subsribers
 	bbh_obj.yolo_detectedObjects_sub = bbh_obj.node.subscribe<tmc_yolo2_ros::Detections>("yolo2_node/detections", 10, boost::bind(&Features_check::yolo_detected_obj_callback, &bbh_obj, _1));	
 	bbh_obj.image_sub = bbh_obj.node.subscribe<sensor_msgs::Image>("/hsrb/head_rgbd_sensor/rgb/image_rect_color", 1000, boost::bind(&Features_check::ImageCallback, &bbh_obj, _1));
-
+	bbh_obj.client = bbh_obj.node.serviceClient<grabcut_msgs::srv_picture_to_indices>("grabcut_node_server");
 	ros::spin();
 	return 0;
 }
