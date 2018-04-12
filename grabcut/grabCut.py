@@ -45,25 +45,38 @@ def get_foreground_pixels(img, rect):
     cv2.grabCut(img, mask, rect, bg_model, fg_model, 5, cv2.GC_INIT_WITH_RECT)
     flattened = mask.flatten()
     mask2 = np.where((mask == 2) | (mask == 0), 0, 1).astype('uint8')
-    img_rgb = img.flatten()
+    # print type(img)
+    # print len(img)
+    # print len(img[0])
+    # print len(img[0][0])
+
+    # print img[0][0][0]
+    # print img[0][0][1]
+    # print img[0][0][2]
+
+    img_rgb = img.reshape(len(img)*len(img[0]),len(img[0][0]))
+    # print type(img_rgb)
+    # print len(img_rgb)
+    # print len(img_rgb[0])
+    
     img = img * mask2[:,:,np.newaxis]
     #  SHOW IMAGE
     # cv2.imshow("picture",img)
     # cv2.waitKey(100)
     background_coords = np.where((flattened == 1) | (flattened == 3))
-    r = []
-    g = []
-    b = []
-    r.extend(len(background_coords[0]))
-    g.extend(len(background_coords[0]))
-    b.extend(len(background_coords[0]))
-    for i in range(len(background_coords)):
-        r.extend((img_rgb[i])[0])
-        g.extend((img_rgb[i])[1])
-        b.extend((img_rgb[i])[2])
-    # return (img , background_coords)
+    r = [len(background_coords[0])]
+    g = [len(background_coords[0])]
+    b = [len(background_coords[0])]
+    for i in range(len(background_coords[0])):
+        # print img_rgb[i], img_rgb[i+1], img_rgb[i+2],img_rgb[i+3], img_rgb[i+4]
+        r.extend(img_rgb[i][0])
+        g.extend(img_rgb[i][1])
+        b.extend(img_rgb[i][2])
+
     ListBG = [len(background_coords[0])]
     ListBG.extend(list(background_coords[0]))
+    
+    print "finished with rgb size : ", len(r) ," and listBG size : " , len(ListBG)
     return (ListBG , r , g , b)
 
 def get_background_pixels(img, rect):
@@ -107,7 +120,7 @@ def handle_img(req):
                 r.extend(infos[1])
                 g.extend(infos[2])
                 b.extend(infos[3])
-                
+                            
                 # indices.extend( len ( get_foreground_pixels(img,req.rect_input[(i*4):(i*4+4)] ) ) );
                 # indices.extend([])
                 # cv2.imshow("picture",imgp)
@@ -115,7 +128,8 @@ def handle_img(req):
             except CvBridgeError, e:
               print e
               return []
- 
+    print type(r)
+    print len(r)
     return srv_picture_to_indicesResponse(np.asarray(indices),np.asarray(r),np.asarray(g),np.asarray(b))
 
 
