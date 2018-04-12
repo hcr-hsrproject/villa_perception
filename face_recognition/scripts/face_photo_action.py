@@ -34,8 +34,8 @@ class FaceDectector_Action(object):
 
 	def __init__(self, name, wait=0.0):
 		self._action_name = name
-        self._as = actionlib.SimpleActionServer(self._action_name, face_recognition_ros.msg.PhotoActionAction, execute_cb=self.execute_cb, auto_start = False)
-        self._as.start()
+                self._as = actionlib.SimpleActionServer(self._action_name, face_recognition_ros.msg.PhotoActionAction, execute_cb=self.execute_cb, auto_start = False)
+                self._as.start()
 		self.settings = termios.tcgetattr(sys.stdin)
 		image_topic = "/hsrb/head_rgbd_sensor/rgb/image_rect_color"
 		rospy.Subscriber(image_topic, Image, self.image_callback)
@@ -66,8 +66,8 @@ class FaceDectector_Action(object):
 			self.known_img_names.append(name)
 
 	def execute_cb(self, goal):
-		 # helper variables
-		 cv2.imwrite('saved_image.jpeg', selfcv2_img)
+            # helper variables
+                 cv2.imwrite('saved_image.jpeg', selfcv2_img)
 			print('save picture')
 
         self._feedback = True

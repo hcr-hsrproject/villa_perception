@@ -35,7 +35,7 @@ class FaceDectectors(object):
 		s = rospy.Service('/face_recognition_run', face_recognition_srv, self.Isrunnging)
 		self.string_pub = rospy.Publisher('/face_detected_name', String, queue_size=10)
 		self.bridge = CvBridge()
-		self.path =exists("known_faces")
+                self.path =exists("known_faces")
 		print self.path
 		self.takepicture = False
 		self.threshold = 0.6
@@ -44,7 +44,6 @@ class FaceDectectors(object):
 		print self.known_imgs
 		self.known_img_names = []
 		self.known_encodings = []
-                self.face_infos=[]
 		self.count=0
 		self.unknowncount=0
 		self.Isrecognized =False
@@ -74,29 +73,25 @@ class FaceDectectors(object):
 		print msg.code
 
 	def crop_face(self,image_data):
-                image_batch = image_data
-                files = []
-                face_detect = face_detection_model('/opt/ros/kinetic/share/OpenCV-3.3.1/haarcascades/haarcascade_frontalface_default.xml')
-                # face_files = face_detect.run(image_data)
-                ReturnValue= face_detect.run_wh(image_data)
-                face_files = ReturnValue.images
-                self.face_infos = ReturnValue.faces
-                print self.face_infos
-                #print(face_files)
-                return face_files
+		image_batch = image_data
+		files = []
+		face_detect = face_detection_model('/opt/ros/kinetic/share/OpenCV-3.3.1/haarcascades/haarcascade_frontalface_default.xml')
+		face_files = face_detect.run(image_data)
+		#print(face_files)
+		return face_files
 
-	def image_callback(self,msg):
-		# print("Received an image!")
-		self.detected_msg =std_msgs.msg.String()
-		self.unknowncount=self.unknowncount+1
-		if(self.unknowncount>5):
-			self.detected_name="unknown"
-			self.unknowncount=0
-		try:
-			# Convert your ROS Image message to OpenCV2
-			cv2_img   = self.bridge.imgmsg_to_cv2(msg,"bgr8")
-			facelists =self.crop_face(cv2_img)
-			
+        def image_callback(self,msg):
+            # print("Received an image!")
+                self.detected_msg =std_msgs.msg.String()
+                self.unknowncount=self.unknowncount+1
+                if(self.unknowncount>10):
+                    self.detected_name="unknown"
+                    self.unknowncount=0
+                try:
+                    # Convert your ROS Image message to OpenCV2
+                        cv2_img   = self.bridge.imgmsg_to_cv2(msg,"bgr8")
+                        facelists =self.crop_face(cv2_img)
+
                         if(len(facelists)>0):
                             for face in facelists:
                                 unknown_encoding = face_recognition.face_encodings(face)[0]
